@@ -2,8 +2,8 @@
 import './App.css'
 import { useRoutes } from 'react-router-dom'
 import Home from './pages/Home/Home'
-import Courses from './pages/Courses'
-import Blog from './pages/Blog'
+import Courses from './pages/Courses/Courses'
+import Blog from './pages/Blog/Blog'
 
 
 function App() {
