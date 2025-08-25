@@ -1,13 +1,19 @@
 
 import './App.css'
+import { useRoutes } from 'react-router-dom'
+import Home from './pages/Home'
+import Courses from './pages/Courses'
+import Blog from './pages/Blog'
+
 
 function App() {
+  const routes = useRoutes([
+    { path: '/', element: <Home /> },
+    { path: '/courses', element: <Courses /> },
+    { path: '/blog', element: <Blog /> },
+  ])
 
-  return (
-    <>
-      <h1>App</h1>
-    </>
-  )
+  return routes
 }
 
 export default App
