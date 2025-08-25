@@ -16,6 +16,8 @@
 }
 
 body{
+  width:100%;
+  max-width:192rem;
   margin: 0px;
   padding: 0px;
   font-family: var(--font-family-Exo);
@@ -42,4 +44,10 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.container{
+  width:100%;
+  max-width: 129rem;
+  margin: 0 auto;
 }

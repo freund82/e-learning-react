@@ -1,7 +1,7 @@
 
 import './App.css'
 import { useRoutes } from 'react-router-dom'
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import Courses from './pages/Courses'
 import Blog from './pages/Blog'
 
