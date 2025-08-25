@@ -1,0 +1,31 @@
+.header__main{
+    height:70rem;
+    background-image:url("../../assets/images/header_inner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__inner--block{
+    width:100%;
+    max-width:52rem;
+    height:70rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__main--title{
+    font-size: var(--font-size48);
+    font-weight: 600;
+    line-height: var(--line-height120);
+    margin-bottom: 2.4rem;
+}
+
+.header__main--text{
+    font-size: var(--font-size18);
+    line-height: var(--line-height150);
+    margin-bottom: 2rem;
+    font-family: var(--font-family-Jost);
+    color:var(--dark-gray);
+}

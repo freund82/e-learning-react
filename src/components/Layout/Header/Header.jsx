@@ -6,7 +6,6 @@ import Search from "../../../assets/images/search.svg";
 function Header() {
     return (
         <div className="header">
-            <div className="container">
                 <div className="header__inner">
                 <div className="header__logo">
                     <img src={Logo} alt="logo" />
@@ -32,7 +31,6 @@ function Header() {
                         </div>
                     </div>
                 </nav>
-            </div>
             </div>
         </div>
     );
