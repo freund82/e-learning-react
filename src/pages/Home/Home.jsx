@@ -1,7 +1,7 @@
 import "./home.css"
 import Layout from "../../components/Layout/Layout"
 import ButtonPrimary from "../../components/shared/ButtonPrimary/ButtonPrimary"
-
+import Categories from "./Categories/Categories.jsx" // здесь расширение указывать важно так как есть еще файл с расширением js
 
 function Home() {
 
@@ -16,6 +16,11 @@ function Home() {
                         <ButtonPrimary>Posts Comment</ButtonPrimary>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section className="categories">
+            <div className="container">
+                <Categories />
             </div>
         </section>
         </Layout>

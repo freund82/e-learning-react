@@ -1,0 +1,11 @@
+.button-secondary{
+    padding: 1rem 2.4rem;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 2.4rem;
+    border: solid 0.2rem var(--gray);
+    cursor: pointer;
+    font-size: var(--font-size16);
+    font-family: var(--font-family-Jost);
+    font-weight: 500;
+}
