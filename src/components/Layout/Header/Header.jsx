@@ -22,6 +22,9 @@ function Header() {
                             <Link to="/blog" className="header__link" href="#">Blog</Link>
                         </li>
                     </ul>
+                    <div className="nav__burger--menu">
+                       
+                    </div>
                     <div className="header__auth">
                         <Link to="/login" className="header__link" href="#">Login</Link>
                         <span>/</span>

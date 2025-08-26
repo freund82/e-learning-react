@@ -51,3 +51,9 @@ a {
   max-width: 129rem;
   margin: 0 auto;
 }
+
+@media(max-width: 1400px) {
+    .container{
+        padding: 0 2rem;
+    }
+}
