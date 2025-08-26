@@ -41,7 +41,7 @@
 }
 
 .nav__burger--menu{
-    display:block;
+    display:none;
     width:3rem;
     cursor: pointer;
     border-bottom:solid 0.2rem var(--black);
@@ -103,6 +103,7 @@
     }
 
     .nav__burger--menu{
+        display:block;
         align-items: flex-end;
     }
 
