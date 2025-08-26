@@ -1,9 +1,15 @@
 import "./categories.css"
+import {useState} from "react"
 import categories from "./categories"
 import ButtonSecondary from "../../../components/shared/ButtonSecondary/ButtonSecondary"
  
 
 function Categories() {
+    
+    const [showAll, setShowAll] = useState(false)
+
+    const visibleCategories = showAll ? categories : categories.slice(0, 10);
+
     return (
         <div className="categories">
                 <div className="categories__inner">
@@ -13,12 +19,12 @@ function Categories() {
                               <p className="categories__text">Explore our Popular Categories</p>
                         </div>
                     <div className="categories__btn">
-                         <ButtonSecondary>All Categories</ButtonSecondary>
+                         <ButtonSecondary showAllCategories={() => setShowAll(true)}>All Categories</ButtonSecondary>
                     </div>
                     </div>
                     <div className="categories__list">
                         {
-                            categories.map((item) => (
+                            visibleCategories.map((item) => (
                                 <div className="categories__item--card" key={item.id}>
                                     <div className="categories__item--inner">
                                         <img src={item.img} alt={item.title} />
