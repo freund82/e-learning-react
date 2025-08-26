@@ -2,7 +2,9 @@ import "./home.css"
 import Layout from "../../components/Layout/Layout"
 import ButtonPrimary from "../../components/shared/ButtonPrimary/ButtonPrimary"
 
+
 function Home() {
+
     return (
         <Layout>
         <section className="header__main">
