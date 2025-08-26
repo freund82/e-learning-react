@@ -1,12 +1,11 @@
 import "./home.css"
-import Layout from "../../components/Layout/Layout"
 import ButtonPrimary from "../../components/shared/ButtonPrimary/ButtonPrimary"
 import Categories from "./Categories/Categories.jsx" // здесь расширение указывать важно так как есть еще файл с расширением js
 
 function Home() {
 
     return (
-        <Layout>
+        <>
         <section className="header__main">
             <div className="container">
                 <div className="header__inner--block">
@@ -23,7 +22,7 @@ function Home() {
                 <Categories />
             </div>
         </section>
-        </Layout>
+        </>
     )
 }
 
