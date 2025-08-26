@@ -9,3 +9,10 @@
     font-family: var(--font-family-Jost);
     font-weight: 500;
 }
+
+.button-secondary:hover{
+    background-color: var(--gray);
+    color: var(--white);
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}

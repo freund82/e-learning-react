@@ -66,3 +66,8 @@
     transform:translateY(-1.6rem);
     transition:transform 0.3s ease-in-out;
 }
+
+.categories__item--card:hover h3{
+    color:var(--orange);
+    transition: color 0.3s ease-in-out;
+}
