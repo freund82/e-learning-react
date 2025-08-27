@@ -26,6 +26,7 @@
 }
 
 .featuredCourses__item--card{
+    position:relative;
     width:41rem;
     height:47.4rem;
     border-radius: 2rem;
@@ -33,17 +34,20 @@
     display:flex;
     flex-direction: column;
     cursor: pointer;
+    z-index:1;
 }
 
 .featuredCourses__item--img{
     display:block;
-    margin-bottom:2.4rem;
 }
 
 .featuredCourses__item--inner{
-    padding:2rem;
+    padding:0 2rem 2rem 2rem;
 }
 
+.featuredCourses__item--author{
+    color:var(--black);
+}
 
 .featuredCourses__item--inner h3{
     font-size: var(--font-size20);
@@ -70,6 +74,43 @@
 .featuredCourses__item--card:hover h3{
     color:var(--orange);
     transition: color 0.3s ease-in-out;
+}
+
+.featuredCourses__item--info{
+    display:flex;
+    gap:0.8rem;
+    align-items: center;
+    margin-top:1.6rem;
+}
+
+.featuredCourses__item--text{
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
+.featuredCourses__item--price{
+    position:absolute;
+    bottom:2rem;
+    width:37rem;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-top: solid 0.1rem var(--light-gray);
+    padding-top:1.7rem;
+    z-index:1000;
+}
+
+.featuredCourses__item--link:hover{
+    color:var(--orange) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+@media(max-width:1400px){
+    .featuredCourses__list{
+    justify-content: space-around;
+}
 }
 
 @media(max-width:700px){
