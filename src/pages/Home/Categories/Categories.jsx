@@ -1,6 +1,6 @@
 import "./categories.css"
 import {useState} from "react"
-import categories from "./categories"
+import categories from "../../../data/categories"
 import ButtonSecondary from "../../../components/shared/ButtonSecondary/ButtonSecondary"
  
 
