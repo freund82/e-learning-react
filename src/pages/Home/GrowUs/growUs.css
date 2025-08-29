@@ -50,3 +50,14 @@
     content:url("../../../assets/icons/ok.svg");
     margin-right:0.8rem;
 }
+
+/**************
+MEDIA QUERIES
+**************/
+
+@media(max-width: 1400px) {
+    .growUs__inner{
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
