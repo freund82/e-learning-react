@@ -3,8 +3,9 @@ import ButtonPrimary from "../../components/shared/ButtonPrimary/ButtonPrimary"
 import Categories from "./Categories/Categories.jsx" // здесь расширение указывать важно так как есть еще файл с расширением js
 import FeaturedCourses from "./FeaturedCourses/FeaturedCourses.jsx"
 import LearnPressBanner from "./LearnPressBanner/LearnPressBanner.jsx"
+import StatisticCard from "../../components/StatisticCard/StatisticCard.jsx"
 
-function Home() {
+function Home({ statistic }) {
 
     return (
         <>
@@ -29,9 +30,14 @@ function Home() {
                 <FeaturedCourses />
             </div>
         </section>
-        <section>
+        <section className="learnPressBanner__section">
             <div className="container">
                 <LearnPressBanner />
+            </div>
+        </section>
+        <section className="statistic__section">
+            <div className="container">
+                <StatisticCard statistic={statistic} />
             </div>
         </section>
         </>

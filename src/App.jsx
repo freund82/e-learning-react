@@ -9,12 +9,36 @@ import Blog from './pages/Blog/Blog'
 
 
 function App() {
+
+  const statistic=[
+    {
+      id:1,
+      title:"Active Students",
+      number:25000,
+    },
+    {
+      id:2,
+      title:"Total Courses",
+      number:899,
+    },
+    {
+      id:3,
+      title:"Instructor",
+      number:158,
+    },
+    {
+      id:4,
+      title:"Satisfaction Rate",
+      number:100,
+    },
+  ]
+
   const routes = useRoutes([
    {
       path: "/",
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> }, // index: true - означает что Home будет доступен по корневому маршруту
+        { index: true, element: <Home statistic={statistic} /> }, // index: true - означает что Home будет доступен по корневому маршруту
         { path: "courses", element: <Courses /> },
         { path: "blog", element: <Blog /> }
       ]
