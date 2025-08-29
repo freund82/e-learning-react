@@ -1,4 +1,5 @@
 import "./growUs.css"
+import ButtonPrimary from "../../../components/shared/ButtonPrimary/ButtonPrimary"
 
 function GrowUs() {
     return (
@@ -12,6 +13,9 @@ function GrowUs() {
                         <li>Certification</li>
                         <li>Certification</li>
                     </ul>
+                    <div>
+                         <ButtonPrimary>Explorer course</ButtonPrimary>
+                    </div>
                 </div>
             </div>
     )
