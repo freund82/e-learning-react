@@ -1,0 +1,39 @@
+.learnPressBanner{
+    background-image: url('../../../assets/images/learnPress.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 32.4rem;
+    width: 100%;
+}
+
+.learnPressBanner__inner{
+    width:100%;
+    max-width:45rem;
+    display:flex;
+    padding:5.45rem 0 5.45rem 5rem;
+}
+
+.learnPressBanner__suptitle{
+    font-size: var(--font-size16);
+    line-height: var(--line-height120);
+    color:var(--dark-gray);
+    margin-bottom: 1.6rem;
+    font-weight:600;
+}
+
+.learnPressBanner__title{
+    font-size: var(--font-size32);
+    line-height: var(--line-height120);
+    color:var(--black);
+    margin-bottom: 1.6rem;
+    font-weight:600;
+}
+
+.learnPressBanner__text{
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+    margin-bottom:2rem;
+}

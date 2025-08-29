@@ -2,6 +2,7 @@ import "./home.css"
 import ButtonPrimary from "../../components/shared/ButtonPrimary/ButtonPrimary"
 import Categories from "./Categories/Categories.jsx" // здесь расширение указывать важно так как есть еще файл с расширением js
 import FeaturedCourses from "./FeaturedCourses/FeaturedCourses.jsx"
+import LearnPressBanner from "./LearnPressBanner/LearnPressBanner.jsx"
 
 function Home() {
 
@@ -26,6 +27,11 @@ function Home() {
         <section className="featured__courses">
             <div className="container">
                 <FeaturedCourses />
+            </div>
+        </section>
+        <section>
+            <div className="container">
+                <LearnPressBanner />
             </div>
         </section>
         </>
