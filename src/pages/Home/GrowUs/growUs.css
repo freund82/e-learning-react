@@ -1,0 +1,44 @@
+.growUs{
+    background-image:url("../../../assets/images/growUs.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:64.4rem;
+    height: 46.9rem;
+}
+
+.growUs__inner{
+    width:100%;
+    max-width:52rem;
+    position:absolute;
+    top:4.25rem;
+    right:31.55rem;
+    display:flex;
+    flex-direction: column;
+    gap:1.6rem;
+    z-index:1000;
+}
+
+.growUs__title{
+    font-size: var(--font-size32);
+    line-height: var(--line-height120);
+    font-weight: 600;
+    color:var(--black);
+}
+
+.growUs__text{
+    font-size: var(--font-size18);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
+.growUs__list{
+    margin-top:0;
+}
+.growUs__list li{
+    font-size: var(--font-size18);
+    line-height: var(--line-height215);
+    color:var(--black);
+    font-style:var(--font-family--Jost);
+    font-weight: 500;
+}

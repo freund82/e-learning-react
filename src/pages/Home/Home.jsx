@@ -4,6 +4,7 @@ import Categories from "./Categories/Categories.jsx" // здесь расшир�
 import FeaturedCourses from "./FeaturedCourses/FeaturedCourses.jsx"
 import LearnPressBanner from "./LearnPressBanner/LearnPressBanner.jsx"
 import StatisticCard from "../../components/StatisticCard/StatisticCard.jsx"
+import GrowUs from "./GrowUs/GrowUs.jsx"
 
 function Home({ statistic }) {
 
@@ -38,6 +39,11 @@ function Home({ statistic }) {
         <section className="statistic__section">
             <div className="container">
                 <StatisticCard statistic={statistic} />
+            </div>
+        </section>
+        <section className="growUs__section">
+            <div className="container">
+                <GrowUs />
             </div>
         </section>
         </>

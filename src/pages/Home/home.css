@@ -52,6 +52,12 @@ CATEGORIES
     margin-bottom: 9rem;
 }
 
+.growUs__section{
+    position:relative;
+    margin-bottom: 9rem;
+    z-index:1;
+}
+
 /***********
 MEDIA QUERIES
 ***********/
