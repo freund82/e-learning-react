@@ -1,0 +1,40 @@
+.educationBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../../../assets/images/educationBanner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom:9rem;
+}
+
+.educationBanner__suptitle{
+    font-size: var(--font-size16);
+    line-height: var(--line-height120);
+    color:var(--black);
+    margin-bottom: 1.6rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+
+.educationBanner__title{
+    font-size: var(--font-size32);
+    line-height: var(--line-height120);
+    color:var(--black);
+    margin-bottom: 1.6rem;
+    font-weight:600;
+}
+
+.educationBanner__text{
+    font-size: var(--font-size18);
+    line-height: var(--line-height150);
+    margin-top:2.4rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-family-Jost);
+    color:var(--dark-gray);
+}

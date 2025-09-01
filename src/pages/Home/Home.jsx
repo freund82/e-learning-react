@@ -5,6 +5,7 @@ import FeaturedCourses from "./FeaturedCourses/FeaturedCourses.jsx"
 import LearnPressBanner from "./LearnPressBanner/LearnPressBanner.jsx"
 import StatisticCard from "../../components/StatisticCard/StatisticCard.jsx"
 import GrowUs from "./GrowUs/GrowUs.jsx"
+import EducationBanner from "./EducationBanner/EducationBanner.jsx"
 
 function Home({ statistic }) {
 
@@ -44,6 +45,11 @@ function Home({ statistic }) {
         <section className="growUs__section">
             <div className="container">
                 <GrowUs />
+            </div>
+        </section>
+        <section className="educationBanner__section">
+            <div className="container">
+                <EducationBanner />
             </div>
         </section>
         </>
