@@ -1,5 +1,5 @@
 import "./educationBanner.css"
-import ButtonPrimary from "../../../components/shared/ButtonPrimary/ButtonPrimary"
+import ButtonPrimary from "../../shared/ButtonPrimary/ButtonPrimary"
 
 function EducationBanner() {
     return (

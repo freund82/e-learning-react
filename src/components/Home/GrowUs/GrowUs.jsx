@@ -1,5 +1,5 @@
 import "./growUs.css"
-import ButtonPrimary from "../../../components/shared/ButtonPrimary/ButtonPrimary"
+import ButtonPrimary from "../../shared/ButtonPrimary/ButtonPrimary"
 
 function GrowUs() {
     return (

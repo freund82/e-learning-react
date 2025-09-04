@@ -1,11 +1,11 @@
 import "./home.css"
 import ButtonPrimary from "../../components/shared/ButtonPrimary/ButtonPrimary"
-import Categories from "./Categories/Categories.jsx" // здесь расширение указывать важно так как есть еще файл с расширением js
-import FeaturedCourses from "./FeaturedCourses/FeaturedCourses.jsx"
-import LearnPressBanner from "./LearnPressBanner/LearnPressBanner.jsx"
+import Categories from "../../components/Home/Categories/Categories.jsx" // здесь расширение указывать важно так как есть еще файл с расширением js
+import FeaturedCourses from "../../components/Home/FeaturedCourses/FeaturedCourses.jsx"
+import LearnPressBanner from "../../components/Home/LearnPressBanner/LearnPressBanner.jsx"
 import StatisticCard from "../../components/StatisticCard/StatisticCard.jsx"
-import GrowUs from "./GrowUs/GrowUs.jsx"
-import EducationBanner from "./EducationBanner/EducationBanner.jsx"
+import GrowUs from "../../components/Home/GrowUs/GrowUs.jsx"
+import EducationBanner from "../../components/Home/EducationBanner/EducationBanner.jsx"
 
 function Home({ statistic }) {
 

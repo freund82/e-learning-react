@@ -2,7 +2,7 @@ import "./featuredCourses.css"
 import {useState} from "react"
 import {Link} from "react-router-dom"
 import featuredCourses from "../../../data/featuredCourses"
-import ButtonSecondary from "../../../components/shared/ButtonSecondary/ButtonSecondary"
+import ButtonSecondary from "../../shared/ButtonSecondary/ButtonSecondary"
 import WeeksIcon from "../../../assets/icons/weeks.svg"
 import StudentsIcon from "../../../assets/icons/students.svg"
  
