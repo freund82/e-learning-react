@@ -6,6 +6,8 @@ import LearnPressBanner from "../../components/Home/LearnPressBanner/LearnPressB
 import StatisticCard from "../../components/StatisticCard/StatisticCard.jsx"
 import GrowUs from "../../components/Home/GrowUs/GrowUs.jsx"
 import EducationBanner from "../../components/Home/EducationBanner/EducationBanner.jsx"
+import Blockquote from "../../components/Home/Blockquote/Blockquote.jsx"
+import comments from "../../data/comments"
 
 function Home({ statistic }) {
 
@@ -50,6 +52,19 @@ function Home({ statistic }) {
         <section className="educationBanner__section">
             <div className="container">
                 <EducationBanner />
+            </div>
+        </section>
+        <section className="blockquote__section">
+            <div className="container">
+                    <h3 className="blockquote__title">Student Feedbacks</h3>
+                    <p className="blockquote__subText">What Students Say About Academy LMS</p>
+                    <div className="blockquote__block">
+                        {
+                    comments.map((comment) => (
+                        <Blockquote key={comment.id} quote={comment} />
+                    ))
+                }
+                    </div>
             </div>
         </section>
         </>

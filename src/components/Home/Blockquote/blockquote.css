@@ -1,0 +1,43 @@
+
+.blockquote{
+    width:30rem;
+    height:40.78rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 3rem;
+    border:thin solid var(--light-gray);
+    border-radius: 2rem;
+    margin:0;
+}
+
+.blockquote__inner{
+    text-align: left;
+}
+
+.blockquote__text{
+    font-size: var(--font-size16);
+    line-height: var(--line-height215);
+    color:var(--black);
+    font-style:var(--font-family--Jost);
+    margin-top:2rem;
+    margin-bottom:3rem;
+    font-weight:500;
+}
+
+.blockquote__author{
+    font-size: var(--font-size20);
+    line-height: var(--line-height120);
+    color:var(--black);
+    font-style:var(--font-family--Jost);
+    font-weight:600;
+    margin-bottom:0.8rem;
+}
+
+.blockquote__profession{
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+    font-weight: 400;
+}
