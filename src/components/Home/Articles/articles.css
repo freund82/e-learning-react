@@ -1,0 +1,126 @@
+.featuredCourses__title{
+    font-size: var(--font-size32);
+    line-height: var(--line-height120);
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.featuredCourses__text{
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
+.featuredCourses__inner--block{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5rem;
+}
+
+.featuredCourses__list{
+    display:flex;
+    gap:3rem;
+    flex-wrap: wrap;
+}
+
+.featuredCourses__item--card{
+    position:relative;
+    width:100%;
+    max-width:41rem;
+    height:47.4rem;
+    border-radius: 2rem;
+    border:solid 0.1rem var(--light-gray);
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index:1;
+}
+
+.featuredCourses__item--img{
+    display:block;
+}
+
+.featuredCourses__item--inner{
+    padding:0 2rem 2rem 2rem;
+}
+
+.featuredCourses__item--author{
+    color:var(--black);
+}
+
+.featuredCourses__item--inner h3{
+    font-size: var(--font-size20);
+    line-height: var(--line-height120);
+    font-weight: 600;
+    margin-top:1.2rem;
+}
+
+.featuredCourses__item--inner p{
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+    margin-top:2rem;
+}
+
+.featuredCourses__item--card:hover{
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    transform:translateY(-1.6rem);
+    transition:transform 0.3s ease-in-out;
+}
+
+.featuredCourses__item--card:hover h3{
+    color:var(--orange);
+    transition: color 0.3s ease-in-out;
+}
+
+.featuredCourses__item--info{
+    display:flex;
+    gap:0.8rem;
+    align-items: center;
+    margin-top:1.6rem;
+}
+
+.featuredCourses__item--text{
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
+.featuredCourses__item--price{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:2rem;
+    width:100%;
+    max-width:37rem;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-top: solid 0.1rem var(--light-gray);
+    padding-top:1.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    z-index:1000;
+}
+
+.featuredCourses__item--link:hover{
+    color:var(--orange) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+@media(max-width:1400px){
+    .featuredCourses__list{
+    justify-content: space-around;
+}
+}
+
+@media(max-width:700px){
+    .featuredCourses__list{
+    justify-content: space-around;
+}
+}
