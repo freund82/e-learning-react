@@ -1,7 +1,7 @@
 import "./buttonSecondary.css";
 
-function ButtonSecondary({ children, showAllCategories }) {
-    return <button className="button-secondary" onClick={showAllCategories}>{children}</button>;
+function ButtonSecondary({ children, showAllCategories, variant}) {
+    return <button className={`button-secondary ${variant}`} onClick={showAllCategories} >{children}</button>;
 }
 
 export default ButtonSecondary;

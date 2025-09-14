@@ -8,6 +8,7 @@ import GrowUs from "../../components/Home/GrowUs/GrowUs.jsx"
 import EducationBanner from "../../components/Home/EducationBanner/EducationBanner.jsx"
 import Blockquote from "../../components/Home/Blockquote/Blockquote.jsx"
 import comments from "../../data/comments"
+import Banner from "../../components/Home/Banner/Banner.jsx"
 
 function Home({ statistic }) {
 
@@ -65,6 +66,11 @@ function Home({ statistic }) {
                     ))
                 }
                     </div>
+            </div>
+        </section>
+        <section className="banner__section">
+            <div className="container">
+                <Banner />
             </div>
         </section>
         </>

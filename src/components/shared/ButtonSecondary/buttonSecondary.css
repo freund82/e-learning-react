@@ -10,9 +10,20 @@
     font-weight: 500;
 }
 
+.orange{
+    background-color:transparent;
+    border:solid 0.1rem var(--orange);
+    color:var(--orange);
+}
+
 .button-secondary:hover{
     background-color: var(--gray);
     color: var(--white);
     transition: background-color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
+}
+
+.orange:hover{
+    background-color: var(--orange);
+    color: var(--white);
 }
