@@ -7,7 +7,7 @@ const Blockquote = ({quote}) => {
                 <div className="blockquote__inner">
                     <img className="blockquote__image" src={BlockquoteImage} alt="blockquote" />
                     <p className="blockquote__text">{quote.text}</p>
-                    <h4 className="blockquote__author">{quote.author}</h4>
+                    <cite className="blockquote__author">{quote.author}</cite>
                     <p className="blockquote__profession">{quote.profession}</p>
                 </div>
             </blockquote>
