@@ -89,9 +89,19 @@ COMMENTS
 /***********
 BANNER
 ***********/
+
 .banner__section{
     margin-bottom:9rem;
 }
+
+/***********
+ARTICLES
+***********/
+
+.articles__section{
+    margin-bottom:9rem;
+}
+
 
 /***********
 MEDIA QUERIES

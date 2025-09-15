@@ -74,7 +74,7 @@ function Home({ statistic }) {
                 <Banner />
             </div>
         </section>
-        <section className="featured__courses">
+        <section className="articles__section">
             <div className="container">
                 <Articles />
             </div>
