@@ -40,6 +40,7 @@
 
 .articles__item--img{
     display:block;
+    margin-top:-0.1rem;
 }
 
 .articles__item--inner{
