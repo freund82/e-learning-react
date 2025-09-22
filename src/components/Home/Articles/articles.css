@@ -29,7 +29,8 @@
     position:relative;
     width:100%;
     max-width:41rem;
-    height:44rem;
+    min-height:44rem;
+    max-height:auto;
     border-radius: 2rem;
     border:solid 0.1rem var(--light-gray);
     display:flex;
