@@ -1,0 +1,23 @@
+footer{
+    background-color: var(--white-gray);
+}
+.footer__inner{
+    padding-top:9rem;
+}
+
+.footer__inner--block{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5rem;
+}
+
+.footer__text{
+    width:100%;
+    max-width:34.1rem;
+    margin-top:3.2rem;
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
