@@ -29,14 +29,20 @@
     position:relative;
     width:100%;
     max-width:41rem;
-    min-height:44rem;
-    max-height:auto;
     border-radius: 2rem;
     border:solid 0.1rem var(--light-gray);
     display:flex;
     flex-direction: column;
     cursor: pointer;
     z-index:1;
+}
+
+.articles__item--card.collapsed {
+    height: 440px;
+}
+
+.articles__item--card.expanded {
+    height: auto;
 }
 
 .articles__item--img{

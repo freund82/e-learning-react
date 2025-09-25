@@ -1,6 +1,5 @@
 import "./articles.css"
 import {useState} from "react"
-import {Link} from "react-router-dom"
 import articles from "../../../data/articles"
 import ButtonSecondary from "../../shared/ButtonSecondary/ButtonSecondary"
 import CalendarIcon from "../../../assets/icons/calendar.svg"
@@ -12,10 +11,11 @@ function Articles() {
 
     const visibleArticles = showAll ? articles : articles.slice(0, 3)
 
+
     const handleShow = (id) => {
         setExpandedArticles(prev => ({
             ...prev,
-            [id]: !prev[id] // переключаем состояние для конкретной статьи
+            [id]: !prev[id] // переключаем состояние для конкретной статьи (и получается если было значение true, то станет false и наоборот)
         }))
     }
 
@@ -28,6 +28,7 @@ function Articles() {
         
         // Иначе показываем сокращенный текст
         return item.text.slice(0, 68) + "..."
+
     }
 
     return (
@@ -39,14 +40,12 @@ function Articles() {
                         <p className="articles__text">Explore our Free Articles</p>
                     </div>
                     <div className="articles__btn">
-                        <ButtonSecondary onClick={() => setShowAll(!showAll)}>
-                            {showAll ? "Show Less" : "All Articles"}
-                        </ButtonSecondary>
+                        <ButtonSecondary showAllCategories={() => setShowAll(true)}>All Articles</ButtonSecondary>
                     </div>
                 </div>
                 <div className="articles__list">
                     {visibleArticles.map((item) => (
-                        <div className="articles__item--card" key={item.id}>
+                        <div className={`articles__item--card ${item.text.length > 68 ? (expandedArticles[item.id] ? 'expanded' : 'collapsed') : ''}`}  key={item.id}>
                             <img className="articles__item--img" src={item.img} alt={item.title} />
                             <div className="articles__item--inner">
                                 <h3 className="articles__item--title">{item.title}</h3>
