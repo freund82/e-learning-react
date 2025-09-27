@@ -114,4 +114,12 @@ MEDIA QUERIES
     .header__inner--block{
         justify-content: flex-start;
     }
+
+    .header__main--block{
+        margin-top:5%;
+    }
+
+     .header__main--title{
+        font-size: var(--font-size32);
+    }
 }
