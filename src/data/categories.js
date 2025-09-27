@@ -1,75 +1,75 @@
-const categories=[
-{
-    id:1,
-    title:"Art & Design",
-    courses:38,
-    img:"./src/assets/icons/icon.svg",
-},
-{
-    id:2,
-    title:"Development",
-    courses:38,
-    img:"./src/assets/icons/icon1.svg",
-},
-{
-    id:3,
-    title:"Communiication",
-    courses:38,
-    img:"./src/assets/icons/icon2.svg",
-},
-{
-    id:4,
-    title:"Videography",
-    courses:38,
-    img:"./src/assets/icons/icon3.svg",
-},
-{
-    id:5,
-    title:"Photography",
-    courses:38,
-    img:"./src/assets/icons/icon4.svg",
-},
-{
-    id:6,
-    title:"Marketing",
-    courses:38,
-    img:"./src/assets/icons/icon5.svg",
-},
-{
-    id:7,
-    title:"Content writing",
-    courses:38,
-    img:"./src/assets/icons/icon6.svg",
-},
-{
-    id:8,
-    title:"Finance",
-    courses:38,
-    img:"./src/assets/icons/icon7.svg",
-},
-{
-    id:9,
-    title:"Science",
-    courses:38,
-    img:"./src/assets/icons/icon8.svg",
-},
-{
-    id:10,
-    title:"Network",
-    courses:38,
-    img:"./src/assets/icons/icon9.svg",
-},
-{
-    id:11,
-    title:"Science",
-    courses:38,
-    img:"./src/assets/icons/icon8.svg",
-},
-{
-    id:12,
-    title:"Network",
-    courses:38,
-    img:"./src/assets/icons/icon9.svg",
-}
-]
-export default categories
+const categories = [
+  {
+    id: 1,
+    title: 'Art & Design',
+    courses: 38,
+    img: 'categories/icon.svg',
+  },
+  {
+    id: 2,
+    title: 'Development',
+    courses: 38,
+    img: 'categories/icon1.svg',
+  },
+  {
+    id: 3,
+    title: 'Communiication',
+    courses: 38,
+    img: 'categories/icon2.svg',
+  },
+  {
+    id: 4,
+    title: 'Videography',
+    courses: 38,
+    img: 'categories/icon3.svg',
+  },
+  {
+    id: 5,
+    title: 'Photography',
+    courses: 38,
+    img: 'categories/icon4.svg',
+  },
+  {
+    id: 6,
+    title: 'Marketing',
+    courses: 38,
+    img: 'categories/icon5.svg',
+  },
+  {
+    id: 7,
+    title: 'Content writing',
+    courses: 38,
+    img: 'categories/icon6.svg',
+  },
+  {
+    id: 8,
+    title: 'Finance',
+    courses: 38,
+    img: 'categories/icon7.svg',
+  },
+  {
+    id: 9,
+    title: 'Science',
+    courses: 38,
+    img: 'categories/icon8.svg',
+  },
+  {
+    id: 10,
+    title: 'Network',
+    courses: 38,
+    img: 'categories/icon9.svg',
+  },
+  {
+    id: 11,
+    title: 'Science',
+    courses: 38,
+    img: 'categories/icon8.svg',
+  },
+  {
+    id: 12,
+    title: 'Network',
+    courses: 38,
+    img: 'categories/icon9.svg',
+  },
+];
+export default categories;
