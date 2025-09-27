@@ -8,7 +8,9 @@
     padding:6.5rem 5rem;
 }
 
+
 .banner__inner{
+   position:relative;
    display:flex;
    justify-content: space-between;
    align-items: center;
