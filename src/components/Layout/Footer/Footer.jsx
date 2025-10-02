@@ -1,8 +1,6 @@
 import "./footer.css";
 import Logo from "../../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
-import instagram from "../../../assets/icons/instagram.svg";
-import youtube from "../../../assets/icons/youtube.svg";
 
 function Footer() {
     return (
@@ -14,6 +12,7 @@ function Footer() {
                             <img src={Logo} alt="logo" />
                             <p className="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
+                    <div className="footer__links--block">
                         <div>
                             <h4 className="footer__title">Get help</h4>
                                 <ul className="footer__list">
@@ -32,6 +31,7 @@ function Footer() {
                                     <li><Link to="" className="footer__item--link">Programming</Link></li>
                                 </ul>
                         </div>
+                    </div>
                         <div className="footer__contact">
                              <h4 className="footer__title">Contact us</h4>
                              <p className="footer__address">Address: 2321 New Design Str, Lorem Ipsum10 <br></br> Hudson Yards, USA</p>
