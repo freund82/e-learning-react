@@ -1,0 +1,23 @@
+.all-courses__inner {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+}
+
+.left-section{
+    grid-column: 1;
+}
+
+.right-section{
+    grid-column: 2;
+}
+
+.courses-row{
+    grid-row: 2;
+    grid-column:1;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    gap:1.6rem;
+    padding:2rem;
+}
