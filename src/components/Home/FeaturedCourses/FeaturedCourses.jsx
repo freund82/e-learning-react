@@ -11,7 +11,7 @@ function FeaturedCourses() {
     
     const [showAll, setShowAll] = useState(false)
 
-    let featuredFilter=featuredCourses.filter(course=>course.featured)
+    const featuredFilter=featuredCourses.filter(course=>course.featured)
 
     const visibleFeaturedCourses = showAll ? featuredFilter : featuredFilter.slice(0, 6);
 
