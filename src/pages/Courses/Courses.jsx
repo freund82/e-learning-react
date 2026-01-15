@@ -1,7 +1,7 @@
 import "./courses.css"
 import {useState} from "react"
 import {Link} from "react-router-dom"
-import featuredCourses from "../../data/courses.js"
+import allCourses from "../../data/courses.js"
 import WeeksIcon from "../../assets/icons/weeks.svg"
 import StudentsIcon from "../../assets/icons/students.svg"
 
@@ -10,7 +10,7 @@ function Courses() {
 
     const [showAll, setShowAll] = useState(false)
 
-    const visibleFeaturedCourses = showAll ? featuredCourses : featuredCourses.slice(0, 6);
+    const visibleAllCourses = showAll ? allCourses : allCourses.slice(0, 6);
 
     return (
         <section className="all-courses">
@@ -22,7 +22,7 @@ function Courses() {
                         <div className="courses-row">
                             <div className="featuredCourses__list">
                                                     {
-                                                        visibleFeaturedCourses.map((item) => (
+                                                        visibleAllCourses.map((item) => (
                                                             <div className="featuredCourses__item--card" key={item.id}>
                                                                 <img className="featuredCourses__item--img" src={item.img} alt={item.title} />
                                                                 <div className="featuredCourses__item--inner">
