@@ -1,4 +1,4 @@
-const featuredCourses = [
+const courses = [
   {
     id: 1,
     author: 'Determined-Poitras',
@@ -9,6 +9,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses1.png',
+    featured: true,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const featuredCourses = [
     newPrice: 49.0,
     free: false,
     img: 'courses/courses2.png',
+    featured: true,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses3.png',
+    featured: true,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses4.png',
+    featured: true,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses5.png',
+    featured: true,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses6.png',
+    featured: true,
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses1.png',
+    featured: true,
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses2.png',
+    featured: true,
   },
   {
     id: 9,
@@ -97,6 +105,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses3.png',
+    featured: true,
   },
   {
     id: 10,
@@ -108,6 +117,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses4.png',
+    featured: true,
   },
   {
     id: 11,
@@ -119,6 +129,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses5.png',
+    featured: true,
   },
   {
     id: 12,
@@ -130,6 +141,7 @@ const featuredCourses = [
     newPrice: '',
     free: true,
     img: 'courses/courses6.png',
+    featured: true,
   },
 ];
-export default featuredCourses;
+export default courses;

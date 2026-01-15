@@ -1,7 +1,7 @@
 import "./featuredCourses.css"
 import {useState} from "react"
 import {Link} from "react-router-dom"
-import featuredCourses from "../../../data/featuredCourses"
+import featuredCourses from "../../../data/courses.js"
 import ButtonSecondary from "../../shared/ButtonSecondary/ButtonSecondary"
 import WeeksIcon from "../../../assets/icons/weeks.svg"
 import StudentsIcon from "../../../assets/icons/students.svg"
@@ -11,7 +11,9 @@ function FeaturedCourses() {
     
     const [showAll, setShowAll] = useState(false)
 
-    const visibleFeaturedCourses = showAll ? featuredCourses : featuredCourses.slice(0, 6);
+    let featuredFilter=featuredCourses.filter(course=>course.featured)
+
+    const visibleFeaturedCourses = showAll ? featuredFilter : featuredFilter.slice(0, 6);
 
     return (
         <div className="featuredCourses">

@@ -1,7 +1,7 @@
 import "./courses.css"
 import {useState} from "react"
 import {Link} from "react-router-dom"
-import featuredCourses from "../../data/featuredCourses.js"
+import featuredCourses from "../../data/courses.js"
 import WeeksIcon from "../../assets/icons/weeks.svg"
 import StudentsIcon from "../../assets/icons/students.svg"
 
