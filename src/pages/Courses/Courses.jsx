@@ -1,6 +1,7 @@
 import "./courses.css"
 import Card from "../../components/shared/Card/Card.jsx"
 import courses from "../../data/courses.js"
+import Search from "../../components/shared/Search/Search.jsx"
 
 
 
@@ -13,6 +14,7 @@ function Courses() {
                     <div className="all-courses__inner">
                         <div className="left-section"> 
                             <h1>All Courses</h1>
+                            <Search/>
                         </div>
                         <div className="courses-row">
                             <Card courses={courses}/>
@@ -22,7 +24,7 @@ function Courses() {
                             <span>2</span>
                         </div>
                         <div className="right-section">
-                            <h1>Filters</h1>
+                            <h1>Course Category</h1>
                         </div>
                     </div>
             </div>
