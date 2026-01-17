@@ -2,12 +2,13 @@ import "./search.css"
 import { useState } from "react"
 import SearchIcon from "../../../assets/icons/search.svg"
 
-function Search() {
+function Search({activeIconValue}) {
 
     const [activeIcon, setActiveIcon] = useState(false);
 
-    const handleIconClick = (iconNumber) => {
-        setActiveIcon(iconNumber);
+    const handleIconClick = (value) => {
+        setActiveIcon(value);
+        activeIconValue(value);
     };
 
     return (
@@ -18,7 +19,7 @@ function Search() {
             </div>
             <div className="search__style-blocks">
                 <svg
-                    onClick={() => setActiveIcon(false)}
+                    onClick={() => handleIconClick(false)}
                     className={`svgIcon ${!activeIcon ? 'active' : ''}`}
                     width="20"
                     height="20"
@@ -30,7 +31,7 @@ function Search() {
                     <path fillRule="evenodd" clipRule="evenodd" d="M2.5 2.5V9.16667H9.16667V2.5H2.5ZM2.5 10.8333V17.5H9.16667V10.8333H2.5ZM10.8333 2.5V9.16667H17.5V2.5H10.8333ZM10.8333 10.8333V17.5H17.5V10.8333H10.8333Z" />
                 </svg>
                 <svg
-                    onClick={() => setActiveIcon(true)}
+                    onClick={() => handleIconClick(true)}
                     className={`svgIcon ${activeIcon ? 'active' : ''}`}
                     width="20"
                     height="20"
