@@ -22,7 +22,7 @@ function FeaturedCourses() {
                               <p className="featuredCourses__text">Explore our Popular Courses</p>
                             </div>
                         <div className="featuredCourses__btn">
-                         <ButtonSecondary showAllCategories={() => setShowAll(true)}>All Categories</ButtonSecondary>
+                         <ButtonSecondary showAllCategories={() => setShowAll(true)}>All Courses</ButtonSecondary>
                         </div>
                     </div>
                     <div className="featuredCourses__list">
