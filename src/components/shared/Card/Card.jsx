@@ -4,7 +4,7 @@ import WeeksIcon from "../../../assets/icons/weeks.svg"
 import StudentsIcon from "../../../assets/icons/students.svg"
  
 
-function Card({courses}) {
+function Card({courses, isList}) {
   
 
     return (
@@ -15,7 +15,7 @@ function Card({courses}) {
                     <div className="cardCourses__list">
                         {
                            courses.map((item) => (
-                                <div className="cardCourses__item--card" key={item.id}>
+                                <div className={`cardCourses__item--card ${isList && "cardCourses__item--list"}`} key={item.id}>
                                     <img className="cardCourses__item--img" src={item.img} alt={item.title} />
                                     <div className="cardCourses__item--inner">
                                         <p>by <span className="cardCourses__item--author">{item.author}</span></p>
@@ -26,7 +26,7 @@ function Card({courses}) {
                                              <img src={StudentsIcon} alt="students" />
                                             <span className="cardCourses__item--text">{item.students} Students</span>
                                         </div>
-                                        <div className="cardCourses__item--price">
+                                        <div className={`cardCourses__item--price ${isList && "cardCourses__item--listPrice"}`}>
                                             <div>
                                                  <span className="cardCourses__item--text" style={item.free || item.newPrice? {textDecoration:"line-through", fontSize:"var(--font-size18)", color:"var(--gray)", fontWeight:"400"}:""}>${item.price.toFixed(1)}</span>
                                             {item.free==true?<span className="cardCourses__item--text" style={{marginLeft:"0.6rem", color:"var(--green)", fontSize:"var(--font-size18)", fontWeight:"600"}}>Free</span>:""} {/*Условный рендеринг*/}

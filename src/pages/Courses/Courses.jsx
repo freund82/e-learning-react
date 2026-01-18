@@ -23,7 +23,7 @@ function Courses() {
                             <Search activeIconValue={activeIconValue}/>
                         </div>
                         <div className={`courses-row ${listStyle ? "list" : ""}`}>
-                            <Card courses={courses}/>
+                            <Card courses={courses} isList={listStyle}/>
                         </div>
                         <div className="courses-pagination">
                             <span>1</span>

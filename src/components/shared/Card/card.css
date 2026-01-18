@@ -38,11 +38,14 @@
     z-index:1;
 }
 
+
+
 .cardCourses__item--img{
     display:block;
 }
 
 .cardCourses__item--inner{
+    width:58rem;
     padding:0 2rem 2rem 2rem;
 }
 
@@ -106,6 +109,17 @@
     padding-left: 2rem;
     padding-right: 2rem;
     z-index:1000;
+}
+
+.cardCourses__item--list{
+    width:100%;
+    max-width:99rem;
+    height:25rem;
+    flex-direction: row;
+}
+
+.cardCourses__item--listPrice{
+    transform:none;
 }
 
 .cardCourses__item--link:hover{
