@@ -16,7 +16,7 @@ function Card({courses, isList}) {
                         {
                            courses.map((item) => (
                                 <div className={`cardCourses__item--card ${isList && "cardCourses__item--list"}`} key={item.id}>
-                                    <img className="cardCourses__item--img" src={item.img} alt={item.title} />
+                                    <img className={`cardCourses__item--img ${isList && "cardCourses__item--listImg"}`} src={item.img} alt={item.title} />
                                     <div className="cardCourses__item--inner">
                                         <p>by <span className="cardCourses__item--author">{item.author}</span></p>
                                         <h3 className="cardCourses__item--title">{item.title}</h3>
