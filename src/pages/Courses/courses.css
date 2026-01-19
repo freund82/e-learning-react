@@ -32,4 +32,8 @@
 
 .courses-pagination{
     grid-row:3;
+    width:10%;
+    max-width: 28.8rem;
+    margin:0 auto;
+    display:flex;
 }

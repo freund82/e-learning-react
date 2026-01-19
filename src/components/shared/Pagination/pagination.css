@@ -1,0 +1,16 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    font-size: var(--font-size32);
+}
+
+.page-item{
+     color:var(--black);
+     font-weight: var(--font-weight700);
+     border:0.1rem solid var(--black);
+     border-radius: 50%;
+     padding: 0.8rem 1.6rem;
+     cursor: pointer;
+}
