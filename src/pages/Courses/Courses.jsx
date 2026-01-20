@@ -36,6 +36,7 @@ function Courses() {
                         </div>
                         <div className="courses-pagination">
                             <Pagination
+                            currentPage={currentPage}
                             coursesPerPage={coursesPerPage}
                             totalCourses={courses.length}
                             paginate={paginate}

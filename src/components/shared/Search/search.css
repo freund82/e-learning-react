@@ -41,6 +41,6 @@
     fill:var(--black);
     cursor:pointer;
 }
-.active{
+.activeSearch{
     fill:var(--orange);
 }
