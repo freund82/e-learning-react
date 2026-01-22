@@ -11,7 +11,7 @@ const Pagination = ({ coursesPerPage, currentPage, totalCourses, paginate }) => 
 
   return (
     <nav className="pagination-container">
-      <button className='page-link prev' onClick={() => paginate(currentPage - 1)}disabled={currentPage === 1}><img src={LeftSvg} alt="left" /></button>
+      <button className={`page-link prev ${currentPage === 1 ? 'disabled' : ''}`} onClick={() => paginate(currentPage - 1)} ><img src={LeftSvg} alt="left" /></button>
       <ul className='pagination'>
         {pageNumbers.map(number => (
           <li key={number} onClick={() => paginate(number)} className={number === currentPage ? 'page-item activePage' : 'page-item'}>
@@ -21,7 +21,7 @@ const Pagination = ({ coursesPerPage, currentPage, totalCourses, paginate }) => 
           </li>
         ))}
       </ul>
-      <button className='page-link next' onClick={() => paginate(currentPage + 1)}disabled={currentPage === pageNumbers.length}><img src={RightSvg} alt="right"/></button>
+      <button className={`page-link next ${currentPage === pageNumbers.length ? 'disabled' : ''}`} onClick={() => paginate(currentPage + 1)}><img src={RightSvg} alt="right"/></button>
     </nav>
   );
 };

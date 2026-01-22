@@ -51,7 +51,8 @@
      color:var(--white);
 }
 
-.disabled{
+ .page-link.disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    pointer-events: none;
 }
