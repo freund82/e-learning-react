@@ -81,8 +81,10 @@
 }
 
 .cardCourses__item--info{
+    width:100%;
+    max-width:47.6rem;
     display:flex;
-    gap:0.8rem;
+    gap:2.4rem;
     align-items: center;
     margin-top:1.6rem;
 }
@@ -92,7 +94,13 @@
     line-height: var(--line-height150);
     color:var(--dark-gray);
     font-style:var(--font-family--Jost);
+    margin-left:0.8rem;
 }
+
+.price{
+    margin-left:0;
+}
+
 
 .cardCourses__item--price{
     position:absolute;
@@ -105,9 +113,8 @@
     align-items:center;
     justify-content: space-between;
     border-top: solid 0.1rem var(--light-gray);
+    margin-left:0;
     padding-top:1.7rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     z-index:1000;
 }
 

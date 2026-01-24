@@ -20,7 +20,7 @@ function Search({activeIconValue}) {
             <div className="search__style-blocks">
                 <svg
                     onClick={() => handleIconClick(false)}
-                    className={`svgIcon ${!activeIcon ? 'activeSearch' : ''}`}
+                    className={`svgIconBlock ${!activeIcon ? 'activeSearch' : ''}`}
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -32,7 +32,7 @@ function Search({activeIconValue}) {
                 </svg>
                 <svg
                     onClick={() => handleIconClick(true)}
-                    className={`svgIcon ${activeIcon ? 'activeSearch' : ''}`}
+                    className={`svgIconList ${activeIcon ? 'activeSearch' : ''}`}
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"

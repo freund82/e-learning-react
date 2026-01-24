@@ -2,10 +2,12 @@ import "./card.css"
 import {Link} from "react-router-dom"
 import WeeksIcon from "../../../assets/icons/weeks.svg"
 import StudentsIcon from "../../../assets/icons/students.svg"
+import GraphIcon from "../../../assets/icons/graph.svg"
+import LessonsIcon from "../../../assets/icons/lessons.svg"
  
 
 function Card({courses, isList}) {
-  
+ 
 
     return (
         <div className="cardCourses">
@@ -21,14 +23,34 @@ function Card({courses, isList}) {
                                         <p>by <span className="cardCourses__item--author">{item.author}</span></p>
                                         <h3 className="cardCourses__item--title">{item.title}</h3>
                                         <div className="cardCourses__item--info">
-                                            <img src={WeeksIcon} alt="weeks" />
-                                            <span className="cardCourses__item--text">{item.length}Weeks</span>
-                                             <img src={StudentsIcon} alt="students" />
-                                            <span className="cardCourses__item--text">{item.students} Students</span>
+                                            <div className="cardCourses__item--block">
+                                                <img src={WeeksIcon} alt="weeks" />
+                                                <span className="cardCourses__item--text">{item.length}Weeks</span>
+                                            </div>
+                                            <div className="cardCourses__item--block">
+                                                <img src={StudentsIcon} alt="students" />
+                                                <span className="cardCourses__item--text">{item.students} Students</span>
+                                            </div> 
+                                            {isList && 
+                                                <>
+                                                    <div className="cardCourses__item--block">
+                                                        <img src={GraphIcon} alt="levels" />
+                                                        <span className="cardCourses__item--text">{item.levels} Levels</span>
+                                                    </div>
+                                                </>
+                                             }
+                                            {isList &&
+                                                <>
+                                                     <div className="cardCourses__item--block">
+                                                        <img src={LessonsIcon} alt="lessons" />
+                                                        <span className="cardCourses__item--text">{item.lessons} Lessons</span>
+                                                    </div>
+                                                </>
+                                            }
                                         </div>
                                         <div className={`cardCourses__item--price ${isList && "cardCourses__item--listPrice"}`}>
                                             <div>
-                                                 <span className="cardCourses__item--text" style={item.free || item.newPrice? {textDecoration:"line-through", fontSize:"var(--font-size18)", color:"var(--gray)", fontWeight:"400"}:""}>${item.price.toFixed(1)}</span>
+                                                 <span className="cardCourses__item--text price" style={item.free || item.newPrice? {textDecoration:"line-through", fontSize:"var(--font-size18)", color:"var(--gray)", fontWeight:"400"}:""}>${item.price.toFixed(1)}</span>
                                             {item.free==true?<span className="cardCourses__item--text" style={{marginLeft:"0.6rem", color:"var(--green)", fontSize:"var(--font-size18)", fontWeight:"600"}}>Free</span>:""} {/*Условный рендеринг*/}
                                             {item.newPrice?<span className="cardCourses__item--text" style={{color:"var(--red)", fontSize:"var(--font-size18)", fontWeight:"600", marginLeft:"0.6rem"}}>${item.newPrice.toFixed(1)}</span>:""}
                                             </div>

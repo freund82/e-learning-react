@@ -37,10 +37,25 @@
     gap:2rem;
 }
 
-.svgIcon{
+.svgIconBlock{
+    fill:var(--black);
+    cursor:pointer;
+}
+
+.svgIconList{
     fill:var(--black);
     cursor:pointer;
 }
 .activeSearch{
     fill:var(--orange);
+}
+
+/**********
+MEDIA QUERIES
+**********/
+
+@media (max-width: 1200px) {
+    .svgIconBlock, .svgIconList{
+        display:none;
+    }
 }

@@ -10,6 +10,8 @@ const courses = [
     free: true,
     img: 'courses/courses1.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ const courses = [
     free: false,
     img: 'courses/courses2.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ const courses = [
     free: true,
     img: 'courses/courses3.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 4,
@@ -46,6 +52,8 @@ const courses = [
     free: true,
     img: 'courses/courses4.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ const courses = [
     free: true,
     img: 'courses/courses5.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 6,
@@ -70,6 +80,8 @@ const courses = [
     free: true,
     img: 'courses/courses6.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 7,
@@ -82,6 +94,8 @@ const courses = [
     free: true,
     img: 'courses/courses1.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 8,
@@ -94,6 +108,8 @@ const courses = [
     free: true,
     img: 'courses/courses2.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 9,
@@ -106,6 +122,8 @@ const courses = [
     free: true,
     img: 'courses/courses3.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 10,
@@ -118,6 +136,8 @@ const courses = [
     free: true,
     img: 'courses/courses4.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 11,
@@ -130,6 +150,8 @@ const courses = [
     free: true,
     img: 'courses/courses5.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
   {
     id: 12,
@@ -142,6 +164,8 @@ const courses = [
     free: true,
     img: 'courses/courses6.png',
     featured: true,
+    levels: 'All',
+    lessons: 20,
   },
 ];
 export default courses;
