@@ -1,6 +1,7 @@
 const courses = [
   {
     id: 1,
+    category: 'Office',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -15,6 +16,7 @@ const courses = [
   },
   {
     id: 2,
+    category: 'Commercial',
     author: 'Determined-Poitras',
     title: 'Design a website with ThimPress',
     length: 2,
@@ -29,6 +31,7 @@ const courses = [
   },
   {
     id: 3,
+    category: 'Shop',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -43,6 +46,7 @@ const courses = [
   },
   {
     id: 4,
+    category: 'Educate',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -57,6 +61,7 @@ const courses = [
   },
   {
     id: 5,
+    category: 'Academy',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -71,6 +76,7 @@ const courses = [
   },
   {
     id: 6,
+    category: 'Single family Home',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -85,6 +91,7 @@ const courses = [
   },
   {
     id: 7,
+    category: 'Studio',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -99,6 +106,7 @@ const courses = [
   },
   {
     id: 8,
+    category: 'University',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -113,6 +121,7 @@ const courses = [
   },
   {
     id: 9,
+    category: 'Commercial',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -127,6 +136,7 @@ const courses = [
   },
   {
     id: 10,
+    category: 'Shop',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -141,6 +151,7 @@ const courses = [
   },
   {
     id: 11,
+    category: 'Educate',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,
@@ -155,6 +166,7 @@ const courses = [
   },
   {
     id: 12,
+    category: 'Academy',
     author: 'Determined-Poitras',
     title: 'Create an LMS Website with LearnPress',
     length: 2,

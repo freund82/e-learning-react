@@ -4,6 +4,7 @@ import courses from "../../data/courses.js"
 import Search from "../../components/shared/Search/Search.jsx"
 import Pagination from "../../components/shared/Pagination/Pagination.jsx"
 import { useState } from "react"
+import Filters from "../../components/Courses/Filters/Filters.jsx"
 
 
 
@@ -12,6 +13,19 @@ function Courses() {
     const [listStyle, setListStyle] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [coursesPerPage] = useState(6)
+
+// Функция для подсчета категорий
+const getCategoryCounts = (courses) => {
+  return courses.reduce((acc, course) => {
+    const category = course.category || 'Без категории';
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, {});
+};
+
+// Использование:
+const coursesCategoryFilter = getCategoryCounts(courses);
+// Результат: { Shop: 2, Academy: 2, Business: 1 }
 
     const activeIconValue = (value) => {
        setListStyle(value);
@@ -44,6 +58,7 @@ function Courses() {
                         </div>
                         <div className="right-section">
                             <h1>Course Category</h1>
+                            <Filters coursesCategoryFilter={coursesCategoryFilter} courses={courses} />
                         </div>
                     </div>
             </div>
