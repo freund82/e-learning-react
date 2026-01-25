@@ -13,6 +13,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'Kenny White',
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'Kenny White',
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'Kenny White',
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 6,
@@ -88,6 +93,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 7,
@@ -103,6 +109,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 8,
@@ -118,6 +125,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 9,
@@ -133,6 +141,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 10,
@@ -148,6 +157,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 11,
@@ -163,6 +173,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
   {
     id: 12,
@@ -178,6 +189,7 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    instructor: 'John Doe',
   },
 ];
 export default courses;

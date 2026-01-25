@@ -26,6 +26,8 @@ const getCategoryCounts = (courses) => {
   }, {});
 };
 
+const getInstructors = Array.from(new Set(courses.map(course => course.instructor)))
+
 // Использование:
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
@@ -36,7 +38,7 @@ const coursesCategoryFilter = getCategoryCounts(courses);
             return courses;
         }
         return courses.filter(course => 
-            selectedFilter.includes(course.category)  // ← Убраны фигурные скобки!
+            selectedFilter.includes(course.category)
         );
     }, [courses, selectedFilter]);
 
@@ -85,8 +87,9 @@ const handleCategoryChange = (categoryName, isChecked) => {
                         />
                         </div>
                         <div className="right-section">
-                            <h1>Course Category</h1>
-                            <Filters coursesCategoryFilter={coursesCategoryFilter} selectedFilter={selectedFilter} onCategoryChange={handleCategoryChange}/>
+                           
+                            <Filters coursesCategoryFilter={coursesCategoryFilter} selectedFilter={selectedFilter} onCategoryChange={handleCategoryChange} getInstructors={getInstructors}/>
+            
                         </div>
                     </div>
             </div>
