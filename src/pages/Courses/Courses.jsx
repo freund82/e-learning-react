@@ -27,11 +27,19 @@ const getCategoryCounts = (courses) => {
   }, {});
 };
 
-const getInstructors = Array.from(new Set(courses.map(course => course.instructor)))
+const getInstructorsCounts = (courses) => {
+  return courses.reduce((acc, course) => {
+    const instructor = course.instructor || 'Без автора';
+    acc[instructor] = (acc[instructor] || 0) + 1;
+    return acc;
+  }, {});
+}
 
 // Использование:
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
+
+const getInstructors = getInstructorsCounts(courses);
 
 //Фильтрация курсов по выбранным категориям, инструкторам
     const filteredCourses = useMemo(() => {

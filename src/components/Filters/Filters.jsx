@@ -4,6 +4,7 @@ import {useState} from "react";
 function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, onInstructorChange, getInstructors, selectedInstructors}) {
 
    const entries = Object.entries(coursesCategoryFilter);
+   const instructors = Object.entries(getInstructors);
 
    const handleCheckboxChange = (filterName, e) => onCategoryChange(filterName, e.target.checked)
    const handleInstructorChange = (filterName, e) => onInstructorChange(filterName, e.target.checked)
@@ -15,7 +16,7 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
         {entries.map(([name, count]) => {
             const isChecked = selectedCategories.includes(name);
             return (
-                <div>
+                <div key={name}>
                     <div key={name}>
                         <input 
                             type="checkbox" 
@@ -35,10 +36,10 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
 
         {/*Фильтр по инструкторам*/}
         <h2>Instructors</h2>
-        {getInstructors.map((name) => {
+        {instructors.map(([name, count]) => {
             const isChecked = selectedInstructors.includes(name);
             return (
-                <div>
+                <div key={name}>
                     <div key={name}>
                         <input 
                             type="checkbox" 
@@ -48,7 +49,7 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
                             onChange={(e) => handleInstructorChange(name, e)} 
                         />
                             <label htmlFor={name}>
-                                {name}
+                                {name} {count}
                             </label>
                     </div>
                     
