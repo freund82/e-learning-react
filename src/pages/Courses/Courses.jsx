@@ -3,7 +3,7 @@ import Card from "../../components/shared/Card/Card.jsx"
 import courses from "../../data/courses.js"
 import Search from "../../components/shared/Search/Search.jsx"
 import Pagination from "../../components/shared/Pagination/Pagination.jsx"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import Filters from "../../components/Courses/Filters/Filters.jsx"
 
 
@@ -13,6 +13,9 @@ function Courses() {
     const [listStyle, setListStyle] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [coursesPerPage] = useState(6)
+
+    // Переменные состояния для фильтров
+    const [selectedFilter, setSelectedFilter] = useState([]);
 
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
@@ -27,13 +30,38 @@ const getCategoryCounts = (courses) => {
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
 
+//Фильтрация курсов по выбранным категориям
+    const filteredCourses = useMemo(() => {
+        if(selectedFilter.length === 0) {
+            return courses;
+        }
+        return courses.filter(course => 
+            selectedFilter.includes(course.category)  // ← Убраны фигурные скобки!
+        );
+    }, [courses, selectedFilter]);
+
+//Функция для обработки изменения категорий
+const handleCategoryChange = (categoryName, isChecked) => {
+  setSelectedFilter(prev => {
+            if(isChecked) {
+                // Добавление категории
+                return [...prev, categoryName];
+            } else {
+                // Удаление категории
+                return prev.filter(category => category !== categoryName);
+            }
+        });
+        // Сбрасываем на первую страницу при изменении фильтра
+        setCurrentPage(1);
+    };
+
     const activeIconValue = (value) => {
        setListStyle(value);
     };
 
     const indexOfLastCourse = currentPage * coursesPerPage;
     const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
-    const currentCourses = courses.slice(indexOfFirstCourse, indexOfLastCourse);
+    const currentCourses = filteredCourses.slice(indexOfFirstCourse, indexOfLastCourse);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -52,13 +80,13 @@ const coursesCategoryFilter = getCategoryCounts(courses);
                             <Pagination
                             currentPage={currentPage}
                             coursesPerPage={coursesPerPage}
-                            totalCourses={courses.length}
+                            totalCourses={filteredCourses.length}
                             paginate={paginate}
                         />
                         </div>
                         <div className="right-section">
                             <h1>Course Category</h1>
-                            <Filters coursesCategoryFilter={coursesCategoryFilter} courses={courses} />
+                            <Filters coursesCategoryFilter={coursesCategoryFilter} selectedFilter={selectedFilter} onCategoryChange={handleCategoryChange}/>
                         </div>
                     </div>
             </div>
