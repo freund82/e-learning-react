@@ -15,7 +15,8 @@ function Courses() {
     const [coursesPerPage] = useState(6)
 
     // Переменные состояния для фильтров
-    const [selectedFilter, setSelectedFilter] = useState([]);
+    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedInstructors, setSelectedInstructors] = useState([]);
 
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
@@ -32,19 +33,25 @@ const getInstructors = Array.from(new Set(courses.map(course => course.instructo
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
 
-//Фильтрация курсов по выбранным категориям
+//Фильтрация курсов по выбранным категориям, инструкторам
     const filteredCourses = useMemo(() => {
-        if(selectedFilter.length === 0) {
-            return courses;
-        }
-        return courses.filter(course => 
-            selectedFilter.includes(course.category)
-        );
-    }, [courses, selectedFilter]);
+        return courses.filter(course => {
+            // Фильтр по категориям
+            const categoryMatch = selectedCategories.length === 0 || 
+                selectedCategories.includes(course.category);
+            
+            // Фильтр по авторам
+            const instructorMatch = selectedInstructors.length === 0 || 
+                selectedInstructors.includes(course.instructor);
+            
+            // Курс должен соответствовать ВСЕМ выбранным фильтрам
+            return categoryMatch && instructorMatch;
+        });
+    }, [courses, selectedCategories, selectedInstructors]);
 
 //Функция для обработки изменения категорий
 const handleCategoryChange = (categoryName, isChecked) => {
-  setSelectedFilter(prev => {
+  setSelectedCategories(prev => {
             if(isChecked) {
                 // Добавление категории
                 return [...prev, categoryName];
@@ -54,6 +61,17 @@ const handleCategoryChange = (categoryName, isChecked) => {
             }
         });
         // Сбрасываем на первую страницу при изменении фильтра
+        setCurrentPage(1);
+    };
+
+    const handleInstructorChange = (instructorName, isChecked) => {
+        setSelectedInstructors(prev => {
+            if(isChecked) {
+                return [...prev, instructorName];
+            } else {
+                return prev.filter(instructor => instructor !== instructorName);
+            }
+        });
         setCurrentPage(1);
     };
 
@@ -79,16 +97,16 @@ const handleCategoryChange = (categoryName, isChecked) => {
                             <Card courses={currentCourses} isList={listStyle}/>
                         </div>
                         <div className="courses-pagination">
-                            <Pagination
+                            {filteredCourses.length > coursesPerPage && <Pagination
                             currentPage={currentPage}
                             coursesPerPage={coursesPerPage}
                             totalCourses={filteredCourses.length}
                             paginate={paginate}
-                        />
+                        />}
                         </div>
                         <div className="right-section">
                            
-                            <Filters coursesCategoryFilter={coursesCategoryFilter} selectedFilter={selectedFilter} onCategoryChange={handleCategoryChange} getInstructors={getInstructors}/>
+                            <Filters coursesCategoryFilter={coursesCategoryFilter} selectedCategories={selectedCategories} onCategoryChange={handleCategoryChange} selectedInstructors={selectedInstructors} getInstructors={getInstructors} onInstructorChange={handleInstructorChange} />
             
                         </div>
                     </div>
