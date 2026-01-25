@@ -4,7 +4,7 @@ import courses from "../../data/courses.js"
 import Search from "../../components/shared/Search/Search.jsx"
 import Pagination from "../../components/shared/Pagination/Pagination.jsx"
 import { useState, useMemo } from "react"
-import Filters from "../../components/Courses/Filters/Filters.jsx"
+import Filters from "../../components/Filters/Filters.jsx"
 
 
 
