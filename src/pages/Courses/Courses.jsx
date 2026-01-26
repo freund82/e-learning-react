@@ -17,6 +17,7 @@ function Courses() {
     // Переменные состояния для фильтров
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedInstructors, setSelectedInstructors] = useState([]);
+    const [coursesPriceFilter, setCoursesPriceFilter] = useState([]);
 
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
@@ -35,11 +36,22 @@ const getInstructorsCounts = (courses) => {
   }, {});
 }
 
+const getCoursesPriceCounts = (courses) => {
+  return courses.reduce((acc, course) => {
+    const price = course.free ? 'free' : 'paid';
+    acc[price] = (acc[price] || 0) + 1;
+    return acc;
+  }, {});
+}
+
 // Использование:
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
 
 const getInstructors = getInstructorsCounts(courses);
+
+//Фильтр по платный курс или безплатный
+const getCoursePrice = getCoursesPriceCounts(courses);
 
 //Фильтрация курсов по выбранным категориям, инструкторам
     const filteredCourses = useMemo(() => {
@@ -51,11 +63,15 @@ const getInstructors = getInstructorsCounts(courses);
             // Фильтр по авторам
             const instructorMatch = selectedInstructors.length === 0 || 
                 selectedInstructors.includes(course.instructor);
+
+            // Фильтр по цене
+            const priceMatch = coursesPriceFilter.length === 0 || 
+                coursesPriceFilter.includes(course.free);
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
-            return categoryMatch && instructorMatch;
+            return categoryMatch && instructorMatch && priceMatch;
         });
-    }, [courses, selectedCategories, selectedInstructors]);
+    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter]);
 
 //Функция для обработки изменения категорий
 const handleCategoryChange = (categoryName, isChecked) => {
@@ -78,6 +94,17 @@ const handleCategoryChange = (categoryName, isChecked) => {
                 return [...prev, instructorName];
             } else {
                 return prev.filter(instructor => instructor !== instructorName);
+            }
+        });
+        setCurrentPage(1);
+    };
+
+    const handleCoursePriceTypeChange = (priceType, isChecked) => {
+        setCoursesPriceFilter(prev => {
+            if(isChecked) {
+                return [...prev, priceType];
+            } else {
+                return prev.filter(free => free !== priceType);
             }
         });
         setCurrentPage(1);
@@ -114,7 +141,15 @@ const handleCategoryChange = (categoryName, isChecked) => {
                         </div>
                         <div className="right-section">
                            
-                            <Filters coursesCategoryFilter={coursesCategoryFilter} selectedCategories={selectedCategories} onCategoryChange={handleCategoryChange} selectedInstructors={selectedInstructors} getInstructors={getInstructors} onInstructorChange={handleInstructorChange} />
+                            <Filters coursesCategoryFilter={coursesCategoryFilter}
+                                     selectedCategories={selectedCategories}
+                                     onCategoryChange={handleCategoryChange}
+                                     selectedInstructors={selectedInstructors}
+                                     getInstructors={getInstructors}
+                                     onInstructorChange={handleInstructorChange}
+                                     getCoursePrice={getCoursePrice}
+                                     coursesPriceFilter={coursesPriceFilter}
+                                     onCoursePriceTypeChange={handleCoursePriceTypeChange} />
             
                         </div>
                     </div>
