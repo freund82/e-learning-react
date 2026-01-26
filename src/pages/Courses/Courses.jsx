@@ -38,7 +38,7 @@ const getInstructorsCounts = (courses) => {
 
 const getCoursesPriceCounts = (courses) => {
   return courses.reduce((acc, course) => {
-    const price = course.free ? 'free' : 'paid';
+    const price = course.free ? 'Free' : 'Paid';
     acc[price] = (acc[price] || 0) + 1;
     return acc;
   }, {});
@@ -65,8 +65,8 @@ const getCoursePrice = getCoursesPriceCounts(courses);
                 selectedInstructors.includes(course.instructor);
 
             // Фильтр по цене
-            const priceMatch = coursesPriceFilter.length === 0 || 
-                coursesPriceFilter.includes(course.free);
+                        const priceMatch = coursesPriceFilter.length === 0 ||
+                            coursesPriceFilter.includes(course.free ? 'Free' : 'Paid');
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
             return categoryMatch && instructorMatch && priceMatch;
@@ -100,15 +100,15 @@ const handleCategoryChange = (categoryName, isChecked) => {
     };
 
     const handleCoursePriceTypeChange = (priceType, isChecked) => {
-        setCoursesPriceFilter(prev => {
-            if(isChecked) {
-                return [...prev, priceType];
-            } else {
-                return prev.filter(free => free !== priceType);
-            }
-        });
-        setCurrentPage(1);
-    };
+            setCoursesPriceFilter(prev => {
+                if(isChecked) {
+                    return [...prev, priceType];
+                } else {
+                    return prev.filter(type => type !== priceType);
+                }
+            });
+            setCurrentPage(1);
+        };
 
     const activeIconValue = (value) => {
        setListStyle(value);

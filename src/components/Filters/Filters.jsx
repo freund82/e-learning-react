@@ -63,26 +63,26 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
         {/*Фильтр по типу цены курса*/}
         <h2>Price</h2>
         {coursePriceType.map(([name, count]) => {
-            const isChecked = coursesPriceFilter.includes(name === 'true' ? true : name === 'false' ? false : name);
-            console.log(isChecked)
-            return (
-                <div key={name}>
-                    <div key={name}>
-                        <input 
-                            type="checkbox" 
-                            id={name} 
-                            name={name} 
-                            checked={isChecked} 
-                            onChange={(e) => handleCoursePriceTypeChange(name === 'true' ? true : name === 'false' ? false : name, e)} 
-                        />
-                            <label htmlFor={name}>
-                                {name === 'true' ? "Free" : name === 'false' ? "Paid" : name} {count}
-                            </label>
-                    </div>
-                    
-                </div>
-            );
-        })}
+                    const isChecked = coursesPriceFilter.includes(name);
+                    console.log(isChecked)
+                    return (
+                        <div key={name}>
+                            <div key={name}>
+                                <input
+                                    type="checkbox"
+                                    id={name}
+                                    name={name}
+                                    checked={isChecked}
+                                    onChange={(e) => handleCoursePriceTypeChange(name, e)}
+                                />
+                                    <label htmlFor={name}>
+                                        {name} {count}
+                                    </label>
+                            </div>
+                            
+                        </div>
+                    );
+                })}
     </div>
     );
 }
