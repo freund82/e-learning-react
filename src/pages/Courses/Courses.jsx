@@ -109,19 +109,11 @@ const handleCategoryChange = (categoryName, isChecked) => {
         } else {
             // Обработка выбора "Free" или "Paid"
             setCoursesPriceFilter(prev => {
-                let newFilter = [...prev];
-                
-                if (isChecked) {
-                    // Добавляем тип цены, если его еще нет в фильтре
-                    if (!newFilter.includes(priceType)) {
-                        newFilter.push(priceType);
-                    }
-                } else {
-                    // Удаляем тип цены
-                    newFilter = newFilter.filter(type => type !== priceType);
-                }
-                
-                return newFilter;
+                if(isChecked) {
+                return [...prev, priceType];
+            } else {
+                return prev.filter(free => free !== priceType);
+            }
             });
         }
         setCurrentPage(1);

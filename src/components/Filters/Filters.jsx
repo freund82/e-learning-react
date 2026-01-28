@@ -38,7 +38,7 @@ function Filters({coursesCategoryFilter,
                             onChange={(e) => handleCheckboxChange(name, e)} 
                         />
                             <label htmlFor={name}>
-                                {name} ({count})
+                                {name} {count}
                             </label>
                     </div>
                     
@@ -61,7 +61,7 @@ function Filters({coursesCategoryFilter,
                             onChange={(e) => handleInstructorChange(name, e)} 
                         />
                             <label htmlFor={name}>
-                                {name} ({count})
+                                {name} {count}
                             </label>
                     </div>
                     
@@ -95,7 +95,7 @@ function Filters({coursesCategoryFilter,
                             onChange={(e) => handleCoursePriceTypeChange(name, e.target.checked)}
                         />
                         <label htmlFor={name}>
-                            {name} ({count})
+                            {name} {count}
                         </label>
                     </div>
                 </div>
