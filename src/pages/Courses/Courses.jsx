@@ -65,8 +65,8 @@ const getCoursePrice = getCoursesPriceCounts(courses);
                 selectedInstructors.includes(course.instructor);
 
             // Фильтр по цене
-                        const priceMatch = coursesPriceFilter.length === 0 ||
-                            coursesPriceFilter.includes(course.free ? 'Free' : 'Paid');
+            const priceMatch = coursesPriceFilter.length === 0 ||
+                coursesPriceFilter.includes(course.free ? 'Free' : 'Paid');
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
             return categoryMatch && instructorMatch && priceMatch;
@@ -100,15 +100,32 @@ const handleCategoryChange = (categoryName, isChecked) => {
     };
 
     const handleCoursePriceTypeChange = (priceType, isChecked) => {
+        // Если выбран "All"
+        if (priceType === "All") {
+            if (isChecked) {
+                // Если "All" выбран, очищаем фильтр по цене
+                setCoursesPriceFilter([]);
+            }
+        } else {
+            // Обработка выбора "Free" или "Paid"
             setCoursesPriceFilter(prev => {
-                if(isChecked) {
-                    return [...prev, priceType];
+                let newFilter = [...prev];
+                
+                if (isChecked) {
+                    // Добавляем тип цены, если его еще нет в фильтре
+                    if (!newFilter.includes(priceType)) {
+                        newFilter.push(priceType);
+                    }
                 } else {
-                    return prev.filter(type => type !== priceType);
+                    // Удаляем тип цены
+                    newFilter = newFilter.filter(type => type !== priceType);
                 }
+                
+                return newFilter;
             });
-            setCurrentPage(1);
-        };
+        }
+        setCurrentPage(1);
+    };
 
     const activeIconValue = (value) => {
        setListStyle(value);
@@ -150,7 +167,7 @@ const handleCategoryChange = (categoryName, isChecked) => {
                                      getCoursePrice={getCoursePrice}
                                      coursesPriceFilter={coursesPriceFilter}
                                      onCoursePriceTypeChange={handleCoursePriceTypeChange} />
-            
+             
                         </div>
                     </div>
             </div>

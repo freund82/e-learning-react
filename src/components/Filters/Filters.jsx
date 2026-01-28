@@ -2,7 +2,15 @@ import courses from "../../data/courses";
 import "./filters.css";
 
 
-function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, onInstructorChange, getInstructors, selectedInstructors, coursesPriceFilter, getCoursePrice, onCoursePriceTypeChange}) {
+function Filters({coursesCategoryFilter,
+                    selectedCategories,
+                    onCategoryChange,
+                    onInstructorChange,
+                    getInstructors,
+                    selectedInstructors,
+                    coursesPriceFilter,
+                    getCoursePrice,
+                    onCoursePriceTypeChange}) {
 
 
    const entries = Object.entries(coursesCategoryFilter);
@@ -11,8 +19,8 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
 
    const handleCheckboxChange = (filterName, e) => onCategoryChange(filterName, e.target.checked)
    const handleInstructorChange = (filterName, e) => onInstructorChange(filterName, e.target.checked)
-   const handleCoursePriceTypeChange = (filterName, e) => onCoursePriceTypeChange(filterName, e.target.checked)
-   
+   const handleCoursePriceTypeChange = (filterName, isChecked) => onCoursePriceTypeChange(filterName, isChecked)
+    
     return (
             <div>
                 <h2>Categories</h2>
@@ -30,7 +38,7 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
                             onChange={(e) => handleCheckboxChange(name, e)} 
                         />
                             <label htmlFor={name}>
-                                {name} {count}
+                                {name} ({count})
                             </label>
                     </div>
                     
@@ -53,7 +61,7 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
                             onChange={(e) => handleInstructorChange(name, e)} 
                         />
                             <label htmlFor={name}>
-                                {name} {count}
+                                {name} ({count})
                             </label>
                     </div>
                     
@@ -62,27 +70,37 @@ function Filters({coursesCategoryFilter, selectedCategories, onCategoryChange, o
         })}
         {/*Фильтр по типу цены курса*/}
         <h2>Price</h2>
+        <div>
+            <input
+                type="checkbox"
+                id="All"
+                name="All"
+                checked={coursesPriceFilter.length === 0}
+                onChange={(e) => handleCoursePriceTypeChange("All", e.target.checked)}
+            />
+            <label htmlFor="All">
+                All ({courses.length})
+            </label>
+        </div>
         {coursePriceType.map(([name, count]) => {
-                    const isChecked = coursesPriceFilter.includes(name);
-                    console.log(isChecked)
-                    return (
-                        <div key={name}>
-                            <div key={name}>
-                                <input
-                                    type="checkbox"
-                                    id={name}
-                                    name={name}
-                                    checked={isChecked}
-                                    onChange={(e) => handleCoursePriceTypeChange(name, e)}
-                                />
-                                    <label htmlFor={name}>
-                                        {name} {count}
-                                    </label>
-                            </div>
-                            
-                        </div>
-                    );
-                })}
+            const isChecked = coursesPriceFilter.includes(name);
+            return (
+                <div key={name}>
+                    <div key={name}>
+                        <input
+                            type="checkbox"
+                            id={name}
+                            name={name}
+                            checked={isChecked}
+                            onChange={(e) => handleCoursePriceTypeChange(name, e.target.checked)}
+                        />
+                        <label htmlFor={name}>
+                            {name} ({count})
+                        </label>
+                    </div>
+                </div>
+            );
+        })}
     </div>
     );
 }
