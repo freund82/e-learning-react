@@ -39,7 +39,7 @@ const courses = [
     free: false,
     img: 'courses/courses2.png',
     featured: true,
-    levels: 'All',
+    levels: 'Beginner',
     lessons: 20,
     instructor: 'John Doe',
     rating: {
@@ -67,7 +67,7 @@ const courses = [
     free: true,
     img: 'courses/courses3.png',
     featured: true,
-    levels: 'All',
+    levels: 'Beginner',
     lessons: 20,
     instructor: 'Kenny White',
     rating: {
@@ -123,7 +123,7 @@ const courses = [
     free: true,
     img: 'courses/courses5.png',
     featured: true,
-    levels: 'All',
+    levels: 'Intermediate',
     lessons: 20,
     instructor: 'John Doe',
     rating: {
@@ -151,7 +151,7 @@ const courses = [
     free: true,
     img: 'courses/courses6.png',
     featured: true,
-    levels: 'All',
+    levels: 'Expert',
     lessons: 20,
     instructor: 'John Doe',
     rating: {
@@ -179,7 +179,7 @@ const courses = [
     free: true,
     img: 'courses/courses1.png',
     featured: true,
-    levels: 'All',
+    levels: 'Intermediate',
     lessons: 20,
     instructor: 'John Doe',
     rating: {
@@ -235,7 +235,7 @@ const courses = [
     free: true,
     img: 'courses/courses3.png',
     featured: true,
-    levels: 'All',
+    levels: 'Beginner',
     lessons: 20,
     instructor: 'John Doe',
     rating: {

@@ -35,7 +35,7 @@ function Card({courses, isList}) {
                                                 <>
                                                     <div className="cardCourses__item--block">
                                                         <img src={GraphIcon} alt="levels" />
-                                                        <span className="cardCourses__item--text">{item.levels} Levels</span>
+                                                        <span className="cardCourses__item--text">{item.levels !== "All" ? item.levels : "All Levels"}</span>
                                                     </div>
                                                 </>
                                              }
