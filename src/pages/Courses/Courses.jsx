@@ -44,20 +44,20 @@ const getCoursesPriceCounts = (courses) => {
     return acc;
   }, {});
 }
-const ratingsCounts = useMemo(() => {
+const getRatingsCounts = useMemo(() => {
   return courses.reduce((acc, course) => {
     const avg = course.rating.average;
     
     // Диапазоны среднего рейтинга
     if (avg >= 4.5) {
       acc['5'] = (acc['5'] || 0) + 1; // 4.5 - 5.0
-    } else if (avg >= 4.0) {
+    } else if (avg >= 3.5 && avg < 4.5) {
       acc['4'] = (acc['4'] || 0) + 1; // 4.0 - 4.49
-    } else if (avg >= 3.0) {
+    } else if (avg >= 2.5 && avg < 3.5) {
       acc['3'] = (acc['3'] || 0) + 1; // 3.0 - 3.99
-    } else if (avg >= 2.0) {
+    } else if (avg >= 1.5 && avg < 2.5) {
       acc['2'] = (acc['2'] || 0) + 1; // 2.0 - 2.99
-    } else if (avg >= 1.0) {
+    } else if (avg >= 1.0 && avg < 1.5) {
       acc['1'] = (acc['1'] || 0) + 1; // 1.0 - 1.99
     }
     
@@ -100,13 +100,13 @@ const getCoursePrice = getCoursesPriceCounts(courses);
           case 5:
             return avg >= 4.5; // 4.5 - 5.0
           case 4:
-            return avg >= 4.0 && avg < 4.5; // 4.0 - 4.49
+            return avg >= 3.5 && avg < 4.5; // 3.5 - 4.49
           case 3:
-            return avg >= 3.0 && avg < 4.0; // 3.0 - 3.99
+            return avg >= 2.5 && avg < 3.5; // 2.5 - 3.49
           case 2:
-            return avg >= 2.0 && avg < 3.0; // 2.0 - 2.99
+            return avg >= 1.5 && avg < 2.5; // 1.5 - 2.49
           case 1:
-            return avg >= 1.0 && avg < 2.0; // 1.0 - 1.99
+            return avg >= 1.0 && avg < 1.5; // 1.0 - 1.49
           default:
             return false;
         }
@@ -214,7 +214,7 @@ const handleCategoryChange = (categoryName, isChecked) => {
                                      getCoursePrice={getCoursePrice}
                                      coursesPriceFilter={coursesPriceFilter}
                                      onCoursePriceTypeChange={handleCoursePriceTypeChange}
-                                     ratingsCounts={ratingsCounts}
+                                     getRatingsCounts={getRatingsCounts}
                                      ratingFilter={ratingFilter}
                                      onRatingChange={handleRatingChange}/>
              

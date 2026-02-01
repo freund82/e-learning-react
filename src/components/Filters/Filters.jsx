@@ -14,7 +14,7 @@ function Filters({coursesCategoryFilter,
                     getCoursePrice,
                     onCoursePriceTypeChange,
                     ratingFilter,
-                    ratingsCounts,
+                    getRatingsCounts,
                     onRatingChange,}) {
              
 
@@ -110,24 +110,12 @@ function Filters({coursesCategoryFilter,
             );
         })}
         {/*Рейтинг*/}
-        <h2>Rating</h2>
+        <h2>Review</h2>
       <div className="rating">
   {[5, 4, 3, 2, 1].map((stars) => {
     const isChecked = ratingFilter.includes(stars);
-    const count = ratingsCounts[stars] || 0;
-    
-    // Текстовое описание диапазона
-    const getRangeLabel = (stars) => {
-      switch(stars) {
-        case 5: return '4.5 - 5.0';
-        case 4: return '4.0 - 4.49';
-        case 3: return '3.0 - 3.99';
-        case 2: return '2.0 - 2.99';
-        case 1: return '1.0 - 1.99';
-        default: return '';
-      }
-    };
-    
+    const count = getRatingsCounts[stars] || 0;
+
     return (
       <div key={stars}>
         <input 
@@ -151,7 +139,7 @@ function Filters({coursesCategoryFilter,
           </span>
           {/* Диапазон и счетчик */}
           <span>
-            ({getRangeLabel(stars)}) <strong>({count})</strong>
+            <span>({count})</span>
           </span>
         </label>
       </div>
