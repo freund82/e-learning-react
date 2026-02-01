@@ -19,6 +19,7 @@ function Courses() {
     const [selectedInstructors, setSelectedInstructors] = useState([]);
     const [coursesPriceFilter, setCoursesPriceFilter] = useState([]);
     const [ratingFilter, setRatingFilter] = useState([]);
+    const [levelsFilter, setLevelsFilter] = useState([]);
 
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
@@ -29,6 +30,7 @@ const getCategoryCounts = (courses) => {
   }, {});
 };
 
+// Функция для подсчета авторов
 const getInstructorsCounts = (courses) => {
   return courses.reduce((acc, course) => {
     const instructor = course.instructor || 'Без автора';
@@ -37,6 +39,7 @@ const getInstructorsCounts = (courses) => {
   }, {});
 }
 
+// Функция для подсчета ценовых категорий Free и Paid
 const getCoursesPriceCounts = (courses) => {
   return courses.reduce((acc, course) => {
     const price = course.free ? 'Free' : 'Paid';
@@ -44,6 +47,8 @@ const getCoursesPriceCounts = (courses) => {
     return acc;
   }, {});
 }
+
+// Функция для подсчета рейтингов
 const getRatingsCounts = useMemo(() => {
   return courses.reduce((acc, course) => {
     const avg = course.rating.average;
@@ -65,16 +70,26 @@ const getRatingsCounts = useMemo(() => {
   }, {});
 }, [courses]);
 
+const getLevelsCounts = (courses) => {
+  return courses.reduce((acc, course) => {
+    const level = course.levels;
+    acc[level] = (acc[level] || 0) + 1;
+    return acc;
+  }, {});
+}
+
 // Использование:
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
 
 const getInstructors = getInstructorsCounts(courses);
 
-//Фильтр по платный курс или безплатный
+//Количество курсов платных и количество бесплатных курсов. Пример: { Free: 2, Paid: 1 }
 const getCoursePrice = getCoursesPriceCounts(courses);
 
-//Фильтрация курсов по выбранным категориям, инструкторам
+const getLevels= getLevelsCounts(courses);
+
+//Фильтрация курсов по выбранным категориям, инструкторам, цене и рейтингу
     const filteredCourses = useMemo(() => {
         return courses.filter(course => {
             // Фильтр по категориям
@@ -111,11 +126,14 @@ const getCoursePrice = getCoursesPriceCounts(courses);
             return false;
         }
       });
+
+      // Фильтр по уровням
+      const levelMatch = levelsFilter.length === 0 || levelsFilter.includes(course.levels);
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
-            return categoryMatch && instructorMatch && priceMatch && ratingMatch;
+            return categoryMatch && instructorMatch && priceMatch && ratingMatch && levelMatch;
         });
-    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter, ratingFilter]);
+    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter, ratingFilter, levelsFilter]);
 
 //Функция для обработки изменения категорий
 const handleCategoryChange = (categoryName, isChecked) => {
@@ -174,6 +192,25 @@ const handleCategoryChange = (categoryName, isChecked) => {
   setCurrentPage(1);
 };
 
+const handleLevelChange = (level, isChecked) => {
+   // Если выбран "All"
+        if (level === "All") {
+            if (isChecked) {
+                // Если "All" выбран, очищаем фильтр по уровню
+                setLevelsFilter([]);
+            }
+        } else {
+          setLevelsFilter(prev => {
+    if(isChecked) {
+      return [...prev, level];
+    } else {
+      return prev.filter(l => l !== level);
+    }
+  });
+        }
+  setCurrentPage(1);
+}
+
     const activeIconValue = (value) => {
        setListStyle(value);
     };
@@ -216,7 +253,10 @@ const handleCategoryChange = (categoryName, isChecked) => {
                                      onCoursePriceTypeChange={handleCoursePriceTypeChange}
                                      getRatingsCounts={getRatingsCounts}
                                      ratingFilter={ratingFilter}
-                                     onRatingChange={handleRatingChange}/>
+                                     onRatingChange={handleRatingChange}
+                                     getLevels={getLevels}
+                                     levelsFilter={levelsFilter}
+                                     onLevelChange={handleLevelChange}/>
              
                         </div>
                     </div>

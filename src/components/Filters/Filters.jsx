@@ -15,17 +15,22 @@ function Filters({coursesCategoryFilter,
                     onCoursePriceTypeChange,
                     ratingFilter,
                     getRatingsCounts,
-                    onRatingChange,}) {
+                    onRatingChange,
+                    levelsFilter,
+                    onLevelChange,
+                    getLevels}) {
              
 
    const entries = Object.entries(coursesCategoryFilter);
    const instructors = Object.entries(getInstructors);
    const coursePriceType = Object.entries(getCoursePrice);
+   const levels = Object.entries(getLevels);
 
    const handleCheckboxChange = (filterName, e) => onCategoryChange(filterName, e.target.checked)
    const handleInstructorChange = (filterName, e) => onInstructorChange(filterName, e.target.checked)
    const handleCoursePriceTypeChange = (filterName, isChecked) => onCoursePriceTypeChange(filterName, isChecked)
    const handleRatingChange = (filterName, isChecked) => onRatingChange(filterName, isChecked)
+   const handleLevelChange = (filterName, isChecked) => onLevelChange(filterName, isChecked)
 
 
     
@@ -109,7 +114,7 @@ function Filters({coursesCategoryFilter,
                 </div>
             );
         })}
-        {/*Рейтинг*/}
+        {/*Фильтр по Рейтингу*/}
         <h2>Review</h2>
       <div className="rating">
   {[5, 4, 3, 2, 1].map((stars) => {
@@ -146,6 +151,35 @@ function Filters({coursesCategoryFilter,
     );
   })}
 </div>
+{/*Фильтр по уровню*/}
+<h2>Level</h2>
+        <div>
+            <input
+                type="checkbox"
+                id="All"
+                name="All"
+                checked={levelsFilter.length === 0}
+                onChange={(e) => handleLevelChange("All", e.target.checked)}
+            />
+            <label htmlFor="All">
+                All ({courses.length})
+            </label>
+        </div>
+{levels.filter(([level]) => level !== "All").map(([level, count]) => {
+  const isChecked = levelsFilter.includes(level);
+  return (
+    <div key={level}>
+      <input
+        type="checkbox"
+        id={level}
+        name={level}
+        checked={isChecked}
+        onChange={(e) => handleLevelChange(level, e.target.checked)}
+      />
+      <label htmlFor={level}>{level} {count}</label>
+    </div>
+  );
+})}
     </div>
     );
 }
