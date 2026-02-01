@@ -12,8 +12,11 @@ function Filters({coursesCategoryFilter,
                     selectedInstructors,
                     coursesPriceFilter,
                     getCoursePrice,
-                    onCoursePriceTypeChange}) {
-
+                    onCoursePriceTypeChange,
+                    ratingFilter,
+                    ratingsCounts,
+                    onRatingChange,}) {
+             
 
    const entries = Object.entries(coursesCategoryFilter);
    const instructors = Object.entries(getInstructors);
@@ -22,6 +25,9 @@ function Filters({coursesCategoryFilter,
    const handleCheckboxChange = (filterName, e) => onCategoryChange(filterName, e.target.checked)
    const handleInstructorChange = (filterName, e) => onInstructorChange(filterName, e.target.checked)
    const handleCoursePriceTypeChange = (filterName, isChecked) => onCoursePriceTypeChange(filterName, isChecked)
+   const handleRatingChange = (filterName, isChecked) => onRatingChange(filterName, isChecked)
+
+
     
     return (
             <div>
@@ -105,125 +111,53 @@ function Filters({coursesCategoryFilter,
         })}
         {/*Рейтинг*/}
         <h2>Rating</h2>
-        <div className="rating">
-            {/*Пять звезд*/}
-            <div>
-                <span>
-                    <input type="checkbox" id="stars5" name="stars"  value="5" onChange={(e) => console.log(e.target.checked, e.target.value)} />
-                    <label htmlFor="stars">
-                            <span>
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                    <img
-                                        key={star}
-                                        src={StarYellowSvg}
-                                        alt={`Star ${star}`}
-                                    />
-                                ))}
-                            </span>
-                    </label>
-                </span>
-            </div>
-            {/*Четыре звезды*/}
-            <div>
-                <span>
-                    <input type="checkbox" id="stars4" name="stars" value="4" onChange={(e) => console.log(e.target.checked, e.target.value)} />
-                    <label htmlFor="stars">
-                            <span>
-                                {[1, 2, 3, 4, 5].map((star, index) => (
-                                    index < 4 ? (
-                                        <img
-                                            key={star}
-                                            src={StarYellowSvg}
-                                            alt={`Star ${star}`}
-                                        />
-                                        ) : (
-                                            <img
-                                                key={star}
-                                                src={StarGreySvg}
-                                                alt={`Star ${star}`}
-                                            />
-                                        )
-                                    ))}
-                            </span>
-                    </label>
-                </span>
-            </div>
-            {/*Три звезды*/}
-            <div>
-                <span>
-                    <input type="checkbox" id="stars3" name="stars" value="3" onChange={(e) => console.log(e.target.checked, e.target.value)} />
-                    <label htmlFor="stars">
-                            <span>
-                                {[1, 2, 3, 4, 5].map((star, index) => (
-                                    index < 3 ? (
-                                        <img
-                                            key={star}
-                                            src={StarYellowSvg}
-                                            alt={`Star ${star}`}
-                                        />
-                                        ) : (
-                                            <img
-                                                key={star}
-                                                src={StarGreySvg}
-                                                alt={`Star ${star}`}
-                                            />
-                                        )
-                                    ))}
-                            </span>
-                    </label>
-                </span>
-            </div>
-            {/*Две звезды*/}
-            <div>
-                <span>
-                    <input type="checkbox" id="stars2" name="stars" value="2" onChange={(e) => console.log(e.target.checked, e.target.value)}/>
-                    <label htmlFor="stars">
-                            <span>
-                                {[1, 2, 3, 4, 5].map((star, index) => (
-                                    index < 2 ? (
-                                        <img
-                                            key={star}
-                                            src={StarYellowSvg}
-                                            alt={`Star ${star}`}
-                                        />
-                                        ) : (
-                                            <img
-                                                key={star}
-                                                src={StarGreySvg}
-                                                alt={`Star ${star}`}
-                                            />
-                                        )
-                                    ))}
-                            </span>
-                    </label>
-                </span>
-            </div>
-            {/*Одна звезда*/}
-            <div>
-                <span>
-                    <input type="checkbox" id="stars1" name="stars" value="1" onChange={(e) => console.log(e.target.checked, e.target.value)}/>
-                    <label htmlFor="stars">
-                            <span>
-                                {[1, 2, 3, 4, 5].map((star, index) => (
-                                    index < 1 ? (
-                                        <img
-                                            key={star}
-                                            src={StarYellowSvg}
-                                            alt={`Star ${star}`}
-                                        />
-                                        ) : (
-                                            <img
-                                                key={star}
-                                                src={StarGreySvg}
-                                                alt={`Star ${star}`}
-                                            />
-                                        )
-                                    ))}
-                            </span>
-                    </label>
-                </span>
-            </div>
-        </div>
+      <div className="rating">
+  {[5, 4, 3, 2, 1].map((stars) => {
+    const isChecked = ratingFilter.includes(stars);
+    const count = ratingsCounts[stars] || 0;
+    
+    // Текстовое описание диапазона
+    const getRangeLabel = (stars) => {
+      switch(stars) {
+        case 5: return '4.5 - 5.0';
+        case 4: return '4.0 - 4.49';
+        case 3: return '3.0 - 3.99';
+        case 2: return '2.0 - 2.99';
+        case 1: return '1.0 - 1.99';
+        default: return '';
+      }
+    };
+    
+    return (
+      <div key={stars}>
+        <input 
+          type="checkbox" 
+          id={`stars${stars}`}
+          value={stars}
+          checked={isChecked}
+          onChange={(e) => handleRatingChange(e.target.value, e.target.checked)}
+        />
+        <label htmlFor={`stars${stars}`}>
+          {/* Звезды */}
+          <span style={{ display: 'inline-block', marginRight: '8px' }}>
+            {[...Array(5)].map((_, index) => (
+              <img
+                key={index}
+                src={index < stars ? StarYellowSvg : StarGreySvg}
+                alt={index < stars ? "★" : "☆"}
+                style={{ width: '16px', height: '16px', marginRight: '1px' }}
+              />
+            ))}
+          </span>
+          {/* Диапазон и счетчик */}
+          <span>
+            ({getRangeLabel(stars)}) <strong>({count})</strong>
+          </span>
+        </label>
+      </div>
+    );
+  })}
+</div>
     </div>
     );
 }

@@ -18,6 +18,7 @@ function Courses() {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedInstructors, setSelectedInstructors] = useState([]);
     const [coursesPriceFilter, setCoursesPriceFilter] = useState([]);
+    const [ratingFilter, setRatingFilter] = useState([]);
 
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
@@ -43,6 +44,26 @@ const getCoursesPriceCounts = (courses) => {
     return acc;
   }, {});
 }
+const ratingsCounts = useMemo(() => {
+  return courses.reduce((acc, course) => {
+    const avg = course.rating.average;
+    
+    // Диапазоны среднего рейтинга
+    if (avg >= 4.5) {
+      acc['5'] = (acc['5'] || 0) + 1; // 4.5 - 5.0
+    } else if (avg >= 4.0) {
+      acc['4'] = (acc['4'] || 0) + 1; // 4.0 - 4.49
+    } else if (avg >= 3.0) {
+      acc['3'] = (acc['3'] || 0) + 1; // 3.0 - 3.99
+    } else if (avg >= 2.0) {
+      acc['2'] = (acc['2'] || 0) + 1; // 2.0 - 2.99
+    } else if (avg >= 1.0) {
+      acc['1'] = (acc['1'] || 0) + 1; // 1.0 - 1.99
+    }
+    
+    return acc;
+  }, {});
+}, [courses]);
 
 // Использование:
 const coursesCategoryFilter = getCategoryCounts(courses);
@@ -67,11 +88,34 @@ const getCoursePrice = getCoursesPriceCounts(courses);
             // Фильтр по цене
             const priceMatch = coursesPriceFilter.length === 0 ||
                 coursesPriceFilter.includes(course.free ? 'Free' : 'Paid');
+
+            // Фильтр по рейтингу
+             const ratingMatch = ratingFilter.length === 0 ||
+      ratingFilter.some(ratingValue => {
+        const rating = parseInt(ratingValue);
+        const avg = course.rating.average;
+        
+        // Определяем диапазоны для каждой звезды
+        switch(rating) {
+          case 5:
+            return avg >= 4.5; // 4.5 - 5.0
+          case 4:
+            return avg >= 4.0 && avg < 4.5; // 4.0 - 4.49
+          case 3:
+            return avg >= 3.0 && avg < 4.0; // 3.0 - 3.99
+          case 2:
+            return avg >= 2.0 && avg < 3.0; // 2.0 - 2.99
+          case 1:
+            return avg >= 1.0 && avg < 2.0; // 1.0 - 1.99
+          default:
+            return false;
+        }
+      });
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
-            return categoryMatch && instructorMatch && priceMatch;
+            return categoryMatch && instructorMatch && priceMatch && ratingMatch;
         });
-    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter]);
+    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter, ratingFilter]);
 
 //Функция для обработки изменения категорий
 const handleCategoryChange = (categoryName, isChecked) => {
@@ -119,6 +163,17 @@ const handleCategoryChange = (categoryName, isChecked) => {
         setCurrentPage(1);
     };
 
+  const handleRatingChange = (rating, isChecked) => {
+  setRatingFilter(prev => {
+    if(isChecked) {
+      return [...prev, parseInt(rating)];
+    } else {
+      return prev.filter(r => r !== parseInt(rating));
+    }
+  });
+  setCurrentPage(1);
+};
+
     const activeIconValue = (value) => {
        setListStyle(value);
     };
@@ -158,7 +213,10 @@ const handleCategoryChange = (categoryName, isChecked) => {
                                      onInstructorChange={handleInstructorChange}
                                      getCoursePrice={getCoursePrice}
                                      coursesPriceFilter={coursesPriceFilter}
-                                     onCoursePriceTypeChange={handleCoursePriceTypeChange} />
+                                     onCoursePriceTypeChange={handleCoursePriceTypeChange}
+                                     ratingsCounts={ratingsCounts}
+                                     ratingFilter={ratingFilter}
+                                     onRatingChange={handleRatingChange}/>
              
                         </div>
                     </div>
