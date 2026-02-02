@@ -16,7 +16,6 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom:5rem;
 }
 
 .cardCourses__list{
@@ -120,7 +119,7 @@
 
 .cardCourses__item--list{
     width:100%;
-    max-width:99rem;
+    max-width:99rem !important;
     height:25rem;
     flex-direction: row;
 }

@@ -35,7 +35,7 @@ function Filters({coursesCategoryFilter,
 
     
     return (
-            <div>
+            <div className="filters">
                 <h2>Categories</h2>
                 {/*Фильтр по категориям*/}
         {entries.map(([name, count]) => {

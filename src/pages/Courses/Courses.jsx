@@ -226,11 +226,11 @@ const handleLevelChange = (level, isChecked) => {
             <div className="container">
                     <div className="all-courses__inner">
                         <div className="left-section">
-                            <h1>All Courses</h1>
+                            <h1 style={{fontSize: "var(--font-size32)"}}>All Courses</h1>
                             <Search activeIconValue={activeIconValue}/>
                         </div>
                         <div className={`courses-row ${listStyle ? "list" : ""}`}>
-                            <Card courses={currentCourses} isList={listStyle}/>
+                            <Card courses={currentCourses} isList={listStyle} coursesCardWidth={48} borderRadius={3}/>
                         </div>
                         <div className="courses-pagination">
                             {filteredCourses.length > coursesPerPage && <Pagination

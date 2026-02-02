@@ -6,7 +6,7 @@ import GraphIcon from "../../../assets/icons/graph.svg"
 import LessonsIcon from "../../../assets/icons/lessons.svg"
  
 
-function Card({courses, isList}) {
+function Card({courses, isList, coursesCardWidth, borderRadius}) {
  
 
     return (
@@ -17,7 +17,7 @@ function Card({courses, isList}) {
                     <div className="cardCourses__list">
                         {
                            courses.map((item) => (
-                                <div className={`cardCourses__item--card ${isList && "cardCourses__item--list"}`} key={item.id}>
+                                <div className={`cardCourses__item--card ${isList && "cardCourses__item--list"}`} key={item.id} style={{maxWidth:`${coursesCardWidth}rem`, borderRadius:`${borderRadius}rem`}}>
                                     <img className={`cardCourses__item--img ${isList && "cardCourses__item--listImg"}`} src={item.img} alt={item.title} />
                                     <div className="cardCourses__item--inner">
                                         <p>by <span className="cardCourses__item--author">{item.author}</span></p>
