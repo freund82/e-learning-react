@@ -1,7 +1,39 @@
 .filters{
+    display:flex;
+    flex-direction: column;
     width:27rem;
     position: absolute;
     top: 10px;
-    left: 10px;
     z-index: 1000;
+}
+
+.filters__title{
+    font-size:var(--font-size20);
+    font-weight: 600;
+    margin-top:3rem;
+    margin-bottom:2rem;
+}
+
+.firstTitle{
+    margin-top:0;
+}
+
+.filters__block{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.filters__label{
+    font-family: var(--font-family--Jost);
+    font-size:var(--font-size18);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    margin-left:0.4rem;
+}
+
+.filters__count{
+    font-family: var(--font-family--Jost);
+    font-size:var(--font-size18);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
 }
