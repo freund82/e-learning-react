@@ -37,3 +37,20 @@
     line-height: var(--line-height150);
     color:var(--dark-gray);
 }
+
+/* Стили для выбранных чекбоксов */
+input[type="checkbox"]:checked{
+    background-color: var(--dark-gray); /* Серый фон */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + label.filters__label{
+    color: #000000; /* Черный текст */
+    font-weight: 400;
+}
+
+/* Стили для самого чекбокса при выборе */
+input[type="checkbox"]:checked {
+    accent-color: var(--dark-gray); /* Цвет фона чекбокса в некоторых браузерах */
+}
