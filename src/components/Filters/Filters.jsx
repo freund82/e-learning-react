@@ -45,19 +45,17 @@ function Filters({coursesCategoryFilter,
                     <div className="filters__block" key={name}>
                         <div className="filters__checkbox">
                         <input className="filters__checkbox"
-                            type="checkbox" 
-                            id={name} 
-                            name={name} 
-                            checked={isChecked} 
-                            onChange={(e) => handleCheckboxChange(name, e)} 
+                            type="checkbox"
+                            id={name}
+                            name={name}
+                            checked={isChecked}
+                            onChange={(e) => handleCheckboxChange(name, e)}
                         />
                             <label className="filters__label" htmlFor={name}>
                                 {name}
                             </label>
                             </div>
-                            <div>
-                                <span className="filters__count">{count}</span>
-                            </div>
+                                <span className={`filters__count ${isChecked ? 'filters__count--checked' : ''}`}>{count}</span>
                     </div>
                     
                 </div>
@@ -70,17 +68,20 @@ function Filters({coursesCategoryFilter,
             const isChecked = selectedInstructors.includes(name);
             return (
                 <div key={name}>
-                    <div key={name}>
-                        <input 
-                            type="checkbox" 
-                            id={name} 
-                            name={name} 
-                            checked={isChecked} 
-                            onChange={(e) => handleInstructorChange(name, e)} 
-                        />
-                            <label className="filters__label" htmlFor={name}>
-                                {name} {count}
-                            </label>
+                    <div className="filters__block" key={name}>
+                        <div className="filters__checkbox">
+                            <input className="filters__checkbox"
+                                type="checkbox" 
+                                id={name} 
+                                name={name} 
+                                checked={isChecked} 
+                                onChange={(e) => handleInstructorChange(name, e)} 
+                            />
+                                <label className="filters__label" htmlFor={name}>
+                                    {name}
+                                </label>
+                        </div>
+                                <span className={`filters__count ${isChecked ? 'filters__count--checked' : ''}`}>{count}</span>
                     </div>
                     
                 </div>
@@ -89,22 +90,26 @@ function Filters({coursesCategoryFilter,
         {/*Фильтр по типу цены курса*/}
         <h2 className="filters__title">Price</h2>
         <div>
-            <input
-                type="checkbox"
-                id="All"
-                name="All"
-                checked={coursesPriceFilter.length === 0}
-                onChange={(e) => handleCoursePriceTypeChange("All", e.target.checked)}
-            />
-            <label className="filters__label" htmlFor="All">
-                All ({courses.length})
-            </label>
+            <div className="filters__block">
+                <div className="filters__checkbox">
+                        <input
+                            type="checkbox"
+                            id="All"
+                            name="All"
+                            checked={coursesPriceFilter.length === 0}
+                            onChange={(e) => handleCoursePriceTypeChange("All", e.target.checked)}
+                        />
+                    <label className="filters__label" htmlFor="All">All</label>
+                </div>
+                    <span className={`filters__count ${coursesPriceFilter.length === 0 ? 'filters__count--checked' : ''}`}>{courses.length}</span>
+            </div>
         </div>
         {coursePriceType.map(([name, count]) => {
             const isChecked = coursesPriceFilter.includes(name);
             return (
                 <div key={name}>
-                    <div key={name}>
+                    <div className="filters__block"  key={name}>
+                    <div className="filters__checkbox">
                         <input
                             type="checkbox"
                             id={name}
@@ -113,8 +118,10 @@ function Filters({coursesCategoryFilter,
                             onChange={(e) => handleCoursePriceTypeChange(name, e.target.checked)}
                         />
                         <label className="filters__label" htmlFor={name}>
-                            {name} {count}
+                            {name}
                         </label>
+                        </div>
+                        <span className={`filters__count ${isChecked ? 'filters__count--checked' : ''}`}>{count}</span>
                     </div>
                 </div>
             );
@@ -127,7 +134,8 @@ function Filters({coursesCategoryFilter,
     const count = getRatingsCounts[stars] || 0;
 
     return (
-      <div key={stars}>
+      <div className="filters__block" key={stars}>
+        <div>
         <input 
           type="checkbox" 
           id={`stars${stars}`}
@@ -148,10 +156,9 @@ function Filters({coursesCategoryFilter,
             ))}
           </span>
           {/* Диапазон и счетчик */}
-          <span>
-            <span>({count})</span>
-          </span>
         </label>
+        </div>
+         <span className={`filters__count ${isChecked ? 'filters__count--checked' : ''}`}>{count}</span>
       </div>
     );
   })}
@@ -159,6 +166,8 @@ function Filters({coursesCategoryFilter,
 {/*Фильтр по уровню*/}
 <h2 className="filters__title">Level</h2>
         <div>
+           <div className="filters__block">
+            <div className="filters__checkbox">
             <input
                 type="checkbox"
                 id="All"
@@ -167,21 +176,29 @@ function Filters({coursesCategoryFilter,
                 onChange={(e) => handleLevelChange("All", e.target.checked)}
             />
             <label className="filters__label" htmlFor="All">
-                All ({courses.length})
+                All
             </label>
+            </div>
+            <span className={`filters__count ${levelsFilter.length === 0 ? 'filters__count--checked' : ''}`}>{courses.length}</span>
+            </div>
         </div>
 {levels.filter(([level]) => level !== "All").map(([level, count]) => {
   const isChecked = levelsFilter.includes(level);
   return (
     <div key={level}>
-      <input
-        type="checkbox"
-        id={level}
-        name={level}
-        checked={isChecked}
-        onChange={(e) => handleLevelChange(level, e.target.checked)}
-      />
-      <label className="filters__label" htmlFor={level}>{level} {count}</label>
+        <div className="filters__block"  key={level}>
+            <div className="filters__checkbox">
+                <input
+                    type="checkbox"
+                    id={level}
+                    name={level}
+                    checked={isChecked}
+                    onChange={(e) => handleLevelChange(level, e.target.checked)}
+                />
+                    <label className="filters__label" htmlFor={level}>{level}</label>
+            </div>
+                    <span className={`filters__count ${isChecked ? 'filters__count--checked' : ''}`}>{count}</span>
+        </div>
     </div>
   );
 })}

@@ -22,6 +22,7 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom:0.5rem;
 }
 .filters__label{
     font-family: var(--font-family--Jost);
@@ -48,6 +49,10 @@ input[type="checkbox"]:checked{
 input[type="checkbox"]:checked + label.filters__label{
     color: #000000; /* Черный текст */
     font-weight: 400;
+}
+
+.filters__count--checked {
+    color: #000000; /* Черный текст */
 }
 
 /* Стили для самого чекбокса при выборе */
