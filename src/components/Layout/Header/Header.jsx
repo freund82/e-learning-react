@@ -14,7 +14,7 @@ function Header() {
                 <nav className="header__nav">
                     <ul className="header__list">
                         <li className="header__item">
-                            <Link to="/" className="header__link" href="#">Home</Link>
+                            <NavLink to="/" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`} href="#">Home</NavLink>
                         </li>
                         <li className="header__item">
                             <NavLink to="/courses" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`} href="#">Courses</NavLink>
