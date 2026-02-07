@@ -21,6 +21,9 @@ function Courses() {
     const [ratingFilter, setRatingFilter] = useState([]);
     const [levelsFilter, setLevelsFilter] = useState([]);
 
+    //Переменные состояния для поиска
+    const [inputSearchValue, setSearchInputValue] = useState("");
+
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
   return courses.reduce((acc, course) => {
@@ -78,6 +81,11 @@ const getLevelsCounts = (courses) => {
   }, {});
 }
 
+//Функция для получения текста из поля поиска
+const getSearchText = (text) => {
+  setSearchInputValue(text);
+}
+
 // Использование:
 const coursesCategoryFilter = getCategoryCounts(courses);
 // Результат: { Shop: 2, Academy: 2, Business: 1 }
@@ -129,11 +137,15 @@ const getLevels= getLevelsCounts(courses);
 
       // Фильтр по уровням
       const levelMatch = levelsFilter.length === 0 || levelsFilter.includes(course.levels);
+
+      // Фильтр по поиску
+      const searchMatch = inputSearchValue.length === 0 || 
+        course.title.toLowerCase().includes(inputSearchValue.toLowerCase());
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
-            return categoryMatch && instructorMatch && priceMatch && ratingMatch && levelMatch;
+            return categoryMatch && instructorMatch && priceMatch && ratingMatch && levelMatch && searchMatch;
         });
-    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter, ratingFilter, levelsFilter]);
+    }, [courses, selectedCategories, selectedInstructors, coursesPriceFilter, ratingFilter, levelsFilter, inputSearchValue]);
 
 //Функция для обработки изменения категорий
 const handleCategoryChange = (categoryName, isChecked) => {
@@ -227,7 +239,7 @@ const handleLevelChange = (level, isChecked) => {
                     <div className="all-courses__inner">
                         <div className="left-section">
                             <h1 style={{fontSize: "var(--font-size32)"}}>All Courses</h1>
-                            <Search activeIconValue={activeIconValue}/>
+                            <Search activeIconValue={activeIconValue} getSearchText={getSearchText}/>
                         </div>
                         <div className={`courses-row ${listStyle ? "list" : ""}`}>
                             <Card courses={currentCourses} isList={listStyle} coursesCardWidth={48} borderRadius={3}/>
@@ -256,7 +268,8 @@ const handleLevelChange = (level, isChecked) => {
                                      onRatingChange={handleRatingChange}
                                      getLevels={getLevels}
                                      levelsFilter={levelsFilter}
-                                     onLevelChange={handleLevelChange}/>
+                                     onLevelChange={handleLevelChange}
+                                     />
              
                         </div>
                     </div>

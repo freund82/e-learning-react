@@ -2,9 +2,15 @@ import "./search.css"
 import { useState } from "react"
 import SearchIcon from "../../../assets/icons/search.svg"
 
-function Search({activeIconValue}) {
+function Search({activeIconValue, getSearchText}) {
 
     const [activeIcon, setActiveIcon] = useState(false);
+
+    
+
+    const handleInput = (e) => {
+      getSearchText(e.target.value);
+    }
 
     const handleIconClick = (value) => {
         setActiveIcon(value);
@@ -14,7 +20,7 @@ function Search({activeIconValue}) {
     return (
         <div className="search">
             <div className="search__input-block">
-                <input className="search__input" type="text" placeholder="Search" />
+                <input className="search__input" type="text" placeholder="Search" onChange={handleInput} />
                 <img className="search__icon" src={SearchIcon} alt="search" />
             </div>
             <div className="search__style-blocks">
