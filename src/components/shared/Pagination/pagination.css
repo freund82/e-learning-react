@@ -46,6 +46,9 @@
     background-color: var(--black);
     color:var(--white);
 }
+ .page-link:not(.activePage){
+    color: var(--black);
+ }
 
 .page-link .activePage{
      color:var(--white);
