@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
    return( 
    <>
         <Header />
-        {showHeaderBottom && <HeaderBottom />}
+        {showHeaderBottom && <HeaderBottom location={location} />}
         <main><Outlet /></main>
         <Footer />
     </>
