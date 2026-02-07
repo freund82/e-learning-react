@@ -83,6 +83,7 @@ const getLevelsCounts = (courses) => {
 
 //Функция для получения текста из поля поиска
 const getSearchText = (text) => {
+  setCurrentPage(1); // Сбрасываем на первую страницу при изменении поискового запроса. Без этого если я на другой странице не ищет.
   setSearchInputValue(text);
 }
 
@@ -140,7 +141,9 @@ const getLevels= getLevelsCounts(courses);
 
       // Фильтр по поиску
       const searchMatch = inputSearchValue.length === 0 || 
-        course.title.toLowerCase().includes(inputSearchValue.toLowerCase());
+        course.title.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
+        course.instructor.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
+        course.category.toLowerCase().includes(inputSearchValue.toLowerCase());
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
             return categoryMatch && instructorMatch && priceMatch && ratingMatch && levelMatch && searchMatch;

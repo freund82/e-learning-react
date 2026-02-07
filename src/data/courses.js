@@ -69,7 +69,7 @@ const courses = [
     featured: true,
     levels: 'Beginner',
     lessons: 20,
-    instructor: 'Kenny White',
+    instructor: 'Kenny White Utkin',
     rating: {
       average: 3.8, // Средний рейтинг (от 1 до 5)
       count: 108, // Количество оценок
