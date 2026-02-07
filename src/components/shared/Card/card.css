@@ -103,11 +103,12 @@
 
 .cardCourses__item--price{
     position:absolute;
+    top:90%;
     left:50%;
     transform:translateX(-50%);
     bottom:2rem;
     width:100%;
-    max-width:37rem;
+    max-width:44rem;
     display:flex;
     align-items:center;
     justify-content: space-between;
@@ -125,6 +126,7 @@
 }
 
 .cardCourses__item--listPrice{
+    top:80%;
     left:43%;
     width:100%;
     max-width:55rem;

@@ -25,7 +25,7 @@ function Card({courses, isList, coursesCardWidth, borderRadius}) {
                                         <div className="cardCourses__item--info">
                                             <div className="cardCourses__item--block">
                                                 <img src={WeeksIcon} alt="weeks" />
-                                                <span className="cardCourses__item--text">{item.length}Weeks</span>
+                                                <span className="cardCourses__item--text">{item.length} Weeks</span>
                                             </div>
                                             <div className="cardCourses__item--block">
                                                 <img src={StudentsIcon} alt="students" />
