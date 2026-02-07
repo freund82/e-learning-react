@@ -1,0 +1,6 @@
+.header__bottom{
+    width:100%;
+    height:6rem;
+    max-width:192rem;
+    background-color:var(--light-gray);
+}
