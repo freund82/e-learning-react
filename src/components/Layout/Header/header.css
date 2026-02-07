@@ -1,12 +1,12 @@
 .header{
     height:7.2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .header__inner{
     width:100%;
+    height:100%;
     max-width:129rem;
     margin:0 auto;
     display:flex;
@@ -16,6 +16,7 @@
 
 .header__nav{
     width:100%;
+    height:100%;
     max-width:70.2rem;
     display:flex;
     justify-content: space-between;
@@ -90,6 +91,19 @@
 
 .header__search{
     cursor: pointer;
+}
+
+.header__nav >ul li a.active{
+    background-color:var(--white-gray);
+    padding-top:2.7rem;
+    padding-bottom:2.7rem;
+    padding-left:2rem;
+    padding-right:2rem;
+    margin:0;
+}
+
+li a.active{
+    color:var(--orange);
 }
 
 @media(max-width: 1400px) {

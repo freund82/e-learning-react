@@ -1,9 +1,10 @@
 import "./header.css";
-import { Link } from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import Logo from "../../../assets/images/logo.svg";
 import Search from "../../../assets/images/search.svg";
 
 function Header() {
+  
     return (
         <div className="header">
                 <div className="header__inner">
@@ -16,10 +17,10 @@ function Header() {
                             <Link to="/" className="header__link" href="#">Home</Link>
                         </li>
                         <li className="header__item">
-                            <Link to="/courses" className="header__link" href="#">Courses</Link>
+                            <NavLink to="/courses" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`} href="#">Courses</NavLink>
                         </li>
                         <li className="header__item">
-                            <Link to="/blog" className="header__link" href="#">Blog</Link>
+                            <NavLink to="/blog" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Blog</NavLink>
                         </li>
                     </ul>
                     <div className="nav__burger--menu">
