@@ -1,6 +1,6 @@
 .all-courses__inner {
     display: grid;
-    grid-template-columns: 990px 1fr;
+    grid-template-columns: minmax(auto, 990px) 1fr;
     grid-template-rows: auto minmax(1104px, auto) auto;
 }   
 
@@ -46,3 +46,23 @@
     z-index:100;
 
 }
+
+/**********
+  MEDIA QUERIES
+**********/
+
+@media(max-width: 1400px) {
+    .all-courses__inner{
+        grid-template-columns: 1fr;
+    }
+    .right-section{
+        display: none;
+    }
+    .courses-row{
+        margin:0 auto;
+    }
+    .left-section{
+        margin:0 1rem 4rem 1rem;
+    }
+}
+

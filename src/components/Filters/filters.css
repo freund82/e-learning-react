@@ -59,3 +59,13 @@ input[type="checkbox"]:checked + label.filters__label{
 input[type="checkbox"]:checked {
     accent-color: var(--dark-gray); /* Цвет фона чекбокса в некоторых браузерах */
 }
+
+/***********
+MEDIA QUERIES
+***********/
+
+@media(max-width: 1400px) {
+    .filters{
+        display:none;
+    }
+}

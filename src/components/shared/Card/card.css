@@ -144,12 +144,16 @@
 
 @media(max-width:1400px){
     .cardCourses__list{
-    justify-content: space-around;
-}
+        justify-content: space-around;
+    }
+    .cardCourses__list{
+        flex-direction: column;
+        margin:0 auto;
+    }
 }
 
 @media(max-width:700px){
     .cardCourses__list{
     justify-content: space-around;
-}
+    }
 }

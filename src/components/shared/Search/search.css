@@ -18,7 +18,7 @@
     border-bottom: 1px solid var(--black);
     outline: none;
     transition: border-color 0.3s ease;
-    color:va(--gray);
+    color:var(--gray);
     font-style: var(--font-family--Jost);
     font-size: var(--font-size16);
     line-height: var(--line-height150);
