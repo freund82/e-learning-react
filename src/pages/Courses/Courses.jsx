@@ -245,7 +245,7 @@ const handleLevelChange = (level, isChecked) => {
                             <Search activeIconValue={activeIconValue} getSearchText={getSearchText}/>
                         </div>
                         <div className={`courses-row ${listStyle ? "list" : ""}`}>
-                            <Card courses={currentCourses} isList={listStyle} coursesCardWidth={48} borderRadius={3}/>
+                            <Card courses={currentCourses} isList={listStyle} coursesCardWidth={48} priceBlockWidth={44} borderRadius={3}/>
                         </div>
                         <div className="courses-pagination">
                             {filteredCourses.length > coursesPerPage && <Pagination

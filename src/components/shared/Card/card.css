@@ -108,7 +108,7 @@
     transform:translateX(-50%);
     bottom:2rem;
     width:100%;
-    max-width:44rem;
+    max-width:37rem;
     display:flex;
     align-items:center;
     justify-content: space-between;
@@ -129,7 +129,7 @@
     top:80%;
     left:43%;
     width:100%;
-    max-width:55rem;
+    max-width:54rem !important;
     transform:none;
 }
 

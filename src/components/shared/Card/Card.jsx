@@ -6,7 +6,7 @@ import GraphIcon from "../../../assets/icons/graph.svg"
 import LessonsIcon from "../../../assets/icons/lessons.svg"
  
 
-function Card({courses, isList, coursesCardWidth, borderRadius}) {
+function Card({courses, isList, coursesCardWidth, borderRadius, priceBlockWidth}) {
  
 
     return (
@@ -48,7 +48,7 @@ function Card({courses, isList, coursesCardWidth, borderRadius}) {
                                                 </>
                                             }
                                         </div>
-                                        <div className={`cardCourses__item--price ${isList && "cardCourses__item--listPrice"}`}>
+                                        <div className={`cardCourses__item--price ${isList && "cardCourses__item--listPrice"}`} style={{maxWidth:`${priceBlockWidth}rem`}}>
                                             <div>
                                                  <span className="cardCourses__item--text price" style={item.free || !!item.newPrice? {textDecoration:"line-through", fontSize:"var(--font-size18)", color:"var(--gray)", fontWeight:"400"}:undefined}>${item.price.toFixed(1)}</span>
                                             {item.free==true?<span className="cardCourses__item--text" style={{marginLeft:"0.6rem", color:"var(--green)", fontSize:"var(--font-size18)", fontWeight:"600"}}>Free</span>:""} {/*Условный рендеринг*/}
