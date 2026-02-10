@@ -54,7 +54,7 @@ function Card({courses, isList, coursesCardWidth, borderRadius, priceBlockWidth}
                                             {item.free==true?<span className="cardCourses__item--text" style={{marginLeft:"0.6rem", color:"var(--green)", fontSize:"var(--font-size18)", fontWeight:"600"}}>Free</span>:""} {/*Условный рендеринг*/}
                                             {item.newPrice?<span className="cardCourses__item--text" style={{color:"var(--red)", fontSize:"var(--font-size18)", fontWeight:"600", marginLeft:"0.6rem"}}>${item.newPrice.toFixed(1)}</span>:""}
                                             </div>
-                                            <Link to="/viewmore" className="cardCourses__item--link" href="#" style={{fontSize:"var(--font-size18)", fontWeight:"600", color:"var(--black)"}}>View More</Link>
+                                            <Link to={`/courses/${item.id}`} className="cardCourses__item--link" href="#" style={{fontSize:"var(--font-size18)", fontWeight:"600", color:"var(--black)"}}>View More</Link>
                                         </div>
                                     </div>
                                 </div>

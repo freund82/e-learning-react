@@ -1,14 +1,16 @@
-
 import './App.css'
 import { useRoutes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import Home from './pages/Home/Home'
 import Courses from './pages/Courses/Courses'
+import courses from './data/courses.js'
+import CoursesDetail from './components/CoursesDetail/CoursesDetail'
 import Blog from './pages/Blog/Blog'
 
 
 
 function App() {
+ 
 
   const statistic=[
     {
@@ -40,7 +42,8 @@ function App() {
       children: [
         { index: true, element: <Home statistic={statistic} /> }, // index: true - означает что Home будет доступен по корневому маршруту
         { path: "courses", element: <Courses /> },
-        { path: "blog", element: <Blog /> }
+        { path: "blog", element: <Blog /> },
+        {path: "courses/:id", element: <CoursesDetail courses={courses} />},
       ]
     }
   ])
