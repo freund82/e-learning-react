@@ -1,13 +1,22 @@
 import "./coursesDetail.css";
 import { useParams } from "react-router-dom";
+import {useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 
 function CoursesDetail({ courses }) {
   const { id } = useParams();
+  const [setCourseTitle] = useOutletContext();
   console.log("ID из URL:", id);
   
   // Найдем курс по id
   const courseId = parseInt(id);
   const course = courses.find(course => course.id === courseId);
+  
+  useEffect(() => {
+    if (course) {
+      setCourseTitle(course.title);
+    }
+  }, [course, setCourseTitle]);
   
   console.log("Найденный курс:", course);
   

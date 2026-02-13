@@ -3,9 +3,11 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import HeaderBottom from "../HeaderBottom/HeaderBottom";
 import { Outlet, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Layout = ({ children }) => {
    const location = useLocation();
+   const [courseTitle, setCourseTitle] = useState("");
 
    // Массив путей, где должен показываться HeaderBottom
   const pagesWithHeaderBottom = [
@@ -15,15 +17,15 @@ const Layout = ({ children }) => {
   ];
 
     // Проверяем текущий путь
-  const showHeaderBottom = pagesWithHeaderBottom.some(path => 
+  const showHeaderBottom = pagesWithHeaderBottom.some(path =>
     location.pathname.startsWith(path)
   );
 
-   return( 
+   return(
    <>
         <Header />
-        {showHeaderBottom && <HeaderBottom location={location} />}
-        <main><Outlet /></main>
+        {showHeaderBottom && <HeaderBottom location={location} courseTitle={courseTitle} />}
+        <main><Outlet context={[setCourseTitle]} /></main>
         <Footer />
     </>
    )
