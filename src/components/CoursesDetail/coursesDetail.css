@@ -1,4 +1,5 @@
 .courses-detail--header {
+  position:relative;
   width:100%;
   height: 29rem;
   background-color: var(--black);
@@ -8,6 +9,7 @@
   font-size: var(--font-size32);
   font-family: var(--font-family-Jost);
   font-weight: 600;
+  z-index:1;
 }
 
 .courses-detail--photography{
@@ -48,6 +50,32 @@
     max-width:60.3rem !important;
 }
 .cardCourses__item--text{
-    color:var(--gray) !important;
-    font-weight:400 !important;
+    color:var(--gray);
+    font-weight:400
+}
+
+.courses-detail--card{
+    position:absolute;
+    top:5rem;
+    right:31.5rem;
+     background-color:var(--white);
+     border-radius:2.15rem;
+}
+
+.cardCourses-detail--inner{
+    width:100%;
+    max-width:26.1rem;
+    height:9.8rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0;
+    line-height:0;
+    margin:0 auto;
+}
+
+
+.newPrice{
+    margin-left:0;
+    font-weight:600;
 }

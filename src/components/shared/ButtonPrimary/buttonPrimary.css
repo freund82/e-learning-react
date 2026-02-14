@@ -8,6 +8,7 @@
     font-size: var(--font-size16);
     font-family: var(--font-family-Jost);
     font-weight: 500;
+    line-height:1.75;
 }
 
 .button-primary:hover{
