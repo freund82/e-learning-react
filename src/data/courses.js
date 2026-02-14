@@ -13,7 +13,9 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    quizzes: 3,
     instructor: 'Kenny White',
+    photography: 'Determined-Poitras',
     rating: {
       average: 4.7, // Средний рейтинг (от 1 до 5)
       count: 103, // Количество оценок
@@ -26,6 +28,8 @@ const courses = [
         1: 0,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 2,
@@ -41,7 +45,9 @@ const courses = [
     featured: true,
     levels: 'Beginner',
     lessons: 20,
+    quizzes: 2,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 5, // Средний рейтинг (от 1 до 5)
       count: 100, // Количество оценок
@@ -54,6 +60,8 @@ const courses = [
         1: 0,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 3,
@@ -69,7 +77,9 @@ const courses = [
     featured: true,
     levels: 'Beginner',
     lessons: 20,
-    instructor: 'Kenny White Utkin',
+    quizzes: 3,
+    instructor: 'Kenny White',
+    photography: 'Determined-Poitras',
     rating: {
       average: 3.8, // Средний рейтинг (от 1 до 5)
       count: 108, // Количество оценок
@@ -82,6 +92,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 4,
@@ -97,7 +109,9 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    quizzes: 5,
     instructor: 'Kenny White',
+    photography: 'Determined-Poitras',
     rating: {
       average: 3.9, // Средний рейтинг (от 1 до 5)
       count: 338, // Количество оценок
@@ -110,6 +124,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 5,
@@ -125,7 +141,9 @@ const courses = [
     featured: true,
     levels: 'Intermediate',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 4.6, // Средний рейтинг (от 1 до 5)
       count: 898, // Количество оценок
@@ -138,6 +156,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 6,
@@ -153,7 +173,9 @@ const courses = [
     featured: true,
     levels: 'Expert',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 3, // Средний рейтинг (от 1 до 5)
       count: 21, // Количество оценок
@@ -166,6 +188,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 7,
@@ -181,7 +205,9 @@ const courses = [
     featured: true,
     levels: 'Intermediate',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 5, // Средний рейтинг (от 1 до 5)
       count: 80, // Количество оценок
@@ -194,6 +220,8 @@ const courses = [
         1: 0,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 8,
@@ -209,7 +237,9 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 2.5, // Средний рейтинг (от 1 до 5)
       count: 49, // Количество оценок
@@ -222,6 +252,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 9,
@@ -237,7 +269,9 @@ const courses = [
     featured: true,
     levels: 'Beginner',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 3.9, // Средний рейтинг (от 1 до 5)
       count: 372, // Количество оценок
@@ -250,6 +284,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 10,
@@ -265,7 +301,9 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 4.5, // Средний рейтинг (от 1 до 5)
       count: 128, // Количество оценок
@@ -278,6 +316,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 11,
@@ -293,7 +333,9 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 4.5, // Средний рейтинг (от 1 до 5)
       count: 113, // Количество оценок
@@ -306,6 +348,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
   {
     id: 12,
@@ -321,7 +365,9 @@ const courses = [
     featured: true,
     levels: 'All',
     lessons: 20,
+    quizzes: 3,
     instructor: 'John Doe',
+    photography: 'Determined-Poitras',
     rating: {
       average: 4.5, // Средний рейтинг (от 1 до 5)
       count: 128, // Количество оценок
@@ -334,6 +380,8 @@ const courses = [
         1: 2,
       },
     },
+    overview:
+      'LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online. You can create a course curriculum with lessons & quizzes included which is managed with an easy-to-use interface for users. Having this WordPress LMS Plugin, now you have a chance to quickly and easily create education, online school, online-course websites with no coding knowledge required. /n LearnPress is free and always will be, but it is still a premium high-quality WordPress Plugin that definitely helps you with making money from your WordPress Based LMS. Just try and see how amazing it is. LearnPress WordPress Online Course plugin is lightweight and super powerful with lots of Add-Ons to empower its core system.How to use WPML Add-on for LearnPress? /n No comments yet! You be the first to comment.',
   },
 ];
 export default courses;
