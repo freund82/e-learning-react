@@ -8,6 +8,7 @@ import GraphIcon from "../../assets/icons/graph.svg"
 import LessonsIcon from "../../assets/icons/lessons.svg"
 import Quizzes from "../../assets/icons/quizzes.svg"
 import ButtonPrimary from "../shared/ButtonPrimary/ButtonPrimary";
+import TabPanel from "../TabPanel/TabPanel";
 
 function CoursesDetail({ courses }) {
   const { id } = useParams();
@@ -31,6 +32,7 @@ function CoursesDetail({ courses }) {
   }
 
   return (
+    <>
     <div className="courses-detail--header">
       <div className="container">
        <div>
@@ -72,6 +74,10 @@ function CoursesDetail({ courses }) {
                                         </div>
           </div>
     </div>
+    <div>
+        <TabPanel course={course} />
+    </div>
+    </>
   );
 }
 

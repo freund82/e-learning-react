@@ -54,12 +54,13 @@
     font-weight:400
 }
 
+
 .courses-detail--card{
     position:absolute;
     top:5rem;
-    right:31.5rem;
-     background-color:var(--white);
+    right:28rem;
      border-radius:2.15rem;
+     border:solid 0.1rem var(--light-gray);
 }
 
 .cardCourses-detail--inner{
