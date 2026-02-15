@@ -9,6 +9,7 @@ import LessonsIcon from "../../assets/icons/lessons.svg"
 import Quizzes from "../../assets/icons/quizzes.svg"
 import ButtonPrimary from "../shared/ButtonPrimary/ButtonPrimary";
 import TabPanel from "../TabPanel/TabPanel";
+import CommentsForm from "../CommentsForm/CommentsForm";
 
 function CoursesDetail({ courses }) {
   const { id } = useParams();
@@ -76,6 +77,9 @@ function CoursesDetail({ courses }) {
     </div>
     <div>
         <TabPanel course={course} />
+    </div>
+    <div>
+        <CommentsForm />
     </div>
     </>
   );
