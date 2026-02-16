@@ -4,9 +4,9 @@ import ButtonPrimary from "../shared/ButtonPrimary/ButtonPrimary";
 function CommentsForm() {
     return (
         <div className="container">
-            <div className="commentsForm">
-                <h2>Leave A Comment</h2>
-                <p>Your email address will not be published. Required fields are marked *</p>
+            <form className="commentsForm" action="" method="post">
+                <h2 className="commentsForm__title">Leave A Comment</h2>
+                <p className="commentsForm__text">Your email address will not be published. Required fields are marked *</p>
                 <div>
                     <div>
                         <input className="commentsForm__input" type="text" placeholder="Name *" />
@@ -14,13 +14,13 @@ function CommentsForm() {
                     </div>
                      <textarea className="commentsForm__textarea" type="text" placeholder="Comment" />
                 </div>
-                <div>
-                    <input type="checkbox" /><span>Save my name, email in this brower for the next time I comment</span>
+                <div className="commentsForm__checkbox">
+                    <input className="commentsForm__checkbox--input" type="checkbox" /><span сlassName="commentsForm__checkbox--text">Save my name, email in this brower for the next time I comment</span>
                 </div>
                 <div>
                     <ButtonPrimary>Posts Comment</ButtonPrimary>
                 </div>
-        </div>
+        </form>
         </div>
     );
 }

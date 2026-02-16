@@ -7,6 +7,19 @@
     margin-bottom:5rem;
 }
 
+.commentsForm__title{
+    font-size:var(--font-size20);
+    line-height:var(--line-height120);
+    font-weight:600;
+}
+
+.commentsForm__text{
+    font-size:var(--font-size18);
+    line-height:var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
 .commentsForm__input{
     width:100%;
     max-width:41.5rem;
@@ -36,4 +49,22 @@
     border:solid 0.1rem var(--gray);
     border-radius:0.8rem;
     padding:1rem 1.6rem 1rem 1.6rem;
+    resize: none;
+    overflow: auto;
+}
+
+.commentsForm__checkbox--input{
+    width:1.6rem;
+    height:1.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.commentsForm__checkbox{
+    display:flex;
+    align-items:center;
+     font-size:var(--font-size18);
+    line-height:var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+    gap:0.4rem;
 }
