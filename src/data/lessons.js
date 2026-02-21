@@ -1,4 +1,4 @@
-export const lessons = [
+const lessons = [
   {
     id: 1001,
     moduleId: 101,
@@ -299,3 +299,5 @@ export const lessons = [
     order: 5,
   },
 ];
+
+export default lessons;
