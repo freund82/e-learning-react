@@ -42,12 +42,13 @@
 }
 
 .module-title:before {
-  content: ">";
+  content: url("../../../assets/icons/right.svg");
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   transition: transform 0.2s ease;
+  fill:var(--dark-gray);
 }
 
 .module-title.expanded:before {
