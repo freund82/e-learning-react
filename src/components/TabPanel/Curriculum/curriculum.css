@@ -36,23 +36,18 @@
   font-family:var(--font-family-Exo);
   font-weight:600;
   cursor: pointer;
-  user-select: none;
-  position: relative;
-  padding-left: 20px;
 }
 
-.module-title:before {
-  content: url("../../../assets/icons/right.svg");
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
+.module-title.expanded .module-title--icon {
+  transform: rotate(90deg);
+  
+}
+
+.module-title--icon{
+  transform: rotate(-90deg);
   transition: transform 0.2s ease;
   fill:var(--dark-gray);
-}
-
-.module-title.expanded:before {
-  transform: translateY(-50%) rotate(90deg);
+  margin-right:0.8rem;
 }
 
 .module-title.expanded{

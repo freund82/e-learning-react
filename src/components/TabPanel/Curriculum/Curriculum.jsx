@@ -52,7 +52,9 @@ function Curriculum({ course }) {
           {modulesProgram.length>0?modulesProgram.map((module)=>(
             <div key={module.id} className="module-container">
               <div className="module-header"> 
-                <h3 className={`module-title ${expandedModules[module.id] ? 'expanded' : ''}`} onClick={() => toggleModule(module.id)}>{module.title}</h3>
+                <h3 className={`module-title ${expandedModules[module.id] ? 'expanded' : ''}`} onClick={() => toggleModule(module.id)}><svg className="module-title--icon" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.175 0L0 1.175L3.81667 5L0 8.825L1.175 10L6.175 5L1.175 0Z"/>
+</svg>{module.title}</h3>
                     {/* Количество уроков и общее время */}
                       <div>
                         <span>{lessons.filter((lesson)=>lesson.moduleId===module.id).length>1?lessons.filter((lesson)=>lesson.moduleId===module.id).length+' Lessons':lessons.filter((lesson)=>lesson.moduleId===module.id).length+' Lesson'} </span>
