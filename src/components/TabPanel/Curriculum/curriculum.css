@@ -1,3 +1,7 @@
+.short-overview {
+  margin-bottom: 2rem;
+}
+
 .video-player-section {
   margin-bottom: 30px;
   padding: 20px;
@@ -13,20 +17,49 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.module {
-  margin-bottom: 25px;
-  padding: 15px;
+.module-container {
+  margin-bottom: 1.2rem;
+  padding: 1.6rem 2rem;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 0.8rem;
 }
 
-.module h3 {
-  margin: 0 0 15px 0;
+.module-header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module-title {
   color: #333;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 8px;
+  font-size: var(--font-size16);
+  font-family:var(--font-family-Exo);
+  font-weight:600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.module-title:before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: transform 0.2s ease;
+}
+
+.module-title.expanded:before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.module-title.expanded{
+  color: var(--orange);
+}
+
+.lessons-container {
+  padding-left: 20px;
 }
 
 .lesson-item {
@@ -35,7 +68,6 @@
   align-items: center;
   padding: 12px 15px;
   margin: 5px 0;
-  background: #f8f9fa;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -44,12 +76,12 @@
 
 .lesson-item:hover {
   background: #e9ecef;
+  color:var(--orange);
   transform: translateX(5px);
 }
 
 .lesson-item.active {
-  background: #e3f2fd;
-  border-left-color: #007bff;
+  color:var(--orange);
 }
 
 .lesson-title {

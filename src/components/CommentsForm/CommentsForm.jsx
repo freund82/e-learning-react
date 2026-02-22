@@ -15,7 +15,7 @@ function CommentsForm() {
                      <textarea className="commentsForm__textarea" type="text" placeholder="Comment" />
                 </div>
                 <div className="commentsForm__checkbox">
-                    <input className="commentsForm__checkbox--input" type="checkbox" /><span сlassName="commentsForm__checkbox--text">Save my name, email in this brower for the next time I comment</span>
+                    <input className="commentsForm__checkbox--input" type="checkbox" /><span className="commentsForm__checkbox--text">Save my name, email in this brower for the next time I comment</span>
                 </div>
                 <div>
                     <ButtonPrimary>Posts Comment</ButtonPrimary>

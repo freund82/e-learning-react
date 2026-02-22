@@ -30,14 +30,14 @@
 }
 
 .tab-button.active{
-    background-color:var(--light-gray);
+    background-color:var(--white-gray);
     color:var(--orange);
 }
 
 .tab-content-wrapper{
     width:100%;
     max-width:85rem;
-    background-color: var(--light-gray);
+    background-color: var(--white-gray);
     padding:3rem;
     font-size:var(--font-size18);
     font-family: var(--font-family--Jost);
