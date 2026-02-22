@@ -72,8 +72,15 @@
 
 .lesson-item:hover {
   background: #e9ecef;
-  color:var(--orange);
   transform: translateX(5px);
+}
+
+.lesson-item:hover .lesson-title {
+  color: var(--orange);
+}
+
+.lesson-item.active .lesson-title {
+  color: var(--orange);
 }
 
 .lesson-item--title{
