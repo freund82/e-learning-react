@@ -24,6 +24,7 @@
   border-radius: 0.8rem;
 }
 
+
 .module-header{
   display:flex;
   justify-content: space-between;
@@ -36,6 +37,10 @@
   font-family:var(--font-family-Exo);
   font-weight:600;
   cursor: pointer;
+}
+
+.module-container:hover .module-title{
+  color:var(--orange);
 }
 
 .module-title.expanded .module-title--icon {
@@ -52,6 +57,27 @@
 
 .module-title.expanded{
   color: var(--orange);
+}
+
+.module-info{
+  width:14.2rem;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lessons-count{
+  font-size:var(--font-size16);
+  font-family:var(--font-family--Jost);
+  font-weight: 400;
+  color:var(--dark-gray);
+}
+
+.lessons-time{
+  font-size:var(--font-size16);
+  font-family:var(--font-family--Jost);
+  font-weight: 400;
+  color:var(--dark-gray);
 }
 
 .lessons-container {
@@ -96,10 +122,20 @@
   color: var(--black);
 }
 
+.lesson-preview{
+  font-family:var(--font-family--Jost);
+  font-size:var(--font-size16);
+  font-weight: 400;
+  color: var(--white);
+  padding:0.4rem 1.2rem;
+  background-color:var(--blue);
+  border-radius:0.8rem;
+  margin-right:3.6rem;
+}
+
 .lesson-duration {
-  font-size: 0.9rem;
-  color: #666;
-  background: #dee2e6;
-  padding: 3px 8px;
-  border-radius: 4px;
+  font-family:var(--font-family--Jost);
+  font-size: var(--font-size16);
+  color: var(--dark-gray);
+  margin-right:2rem;
 }
