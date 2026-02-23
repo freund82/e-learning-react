@@ -15,6 +15,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'Kenny White',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 4.7, // Средний рейтинг (от 1 до 5)
@@ -51,6 +52,7 @@ const courses = [
     lessons: 20,
     quizzes: 2,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 5, // Средний рейтинг (от 1 до 5)
@@ -87,6 +89,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'Kenny White',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 3.8, // Средний рейтинг (от 1 до 5)
@@ -123,6 +126,7 @@ const courses = [
     lessons: 20,
     quizzes: 5,
     instructor: 'Kenny White',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 3.9, // Средний рейтинг (от 1 до 5)
@@ -159,6 +163,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 4.6, // Средний рейтинг (от 1 до 5)
@@ -195,6 +200,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 3, // Средний рейтинг (от 1 до 5)
@@ -231,6 +237,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 5, // Средний рейтинг (от 1 до 5)
@@ -267,6 +274,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 2.5, // Средний рейтинг (от 1 до 5)
@@ -303,6 +311,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 3.9, // Средний рейтинг (от 1 до 5)
@@ -339,6 +348,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 4.5, // Средний рейтинг (от 1 до 5)
@@ -375,6 +385,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 4.5, // Средний рейтинг (от 1 до 5)
@@ -411,6 +422,7 @@ const courses = [
     lessons: 20,
     quizzes: 3,
     instructor: 'John Doe',
+    instructorImg: '../courses/instructorsImages/ThimPress.png',
     photography: 'Determined-Poitras',
     rating: {
       average: 4.5, // Средний рейтинг (от 1 до 5)

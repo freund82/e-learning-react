@@ -1,0 +1,36 @@
+.instructor__inner{
+    display:flex;
+    justify-content: space-between;
+    gap:2.4rem;
+}
+
+.cardCourses__item--instructorIcon{
+    width:18rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardCourses__item--instructorTab{
+    color:var(--dark-gray);
+    font-size: var(--font-size16);
+    line-height: var(--line-height200);
+    font-family:var(--font-family--Jost);
+    font-weight:400;
+}
+
+.cardCourses__item--instructorInfoTab{
+    margin:1.2rem 0 2rem 0;
+  
+}
+
+.footer__socialsInstructorTab{
+    display:inline-flex;
+    margin-top:2rem;
+}
+
+.footer__socialsInstructorTab--follow{
+    display:flex;
+    align-items: flex-end;
+    margin-right:1.2rem;
+    padding-bottom:0.3rem;
+}
