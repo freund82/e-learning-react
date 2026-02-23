@@ -13,7 +13,7 @@ function Instructor({course}) {
                  <img className="cardCourses__item--instructorIcon" src={course.instructorImg} alt={course.instructor} />
             </div>
             <div>
-                 <h3>{course.author}</h3>
+                 <h3 className="cardCourses__item--author">{course.author}</h3>
                  <p>{shortOverview}</p>
                  <div className="cardCourses__item--instructorInfoTab">
                     <div className="cardCourses__item--block">
