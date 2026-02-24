@@ -2,6 +2,7 @@ import "./tabPanel.css";
 import { useState } from "react";
 import Curriculum from "./Curriculum/Curriculum";
 import Instructor from "./Instructor/Instructor";
+import FAQs from "./FAQs/FAQs";
 
 function TabPanel({ course }) {
     const [activeTab, setActiveTab] = useState('Overview');
@@ -31,7 +32,7 @@ function TabPanel({ course }) {
             case 'FAQs':
                 return (
                     <div>
-                        <h1>FAQs</h1>
+                        <FAQs />
                     </div>
                 );
             case 'Reviews':

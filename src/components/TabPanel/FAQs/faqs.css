@@ -1,0 +1,42 @@
+.faqs{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+.faqs__item{
+    display:flex;
+    flex-direction: column;
+    padding:2rem 3rem;
+    color:var(--black);
+    font-size:var(--font-size16);
+    line-height: var(--line-height120);
+    font-family:var(--font-family--Exo);
+    font-weight:600;
+    background-color:var(--white);
+    border-radius:0.8rem;
+    gap:2rem;
+    cursor:pointer;
+}
+
+.faqs__item--block{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.faqs__item:hover .faqs__item--title{
+    color:var(--orange);
+}
+
+.faqs__arrowIcon{
+    transform:rotate(90deg);
+}
+
+.faqs__item--text{
+    display:flex;
+    font-size:var(--font-size18);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-family:var(--font-family--Jost);
+    font-weight:400;
+}
