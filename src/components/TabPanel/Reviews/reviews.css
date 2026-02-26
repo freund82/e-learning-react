@@ -1,0 +1,14 @@
+.rating-display{
+  display:flex;
+  align-items:center;
+  margin-top:2rem;
+}
+
+.rating-value{
+    font-size:var(--font-size48);
+    font-family:var(--font-family-Exo);
+    line-height: var(--line-height120);
+    font-weight:600;
+    margin-right:1.2rem;
+    color:var(--black);
+}
