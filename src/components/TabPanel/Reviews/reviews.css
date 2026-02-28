@@ -23,14 +23,14 @@
 .starsSection{
   display:flex;
   align-items:center;
-  gap:0.4rem;
+  gap:0.5rem;
 }
+
 .stars-container{
   width:100%;
   display:flex;
   flex-direction: column;
-  gap:0.4rem;
-  margin-right:0.8rem;
+  gap:0.8rem;
 }
 
 .star{
@@ -45,14 +45,29 @@
   font-style:var(--font-family--Jost);
 }
 
-.rating-percentage{
-  width:3rem;
-  margin-left:0.8rem;
+/* Новые стили для строки рейтинга */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
-.rating-line{
+.rating-percentage{
+  min-width: 3.5rem;
+  font-size: var(--font-size14);
+  color: var(--dark-gray);
+}
+
+.rating-line-container {
   flex: 1;
-  height:1rem;
-  background-color:var(--light-gray);
-  margin-left:2rem;
+  height: 1rem;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.rating-line-fill {
+  height: 100%;
+  background-color: var(--yellow);
+  transition: width 0.3s ease;
 }

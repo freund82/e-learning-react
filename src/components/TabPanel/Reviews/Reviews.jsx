@@ -34,7 +34,7 @@ function Reviews({ course }) {
             : 0;
         
         return (
-            <div key={index} className="stars-container">
+            <div key={index} className="rating-row">
                 <span className="starsSection">
                     {[...Array(fullStars)].map((_, i) => (
                         <img key={`full-${index}-${i}`} className="star" src={StarYellow} alt="Full star" />
@@ -42,10 +42,14 @@ function Reviews({ course }) {
                     {[...Array(emptyStars)].map((_, i) => (
                         <img key={`empty-${index}-${i}`} className="star" src={StarGrey} alt="Empty star" />
                     ))}
-                        <span className="rating-percentage">{percentage}%</span>
-                        <span className="rating-line"></span>
                 </span>
-                    
+                <span className="rating-percentage">{percentage}%</span>
+                <div className="rating-line-container">
+                    <div 
+                        className="rating-line-fill" 
+                        style={{ width: `${percentage}%` }}
+                    ></div>
+                </div>
             </div>
         );
     }
