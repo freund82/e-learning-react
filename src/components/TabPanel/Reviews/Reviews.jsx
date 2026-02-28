@@ -11,16 +11,44 @@ function Reviews({ course }) {
         const emptyStars = 5 - fullStars;
         
         return (
-            <>
+            <span className="stars-block">
                 {[...Array(fullStars)].map((_, i) => (
                     <img key={`full-${i}`} src={StarYellow} alt="Full star" />
                 ))}
                 {[...Array(emptyStars)].map((_, i) => (
                     <img key={`empty-${i}`} src={StarGrey} alt="Empty star" />
-                ))}
-            </>
+                ))} 
+            </span>
         );
     };
+
+    const stars = [5,4,3,2,1];
+
+    const renderStarsRating = (starCount, index) => {
+        const fullStars = starCount;
+        const emptyStars = 5 - fullStars;
+        
+        // Рассчитываем процент для каждого рейтинга
+        const percentage = course.rating.breakdown && course.rating.count
+            ? ((course.rating.breakdown[starCount] || 0) / course.rating.count * 100).toFixed(0)
+            : 0;
+        
+        return (
+            <div key={index} className="stars-container">
+                <span className="starsSection">
+                    {[...Array(fullStars)].map((_, i) => (
+                        <img key={`full-${index}-${i}`} src={StarYellow} alt="Full star" />
+                    ))}
+                    {[...Array(emptyStars)].map((_, i) => (
+                        <img key={`empty-${index}-${i}`} src={StarGrey} alt="Empty star" />
+                    ))}
+                        <span className="rating-percentage">{percentage}%</span>
+                        <span className="rating-line"></span>
+                </span>
+                    
+            </div>
+        );
+    }
 
     return (
         <div className="reviews">
@@ -33,59 +61,9 @@ function Reviews({ course }) {
                 </div>
             </div>
             <div className="stars-block">
-                <span className="stars-container">
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star" src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                </span>
-                <span>{((course.rating.breakdown[5]/course.rating.count===0)?0:(course.rating.breakdown[5]/course.rating.count)*100).toFixed(0)}%</span>
-                <span className="rating-line"></span>
-            </div>
-            <div className="stars-block">
-                <span className="stars-container">
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star" src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                </span>
-                <span>{((course.rating.breakdown[4]/course.rating.count===0)?0:(course.rating.breakdown[4]/course.rating.count)*100).toFixed(0)}%</span>
-                <span className="rating-line"></span>
-            </div>
-            <div className="stars-block">
-                <span className="stars-container">
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star" src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                </span>
-                <span>{((course.rating.breakdown[3]/course.rating.count===0)?0:(course.rating.breakdown[3]/course.rating.count)*100).toFixed(0)}%</span>
-                <span className="rating-line"></span>
-            </div>
-            <div className="stars-block">
-                <span className="stars-container">
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star" src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                </span>
-                <span>{((course.rating.breakdown[2]/course.rating.count===0)?0:(course.rating.breakdown[2]/course.rating.count)*100).toFixed(0)}%</span>
-                <span className="rating-line"></span>
-            </div>
-            <div className="stars-block">
-                <span className="stars-container">
-                    <img className="star"  src={StarYellow} alt="Full star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                    <img className="star"  src={StarGrey} alt="Empty star" />
-                   <img className="star"  src={StarGrey} alt="Empty star" />
-                </span>
-                <span>{((course.rating.breakdown[1]/course.rating.count===0)?0:(course.rating.breakdown[1]/course.rating.count)*100).toFixed(0)}%</span>
-                <span className="rating-line"></span>
+                <div className="stars-container">
+                    {stars.map((starCount, index) => renderStarsRating(starCount, index))}
+                </div>
             </div>
         </div>
     );

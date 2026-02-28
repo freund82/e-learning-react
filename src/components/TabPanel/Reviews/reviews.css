@@ -15,11 +15,20 @@
 }
 .stars-block{
     display:flex;
+    gap:0.4rem;
     align-items:center;
+    margin-bottom: 0.4rem;
 }
-.stars-container{
+
+.starsSection{
   display:flex;
   align-items:center;
+  gap:0.4rem;
+}
+.stars-container{
+  width:100%;
+  display:flex;
+  flex-direction: column;
   gap:0.4rem;
   margin-right:0.8rem;
 }
