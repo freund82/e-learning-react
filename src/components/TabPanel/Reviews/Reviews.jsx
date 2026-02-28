@@ -37,10 +37,10 @@ function Reviews({ course }) {
             <div key={index} className="stars-container">
                 <span className="starsSection">
                     {[...Array(fullStars)].map((_, i) => (
-                        <img key={`full-${index}-${i}`} src={StarYellow} alt="Full star" />
+                        <img key={`full-${index}-${i}`} className="star" src={StarYellow} alt="Full star" />
                     ))}
                     {[...Array(emptyStars)].map((_, i) => (
-                        <img key={`empty-${index}-${i}`} src={StarGrey} alt="Empty star" />
+                        <img key={`empty-${index}-${i}`} className="star" src={StarGrey} alt="Empty star" />
                     ))}
                         <span className="rating-percentage">{percentage}%</span>
                         <span className="rating-line"></span>

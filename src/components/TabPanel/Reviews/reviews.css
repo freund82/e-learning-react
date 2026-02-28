@@ -38,9 +38,20 @@
   height:1.85rem;
 }
 
+.total-reviews{
+  font-size:var(--font-size16);
+  line-height: var(--line-height150);
+  color:var(--dark-gray);
+  font-style:var(--font-family--Jost);
+}
+
+.rating-percentage{
+  width:3rem;
+  margin-left:0.8rem;
+}
+
 .rating-line{
-  width:100%;
-  max-width:65rem;
+  flex: 1;
   height:1rem;
   background-color:var(--light-gray);
   margin-left:2rem;
