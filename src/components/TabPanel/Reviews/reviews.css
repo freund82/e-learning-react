@@ -17,7 +17,7 @@
     display:flex;
     gap:0.4rem;
     align-items:center;
-    margin-bottom: 0.4rem;
+    margin-bottom: 2rem;
 }
 
 .starsSection{
@@ -70,4 +70,43 @@
   height: 100%;
   background-color: var(--yellow);
   transition: width 0.3s ease;
+}
+
+/************
+Комментарии
+************/
+
+.comments{
+  display:flex;
+  gap:2rem;
+  border-top:0.1rem solid var(--light-gray);
+  padding-top:2rem;
+  margin-bottom:2rem;
+}
+
+.name{
+  font-size:var(--font-size16);
+  font-family:var(--font-family-Exo);
+  line-height: var(--line-height120);
+  font-weight:600;
+  color:var(--black);
+}
+
+.comment-info{
+  flex:1;
+}
+.comment-title{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:0.4rem;
+}
+
+.reply{
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  cursor:pointer;
+  margin-top:0.5rem;
+  color:var(--black);
 }

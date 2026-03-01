@@ -1,6 +1,9 @@
 import "./reviews.css"
 import StarYellow from "../../../assets/icons/fullStar.svg"
 import StarGrey from "../../../assets/icons/emptyStar.svg"
+import Avatar from "../../../assets/images/avatar.png"
+import Reply from "../../../assets/icons/reply.svg"
+import Pagination from "../../shared/Pagination/Pagination.jsx";
 
 function Reviews({ course }) {
     const average = course.rating.average;
@@ -69,6 +72,62 @@ function Reviews({ course }) {
                     {stars.map((starCount, index) => renderStarsRating(starCount, index))}
                 </div>
             </div>
+            {/*Комментарии*/}
+            <div className="comments">
+                <div className="comment">
+                    <img src={Avatar} alt="avatar" />
+                </div>
+                <div className="comment-info">
+                    <div className="comment-title">
+                        <h5 className="name">Laura Hipster</h5>
+                        <span>October 3, 2022</span>
+                    </div>
+                    <div>
+                        <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
+                        <div className="reply">
+                            <img src={Reply} alt="reply" />
+                            <span>Reply</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="comments">
+                <div className="comment">
+                    <img src={Avatar} alt="avatar" />
+                </div>
+                <div className="comment-info">
+                    <div className="comment-title">
+                        <h5 className="name">Laura Hipster</h5>
+                        <span>October 3, 2022</span>
+                    </div>
+                    <div>
+                        <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
+                        <div className="reply">
+                            <img src={Reply} alt="reply" />
+                            <span>Reply</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="comments">
+                <div className="comment">
+                    <img src={Avatar} alt="avatar" />
+                </div>
+                <div className="comment-info">
+                    <div className="comment-title">
+                        <h5 className="name">Laura Hipster</h5>
+                        <span>October 3, 2022</span>
+                    </div>
+                    <div>
+                        <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
+                        <div className="reply">
+                            <img src={Reply} alt="reply" />
+                            <span>Reply</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Pagination />
         </div>
     );
 }
