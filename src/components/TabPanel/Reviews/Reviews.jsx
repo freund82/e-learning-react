@@ -1,12 +1,25 @@
 import "./reviews.css"
+import {useState} from "react";
 import StarYellow from "../../../assets/icons/fullStar.svg"
 import StarGrey from "../../../assets/icons/emptyStar.svg"
-import Avatar from "../../../assets/images/avatar.png"
+import reviewsData from "../../../data/reviewsData.js"
 import Reply from "../../../assets/icons/reply.svg"
 import Pagination from "../../shared/Pagination/Pagination.jsx";
 
 function Reviews({ course }) {
     const average = course.rating.average;
+
+    const reviews=reviewsData.filter(review => review.courseId === course.id);
+
+    //Для Пагинации называю переменные как называл в курсах чтобы не создавать еще один компонент Пагинации.
+
+    const [currentPage, setCurrentPage] = useState(1)
+    const [coursesPerPage] = useState(3)
+
+    const indexOfLastReview = currentPage * coursesPerPage;
+    const indexOfFirstReview = indexOfLastReview - coursesPerPage;
+    const currentReviews = reviews.slice(indexOfFirstReview, indexOfLastReview);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
     
     // Функция для отображения звездочек рейтинга
     const renderStars = (rating) => {
@@ -73,61 +86,34 @@ function Reviews({ course }) {
                 </div>
             </div>
             {/*Комментарии*/}
-            <div className="comments">
-                <div className="comment">
-                    <img src={Avatar} alt="avatar" />
-                </div>
-                <div className="comment-info">
-                    <div className="comment-title">
-                        <h5 className="name">Laura Hipster</h5>
-                        <span>October 3, 2022</span>
+            {currentReviews.map(review => (
+                <div key={review.id} className="comments">
+                    <div className="comment">
+                        <img src={review.studentAvatar} alt="avatar" />
                     </div>
-                    <div>
-                        <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
-                        <div className="reply">
-                            <img src={Reply} alt="reply" />
-                            <span>Reply</span>
+                    <div className="comment-info">  
+                        <div className="comment-title">
+                            <h5 className="name">{review.studentName}</h5>
+                            <span>{review.date}</span>
+                        </div>
+                        <div>   
+                            <p>{review.text}</p>
+                            <div className="reply">
+                                <img src={Reply} alt="reply" />
+                                <span>Reply</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            ))}
+            <div className="courses-pagination reviewsPagination">
+                            {reviews.length > coursesPerPage && <Pagination
+                            currentPage={currentPage}
+                            coursesPerPage={coursesPerPage}
+                            totalCourses={reviews.length}
+                            paginate={paginate}
+                        />}
             </div>
-            <div className="comments">
-                <div className="comment">
-                    <img src={Avatar} alt="avatar" />
-                </div>
-                <div className="comment-info">
-                    <div className="comment-title">
-                        <h5 className="name">Laura Hipster</h5>
-                        <span>October 3, 2022</span>
-                    </div>
-                    <div>
-                        <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
-                        <div className="reply">
-                            <img src={Reply} alt="reply" />
-                            <span>Reply</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="comments">
-                <div className="comment">
-                    <img src={Avatar} alt="avatar" />
-                </div>
-                <div className="comment-info">
-                    <div className="comment-title">
-                        <h5 className="name">Laura Hipster</h5>
-                        <span>October 3, 2022</span>
-                    </div>
-                    <div>
-                        <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
-                        <div className="reply">
-                            <img src={Reply} alt="reply" />
-                            <span>Reply</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Pagination />
         </div>
     );
 }
