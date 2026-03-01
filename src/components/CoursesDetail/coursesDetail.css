@@ -80,3 +80,21 @@
     margin-left:0;
     font-weight:600;
 }
+
+/********
+MEDIA QUERIES
+********/
+
+@media (max-width:1800px){
+    
+    .courses-detail--card{
+       position:static;
+       height:29rem;
+    }
+    .courses-detail--card img{
+        height:20rem;
+    }
+    .courses-detail--title{
+        font-size:var(--font-size32);
+    }
+}

@@ -5,6 +5,10 @@
     margin-bottom:4rem;
 }
 
+.tabs-header{
+    display:flex;
+}
+
 .tab-button{
     width:17rem;
     height:6.4rem;
