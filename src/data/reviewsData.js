@@ -40,7 +40,7 @@ const reviewsData = [
     text: 'Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.',
   },
   {
-    id: 5,
+    id: 6,
     courseId: 1,
     studentAvatar: null,
     studentName: 'Max',
