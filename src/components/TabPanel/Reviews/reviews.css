@@ -92,6 +92,10 @@
   color:var(--black);
 }
 
+.avatarIcon{
+  width:6rem;
+  height:6rem;
+}
 .comment-info{
   flex:1;
 }

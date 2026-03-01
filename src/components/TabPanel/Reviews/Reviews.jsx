@@ -4,6 +4,7 @@ import StarYellow from "../../../assets/icons/fullStar.svg"
 import StarGrey from "../../../assets/icons/emptyStar.svg"
 import reviewsData from "../../../data/reviewsData.js"
 import Reply from "../../../assets/icons/reply.svg"
+import Avatar from "../../../assets/icons/avatar.svg"
 import Pagination from "../../shared/Pagination/Pagination.jsx";
 
 function Reviews({ course }) {
@@ -89,7 +90,7 @@ function Reviews({ course }) {
             {currentReviews.map(review => (
                 <div key={review.id} className="comments">
                     <div className="comment">
-                        <img src={review.studentAvatar} alt="avatar" />
+                        {review.studentAvatar?<img className="avatarIcon" src={review.studentAvatar} alt="avatar" />:<img className="avatarIcon" src={Avatar} alt="avatar" />}
                     </div>
                     <div className="comment-info">  
                         <div className="comment-title">
