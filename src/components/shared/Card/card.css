@@ -152,6 +152,18 @@
     }
 }
 
+@media(max-width:1000px){
+
+    .cardCourses__item--block{
+        min-width:3rem;
+    }
+  .cardCourses__item--info{
+    flex-wrap: wrap;
+    gap:0.4rem;
+  }
+
+}
+
 @media(max-width:700px){
     .cardCourses__list{
     justify-content: space-around;
