@@ -12,6 +12,13 @@ function Reviews({ course }) {
 
     const reviews=reviewsData.filter(review => review.courseId === course.id);
 
+    //Функция преобразования даты
+    const formatDate = (dateString) => {
+        const date = new Date(dateString); // Преобразуем строку в объект Date
+        return date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
+      };
+
+
     //Для Пагинации называю переменные как называл в курсах чтобы не создавать еще один компонент Пагинации.
 
     const [currentPage, setCurrentPage] = useState(1)
@@ -95,7 +102,7 @@ function Reviews({ course }) {
                     <div className="comment-info">  
                         <div className="comment-title">
                             <h5 className="name">{review.studentName}</h5>
-                            <span>{review.date}</span>
+                            <span>{formatDate(review.date)}</span>
                         </div>
                         <div>   
                             <p>{review.text}</p>
