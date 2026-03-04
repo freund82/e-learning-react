@@ -2,7 +2,7 @@ import "./articles.css"
 import {useState} from "react"
 import articles from "../../data/articles"
 import ButtonSecondary from "../shared/ButtonSecondary/ButtonSecondary"
-import CalendarIcon from "../../../assets/icons/calendar.svg"
+import CalendarIcon from "../../assets/icons/calendar.svg"
 import { formatDate } from "../../utils/formatDate"
 
 function Articles() {
