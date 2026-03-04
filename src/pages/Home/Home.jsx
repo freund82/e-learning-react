@@ -9,7 +9,7 @@ import EducationBanner from "../../components/Home/EducationBanner/EducationBann
 import Blockquote from "../../components/Home/Blockquote/Blockquote.jsx"
 import comments from "../../data/comments"
 import Banner from "../../components/Home/Banner/Banner.jsx"
-import Articles from "../../components/Home/Articles/Articles.jsx"
+import Articles from "../../components/Articles/Articles.jsx"
 
 function Home({ statistic }) {
 
