@@ -257,7 +257,8 @@ const handleLevelChange = (level, isChecked) => {
                         </div>
                         <div className="right-section">
                            
-                            <Filters coursesCategoryFilter={coursesCategoryFilter}
+                            <Filters type={"courseFilters"}
+                                     coursesCategoryFilter={coursesCategoryFilter}
                                      selectedCategories={selectedCategories}
                                      onCategoryChange={handleCategoryChange}
                                      selectedInstructors={selectedInstructors}

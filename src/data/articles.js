@@ -5,6 +5,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage1.png',
+    category: 'Office',
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage2.png',
+    category: 'Commercial',
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage3.png',
+    category: 'Shop',
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage4.png',
+    category: 'Educate',
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage5.png',
+    category: 'Academy',
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage6.png',
+    category: 'Single Family Home',
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage1.png',
+    category: 'Office',
   },
   {
     id: 8,
@@ -54,6 +61,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage2.png',
+    category: 'Office',
   },
   {
     id: 9,
@@ -61,6 +69,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage3.png',
+    category: 'Office',
   },
   {
     id: 10,
@@ -68,6 +77,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage4.png',
+    category: 'Shop',
   },
   {
     id: 11,
@@ -75,6 +85,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage5.png',
+    category: 'Shop',
   },
   {
     id: 12,
@@ -82,6 +93,7 @@ const articles = [
     date: '2023-01-24',
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage6.png',
+    category: 'Shop',
   },
 ];
 export default articles;
