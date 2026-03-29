@@ -91,7 +91,7 @@ const handleCategoryChange = (categoryName, isChecked) => {
             <div className="container">
                     <div className="all-courses__inner">
                         <div className="left-section">
-                            <h1 style={{fontSize: "var(--font-size32)"}}>All Courses</h1>
+                            <h1 style={{fontSize: "var(--font-size32)"}}>All Articles</h1>
                             <Search activeIconValue={activeIconValue} getSearchText={getSearchText}/>
                         </div>
                         <div className={`courses-row ${listStyle ? "list" : ""}`}>

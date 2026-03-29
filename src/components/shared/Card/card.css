@@ -28,7 +28,6 @@
     position:relative;
     width:100%;
     max-width:41rem;
-    height:47.4rem;
     border-radius: 2rem;
     border:solid 0.1rem var(--light-gray);
     display:flex;
@@ -37,7 +36,13 @@
     z-index:1;
 }
 
+.cardCourses__item--cardHeight{
+    height:49.2rem;
+}
 
+.cardCourses__item--featuredCoursesHeight{
+    height:47.4rem;
+}
 
 .cardCourses__item--img{
     display:block;
@@ -52,11 +57,15 @@
     color:var(--black);
 }
 
-.cardCourses__item--inner h3{
-    font-size: var(--font-size20);
+.cardCourses__item--title{
+   font-size: var(--font-size20);
     line-height: var(--line-height120);
     font-weight: 600;
     margin-top:1.2rem;
+}
+
+.cardCourses__item--featuredCoursesWidth{
+    width:36rem;
 }
 
 .cardCourses__item--inner p{
@@ -141,6 +150,37 @@
     color:var(--orange) !important;
     transition: color 0.3s ease-in-out;
 }
+
+/********
+Blog Page Card Styles
+********/
+.blogCard__item--inner{
+    width:44rem;  
+    margin: 0 auto;
+}
+
+.blogCard__item--innerList{
+    width:58rem;
+    height:25rem;
+    padding:3.8rem 3rem 5.8rem 3rem;
+    margin: 0 auto;
+}
+
+.blogCard__item--title{
+    margin-top:2rem;
+}
+
+.cardCourses__item--date{
+    display:flex;
+    align-items: center;
+    gap:0.8rem;
+    font-family: var(--font-family--Jost);
+    font-size: var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+}
+
+
 
 @media(max-width:1400px){
     .cardCourses__list{

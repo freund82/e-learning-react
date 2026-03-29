@@ -26,7 +26,7 @@ function FeaturedCourses() {
                         </div>
                     </div>
                     <div className="featuredCourses__list">
-                        <Card type={"courseCard"} courses={visibleFeaturedCourses}/>
+                        <Card type={"courseCard"} courses={visibleFeaturedCourses} featuredCoursesHeight={true} featuredCoursesWidth={true}/>
                     </div>
                 </div>
         </div>
