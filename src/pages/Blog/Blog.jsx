@@ -13,6 +13,9 @@ function Blog() {
     const [currentPage, setCurrentPage] = useState(1)
     const [coursesPerPage] = useState(6)
 
+    //Последние три статьи
+    const recentArticles = courses.slice(courses.length - 3)
+
     // Переменные состояния для фильтров
     const [selectedCategories, setSelectedCategories] = useState([]);
 
@@ -112,8 +115,8 @@ const handleCategoryChange = (categoryName, isChecked) => {
                                      coursesCategoryFilter={coursesCategoryFilter}
                                      selectedCategories={selectedCategories}
                                      onCategoryChange={handleCategoryChange}
+                                     recentArticles={recentArticles}
                                      />
-             
                         </div>
                     </div>
             </div>

@@ -2,6 +2,7 @@ import courses from "../../data/courses";
 import "./filters.css";
 import StarYellowSvg from "../../assets/icons/starYellow.svg"
 import StarGreySvg from "../../assets/icons/starGrey.svg"
+import { Link } from "react-router-dom";
 
 
 function Filters({
@@ -20,7 +21,8 @@ function Filters({
     onRatingChange,
     levelsFilter,
     onLevelChange,
-    getLevels
+    getLevels,
+    recentArticles,
 }) {
 
         
@@ -227,6 +229,18 @@ function Filters({
                         })}
                     </>
                 )}
+                 {/*вывод последних статей*/}
+                 {recentArticles && (
+                        <div className="filters__block--lastArticles">
+                            <h2 className="filters__title">Recent Posts</h2>
+                            {recentArticles.map((article) => (
+                                <div className="filters__lastArticle--block" key={article.id}>
+                                    <img className="filters__img" src={article.img} alt={article.title} />
+                                    <Link className="filters__lastArticle--link" to={`/blog/${article.id}`}>{article.title}</Link>
+                                </div>
+                            ))}
+                        </div>
+                    )}
             </div>
     );
 }

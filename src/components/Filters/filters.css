@@ -60,6 +60,38 @@ input[type="checkbox"]:checked {
     accent-color: var(--dark-gray); /* Цвет фона чекбокса в некоторых браузерах */
 }
 
+.filters__block--lastArticles{
+    display:flex;
+    flex-direction: column;
+}
+
+.filters__img{
+    width:9rem;
+    height:9rem;
+    border-radius:1.2rem;
+    object-fit: cover;
+}
+
+.filters__lastArticle--block{
+    display:flex;
+    align-items: center;
+    margin-bottom:1.6rem;
+}
+
+.filters__lastArticle--link{
+    color:var(--black);
+    text-decoration: none;
+    font-family: var(--font-family--Jost);
+    font-size:var(--font-size16);
+    line-height: var(--line-height150);
+    font-weight:600;
+    margin-left:1.6rem;
+}
+
+.filters__lastArticle--link:hover{
+    color:var(--orange);
+}
+
 /***********
 MEDIA QUERIES
 ***********/
