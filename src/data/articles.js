@@ -6,6 +6,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage1.png',
     category: 'Office',
+    tags: ['Free courses', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage2.png',
     category: 'Commercial',
+    tags: ['Free courses', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage3.png',
     category: 'Shop',
+    tags: ['Free courses', 'Marketing', 'Business', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage4.png',
     category: 'Educate',
+    tags: ['Marketing', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage5.png',
     category: 'Academy',
+    tags: ['Free courses', 'Marketing', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage6.png',
     category: 'Single Family Home',
+    tags: ['Marketing', 'Business', 'Idea', 'LMS', 'LearnPress'],
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage1.png',
     category: 'Office',
+    tags: ['Free courses', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage2.png',
     category: 'Office',
+    tags: ['Free courses', 'Marketing', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage3.png',
     category: 'Office',
+    tags: ['Free courses', 'Marketing', 'Business', 'Idea', 'LearnPress', 'Instructor'],
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage4.png',
     category: 'Shop',
+    tags: ['Marketing', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage5.png',
     category: 'Shop',
+    tags: ['Free courses', 'Marketing', 'Business', 'Idea', 'LMS', 'LearnPress'],
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ const articles = [
     text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
     img: 'articles/articleImage6.png',
     category: 'Shop',
+    tags: ['Free courses', 'Marketing', 'Business', 'Idea', 'LMS', 'Instructor'],
   },
 ];
 export default articles;
