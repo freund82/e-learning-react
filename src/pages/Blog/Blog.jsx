@@ -60,7 +60,7 @@ const coursesCategoryFilter = getCategoryCounts(courses);
       // Фильтр по поиску
       const searchMatch = inputSearchValue.length === 0 ||
         course.title.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
-        course.instructor.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
+        course.text.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
         course.category.toLowerCase().includes(inputSearchValue.toLowerCase());
 
       // Фильтр по тегам
