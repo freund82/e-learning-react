@@ -23,7 +23,8 @@ function TagFilter({ tags, onTagChange, selectedTags, setSelectedTags }) {
   return (
     <div className="filters__block--tags">
                             <h2 className="filters__title">Tags</h2>
-                            {tags.map((tag) => (
+                            <div className="filters__tag--section">
+                                 {tags.map((tag) => (
                                 <div className="filters__tag--block" key={tag}>
                                     <button
                                         type="button"
@@ -34,6 +35,7 @@ function TagFilter({ tags, onTagChange, selectedTags, setSelectedTags }) {
                                     </button>
                                 </div>
                             ))}
+                            </div>
                         </div>
   );
 }
