@@ -7,7 +7,7 @@ import { useState, useMemo } from "react"
 import Filters from "../../components/Filters/Filters.jsx"
 
 function Blog() {
-    {
+    
 
     const [listStyle, setListStyle] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
@@ -18,10 +18,15 @@ function Blog() {
 
     // Переменные состояния для фильтров
     const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedTags, setSelectedTags] = useState([]);
 
 
     //Переменные состояния для поиска
     const [inputSearchValue, setSearchInputValue] = useState("");
+
+    //Получаем теги из articles.js я переменную в import назвал courses а не articles
+    const tags = [...new Set(courses.map(course => course.tags).flat())];
+    
 
 // Функция для подсчета категорий
 const getCategoryCounts = (courses) => {
@@ -49,19 +54,23 @@ const coursesCategoryFilter = getCategoryCounts(courses);
     const filteredCourses = useMemo(() => {
         return courses.filter(course => {
             // Фильтр по категориям
-            const categoryMatch = selectedCategories.length === 0 || 
+            const categoryMatch = selectedCategories.length === 0 ||
                 selectedCategories.includes(course.category);
 
       // Фильтр по поиску
-      const searchMatch = inputSearchValue.length === 0 || 
+      const searchMatch = inputSearchValue.length === 0 ||
         course.title.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
         course.instructor.toLowerCase().includes(inputSearchValue.toLowerCase()) ||
         course.category.toLowerCase().includes(inputSearchValue.toLowerCase());
+
+      // Фильтр по тегам
+      const tagMatch = selectedTags.length === 0 ||
+        selectedTags.some(tag => course.tags.includes(tag));
             
             // Курс должен соответствовать ВСЕМ выбранным фильтрам
-            return categoryMatch && searchMatch;
+            return categoryMatch && searchMatch && tagMatch;
         });
-    }, [courses, selectedCategories, inputSearchValue]);
+    }, [courses, selectedCategories, inputSearchValue, selectedTags]);
 
 //Функция для обработки изменения категорий
 const handleCategoryChange = (categoryName, isChecked) => {
@@ -77,6 +86,13 @@ const handleCategoryChange = (categoryName, isChecked) => {
         // Сбрасываем на первую страницу при изменении фильтра
         setCurrentPage(1);
     };
+
+//Функция для обработки изменения тегов
+const handleTagChange = (newSelectedTags) => {
+    setSelectedTags(newSelectedTags);
+    // Сбрасываем на первую страницу при изменении фильтра
+    setCurrentPage(1);
+};
 
 
     const activeIconValue = (value) => {
@@ -110,19 +126,22 @@ const handleCategoryChange = (categoryName, isChecked) => {
                         </div>
                         <div className="right-section">
                            
-                            <Filters 
+                            <Filters
                                      type={"blogFilters"}
                                      coursesCategoryFilter={coursesCategoryFilter}
                                      selectedCategories={selectedCategories}
                                      onCategoryChange={handleCategoryChange}
                                      recentArticles={recentArticles}
+                                     tags={tags}
+                                     onTagChange={handleTagChange}
+                                     selectedTags={selectedTags}
+                                     setSelectedTags={setSelectedTags}
                                      />
                         </div>
                     </div>
             </div>
         </section>
     )
-}
-}    
+}  
 
 export default Blog

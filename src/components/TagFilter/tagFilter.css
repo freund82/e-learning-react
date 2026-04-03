@@ -1,0 +1,32 @@
+.filters__block--tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+.filters__tag--block {
+    display: inline-block;
+}
+
+.filters__tag--button {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: var(--font-family--Jost);
+    font-size: var(--font-size16);
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filters__tag--button:hover {
+    background-color: #e9e9e9;
+}
+
+.filters__tag--button.active {
+    background-color: var(--dark-gray);
+    color: white;
+    border-color: var(--dark-gray);
+}

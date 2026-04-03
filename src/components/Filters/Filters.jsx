@@ -3,6 +3,7 @@ import "./filters.css";
 import StarYellowSvg from "../../assets/icons/starYellow.svg"
 import StarGreySvg from "../../assets/icons/starGrey.svg"
 import { Link } from "react-router-dom";
+import TagFilter from "../TagFilter/TagFilter";
 
 
 function Filters({
@@ -23,6 +24,10 @@ function Filters({
     onLevelChange,
     getLevels,
     recentArticles,
+    tags,
+    onTagChange,
+    selectedTags,
+    setSelectedTags,
 }) {
 
         
@@ -241,6 +246,8 @@ function Filters({
                             ))}
                         </div>
                     )}
+                 {/*вывод тегов*/}
+                    {tags && <TagFilter tags={tags} onTagChange={onTagChange} selectedTags={selectedTags} setSelectedTags={setSelectedTags} />}
             </div>
     );
 }
