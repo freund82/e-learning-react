@@ -79,6 +79,7 @@ function Card({ courses, isList, coursesCardWidth, borderRadius, priceBlockWidth
 
     const renderBlogArticleCard = () => {
         return courses.map((item) => (
+            <Link to={`/blog/${item.id}`} className="cardCourses__item--link" key={item.id}>
             <div className={`cardCourses__item--card ${isList && "cardCourses__item--list"}`} key={item.id} style={{ maxWidth: `${coursesCardWidth}rem`, borderRadius: `${borderRadius}rem` }}>
                 <img className={`cardCourses__item--img ${isList && "cardCourses__item--listImg"}`} src={item.img} alt={item.title} />
                 <div className={`cardCourses__item--inner blogCard__item--inner ${isList && "blogCard__item--innerList"}`}>
@@ -87,6 +88,7 @@ function Card({ courses, isList, coursesCardWidth, borderRadius, priceBlockWidth
                     <p className="cardCourses__item--blogArticleText" onClick={() => handleShow(item.id)} style={{cursor: 'pointer'}}>{getDisplayText(item)}</p>
                 </div>
             </div>
+            </Link>
         ))
     }
 

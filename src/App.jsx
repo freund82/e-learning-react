@@ -6,6 +6,7 @@ import Courses from './pages/Courses/Courses'
 import courses from './data/courses.js'
 import CoursesDetail from './components/CoursesDetail/CoursesDetail'
 import Blog from './pages/Blog/Blog'
+import BlogDetail from './components/BlogDetail/BlogDetail'
 
 
 
@@ -44,6 +45,7 @@ function App() {
         { path: "courses", element: <Courses /> },
         { path: "blog", element: <Blog /> },
         {path: "courses/:id", element: <CoursesDetail courses={courses} />},
+        {path: "blog/:id", element: <BlogDetail courses={courses} />},
       ]
     }
   ])
