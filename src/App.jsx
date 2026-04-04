@@ -4,6 +4,7 @@ import Layout from './components/Layout/Layout'
 import Home from './pages/Home/Home'
 import Courses from './pages/Courses/Courses'
 import courses from './data/courses.js'
+import articles from './data/articles.js'
 import CoursesDetail from './components/CoursesDetail/CoursesDetail'
 import Blog from './pages/Blog/Blog'
 import BlogDetail from './components/BlogDetail/BlogDetail'
@@ -45,7 +46,7 @@ function App() {
         { path: "courses", element: <Courses /> },
         { path: "blog", element: <Blog /> },
         {path: "courses/:id", element: <CoursesDetail courses={courses} />},
-        {path: "blog/:id", element: <BlogDetail courses={courses} />},
+        {path: "blog/:id", element: <BlogDetail courses={articles} />},
       ]
     }
   ])
