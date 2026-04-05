@@ -1,0 +1,37 @@
+.blog-detail{
+    margin-top:6rem;
+}
+
+.blog-detail--title{
+    margin-bottom:2rem;
+}
+
+.blog-detail--header{
+    width:100%;
+    max-width:43.1rem;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:4rem;
+}
+
+.blog-detail--item{
+    display:flex;
+    align-items:center;
+    gap:0.4rem;
+}
+
+.blog-detail--item--title{
+    font-size: var(--font-size14);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+    vertical-align: middle;
+}
+
+.blog-detail--img{
+    border-radius:2rem;
+    width:100%;
+    max-width:99rem;
+    height:auto;
+    margin-bottom:3rem;
+}

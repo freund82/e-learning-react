@@ -48,6 +48,7 @@
 .articles__item--img{
     display:block;
     margin-top:-0.1rem;
+    border-radius:2rem 2rem 0 0;
 }
 
 .articles__item--inner{

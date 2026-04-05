@@ -46,6 +46,7 @@
 
 .cardCourses__item--img{
     display:block;
+    border-radius:2rem 2rem 0 0;
 }
 
 .cardCourses__item--inner{
