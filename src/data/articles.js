@@ -4,7 +4,11 @@ const articles = [
     title: 'Best LearnPress WordPress Theme Collection for 2023',
     date: '2023-01-24',
     author: 'Determined-Poitras',
-    text: 'Looking for an amazing & well-functional LearnPress WordPress Theme? Looking for an amazing & well-functional LearnPress WordPress Theme?',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel enim eu turpis imperdiet. 
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus.
+    
+    `,
     img: 'articles/articleImage1.png',
     category: 'Office',
     tags: ['Free courses', 'Business', 'Idea', 'LMS', 'LearnPress', 'Instructor'],
