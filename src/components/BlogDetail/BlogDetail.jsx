@@ -7,6 +7,7 @@ import Author from "../../assets/icons/author.svg"
 import Calendar from "../../assets/icons/calendar.svg"
 import Comments from "../../assets/icons/comments.svg"
 import { formatDate } from "../../utils/formatDate"
+import Slider from "../Slider/Slider"
 
 
 function BlogDetail({ courses }) {
@@ -85,6 +86,7 @@ function BlogDetail({ courses }) {
                             </div>
           </div>
         </div>
+        <Slider articles={courses}/>
       </div>
     </>
   );
