@@ -38,17 +38,25 @@ function Slider({ articles }) {
   }
 
   return (
+    <div className="container">
     <div className="slider-container">
       <div className="slider-navigation">
-        <button 
+        
+        <div className="slider">
+             <button 
           className="slider-button prev-button" 
           onClick={prevSlide}
           aria-label="Предыдущая статья"
         >
           ←
         </button>
-        
-        <div className="slider">
+         <button 
+          className="slider-button next-button" 
+          onClick={nextSlide}
+          aria-label="Следующая статья"
+        >
+          →
+        </button>
           {visibleArticles.map((article) => (
             <div key={article.id} className="slider__item">
               <div className="article-content">
@@ -57,26 +65,8 @@ function Slider({ articles }) {
             </div>
           ))}
         </div>
-        
-        <button 
-          className="slider-button next-button" 
-          onClick={nextSlide}
-          aria-label="Следующая статья"
-        >
-          →
-        </button>
       </div>
-      
-      <div className="slider-indicators">
-        {Array.from({ length: Math.max(1, articles.length - visibleCount + 1) }).map((_, index) => (
-          <button
-            key={index}
-            className={`slider-indicator ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Перейти к слайду ${index + 1}`}
-          />
-        ))}
-      </div>
+    </div>
     </div>
   );
 }
