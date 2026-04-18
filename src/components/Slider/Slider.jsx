@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./slider.css";
 
 function Slider({ articles }) {
@@ -66,7 +67,9 @@ function Slider({ articles }) {
           {visibleArticles.map((article) => (
             <div key={article.id} className="slider__item">
               <div className="article-content">
+                <Link to={`/blog/${article.id}`} className="cardCourses__item--link" key={article.id}>
                 <h2 className="article-title">{article.title}</h2>
+                </Link>
               </div>
             </div>
           ))}
