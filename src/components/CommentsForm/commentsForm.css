@@ -7,6 +7,10 @@
     margin-bottom:5rem;
 }
 
+.blogDetailLeaveAComment{
+    max-width:99rem;
+}
+
 .commentsForm__title{
     font-size:var(--font-size20);
     line-height:var(--line-height120);
@@ -37,6 +41,10 @@
 .commentsForm__input:first-child{
     margin-right:2rem;
     margin-bottom:2rem;
+}
+
+.inputWidth{
+    max-width:48.5rem;
 }
 
 .commentsForm__textarea{

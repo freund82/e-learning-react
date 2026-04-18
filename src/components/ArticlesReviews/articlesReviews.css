@@ -1,0 +1,99 @@
+
+/************
+Комментарии
+************/
+
+.reviews{
+    margin-top:6rem;
+}
+
+.reviews__block{
+    font-size:var(--font-size20);
+    line-height: var(--line-height150);
+    color:var(--black);
+    font-style:var(--font-family--Jost);
+    margin-bottom:1.2rem;
+}
+
+.reviews__count{
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+    font-size:var(--font-size16);
+    line-height: var(--line-height150);
+    margin-bottom:3rem;
+}
+
+.comments{
+  display:flex;
+  gap:2rem;
+  border-top:0.1rem solid var(--light-gray);
+  padding-top:2rem;
+  margin-bottom:2rem;
+}
+
+.comments:nth-child(even){
+    padding-left:8rem;
+}
+
+.blogDetailComments{
+    width:100%;
+    max-width:99rem;
+}
+
+.name{
+  font-size:var(--font-size16);
+  font-family:var(--font-family-Exo);
+  line-height: var(--line-height120);
+  font-weight:600;
+  color:var(--black);
+}
+
+.date{
+    font-size:var(--font-size14);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
+.avatarIcon{
+  width:6rem;
+  height:6rem;
+}
+.comment-info{
+  flex:1;
+}
+.comment-title{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:0.4rem;
+}
+
+.comment-text{
+    font-size:var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+    font-style:var(--font-family--Jost);
+}
+
+.reply{
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  cursor:pointer;
+  margin-top:0.5rem;
+  color:var(--black);
+}
+
+.reply-text{
+    font-size:var(--font-size14);
+    line-height: var(--line-height150);
+    font-style:var(--font-family--Jost);
+    color:var(--black);
+    font-weight:600;
+}
+
+.reviewsPagination{
+  display:flex;
+  justify-content:center;
+}
