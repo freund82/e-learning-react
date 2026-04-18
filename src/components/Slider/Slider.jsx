@@ -48,15 +48,21 @@ function Slider({ articles }) {
           onClick={prevSlide}
           aria-label="Предыдущая статья"
         >
-          ←
+          <svg className="arrowIcon" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.175 1.175L5 0L0 5L5 10L6.175 8.825L2.35833 5L6.175 1.175Z"/>
+</svg>
         </button>
          <button 
           className="slider-button next-button" 
           onClick={nextSlide}
           aria-label="Следующая статья"
         >
-          →
+          <svg className="arrowIcon" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.175 0L0 1.175L3.81667 5L0 8.825L1.175 10L6.175 5L1.175 0Z"/>
+</svg>
         </button>
+        <p className="prev-article">Prev Articles</p>
+        <p className="next-article">Next Articles</p>
           {visibleArticles.map((article) => (
             <div key={article.id} className="slider__item">
               <div className="article-content">
