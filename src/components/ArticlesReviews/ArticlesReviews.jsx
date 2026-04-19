@@ -2,17 +2,12 @@ import "./articlesReviews.css"
 import {useState} from "react";
 import StarYellow from "../../assets/icons/fullStar.svg"
 import StarGrey from "../../assets/icons/emptyStar.svg"
-import reviewsData from "../../data/reviewsData.js"
 import Reply from "../../assets/icons/reply.svg"
 import Avatar from "../../assets/icons/avatar.svg"
 import Pagination from "../shared/Pagination/Pagination.jsx";
 
-function ArticlesReviews({ course }) {
+function ArticlesReviews({ articlesComments }) {
     
-
-    const reviews=reviewsData.filter(review => review.articlesId === course.id);
-
-    console.log(reviews);
 
     //Функция преобразования даты
     const formatDate = (dateString) => {
@@ -28,7 +23,7 @@ function ArticlesReviews({ course }) {
 
     const indexOfLastReview = currentPage * coursesPerPage;
     const indexOfFirstReview = indexOfLastReview - coursesPerPage;
-    const currentReviews = reviews.slice(indexOfFirstReview, indexOfLastReview);
+    const currentReviews = articlesComments.slice(indexOfFirstReview, indexOfLastReview);
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     
    
@@ -36,7 +31,7 @@ function ArticlesReviews({ course }) {
     return (
         <div className="reviews">
             <h3 className="reviews__block">Comments</h3>
-            <p className="reviews__count">{reviews.length} Comments</p>
+            <p className="reviews__count">{articlesComments.length} Comments</p>
             {/*Комментарии*/}
             {currentReviews.map(review => (
                 <div key={review.id} className="comments blogDetailComments">
@@ -59,7 +54,7 @@ function ArticlesReviews({ course }) {
                 </div>
             ))}
             <div className="courses-pagination reviewsPagination">
-                            {reviews.length > coursesPerPage && <Pagination
+                            {articlesComments.length > coursesPerPage && <Pagination
                             currentPage={currentPage}
                             coursesPerPage={coursesPerPage}
                             totalCourses={reviews.length}

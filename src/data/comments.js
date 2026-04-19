@@ -1,31 +1,43 @@
 const comments = [
   {
     id: 1,
+    date: '2022-10-03',
     author: 'Roe Smith',
     profession: 'Designer',
     text: 'I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound',
     articlesId: 1,
+    studentAvatar: '../avatars/LauraHipster.png',
+    studentName: 'Laura Hipster',
   },
   {
     id: 2,
+    date: '2022-10-03',
     author: 'Roe Smith',
     profession: 'Designer',
     text: 'I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound',
     articlesId: 1,
+    studentAvatar: '../avatars/LauraHipster.png',
+    studentName: 'Laura Hipster',
   },
   {
     id: 3,
+    date: '2022-10-03',
     author: 'Roe Smith',
     profession: 'Designer',
     text: 'I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound',
     articlesId: 2,
+    studentAvatar: '../avatars/LauraHipster.png',
+    studentName: 'Laura Hipster',
   },
   {
     id: 4,
+    date: '2022-10-03',
     author: 'Roe Smith',
     profession: 'Designer',
     text: 'I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound',
     articlesId: 1,
+    studentAvatar: '../avatars/LauraHipster.png',
+    studentName: 'Laura Hipster',
   },
 ];
 export default comments;

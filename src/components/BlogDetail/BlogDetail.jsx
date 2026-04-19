@@ -27,7 +27,6 @@ function BlogDetail({ courses }) {
     }
   }, [course, setCourseTitle]);
   
-  console.log("Найденный курс:", course);
   
   if (!course) {
     return <div className="courses-detail">Курс не найден</div>;
@@ -35,8 +34,6 @@ function BlogDetail({ courses }) {
 
   // Найдем комментарии для статей
  const articlesComments = comments.filter(comment => parseInt(comment.articlesId) === parseInt(course.id));
- 
-  console.log("Комментарии:", articlesComments);
 
   return (
     <>
@@ -88,7 +85,7 @@ function BlogDetail({ courses }) {
                             </div>
               </div>
            <Slider articles={courses}/>
-            <ArticlesReviews course={articlesComments} />
+            <ArticlesReviews articlesComments={articlesComments} />
             <CommentsForm blogDetailLeaveAComment="blogDetailLeaveAComment" inputWidth="inputWidth"/>
         </div>
        
