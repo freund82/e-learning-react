@@ -54,6 +54,10 @@
     padding:0 2rem 2rem 2rem;
 }
 
+.cardCourses__item--link{
+    color:var(--black);
+}
+
 .cardCourses__item--author{
     color:var(--black);
 }
