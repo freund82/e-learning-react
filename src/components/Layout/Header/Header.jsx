@@ -22,6 +22,9 @@ function Header() {
                         <li className="header__item">
                             <NavLink to="/blog" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Blog</NavLink>
                         </li>
+                        <li className="header__item">
+                            <NavLink to="/page/contact" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Page</NavLink>
+                        </li>
                     </ul>
                     <div className="nav__burger--menu">
                        

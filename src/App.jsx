@@ -8,6 +8,7 @@ import articles from './data/articles.js'
 import CoursesDetail from './components/CoursesDetail/CoursesDetail'
 import Blog from './pages/Blog/Blog'
 import BlogDetail from './components/BlogDetail/BlogDetail'
+import Page from './pages/Page/Page'
 
 
 
@@ -47,6 +48,7 @@ function App() {
         { path: "blog", element: <Blog /> },
         {path: "courses/:id", element: <CoursesDetail courses={courses} />},
         {path: "blog/:id", element: <BlogDetail courses={articles} />},
+        {path: "page/contact", element: <Page/>},
       ]
     }
   ])

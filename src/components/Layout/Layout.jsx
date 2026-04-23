@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
   const pagesWithHeaderBottom = [
     '/courses',
     '/blog',
+    '/page/contact',
     // можно добавить другие пути
   ];
 
