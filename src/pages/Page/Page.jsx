@@ -1,9 +1,10 @@
 import "./page.css"
+import Contact from "../../components/Contact/Contact";
 
 function Page() {
     return (
         <div className="page">
-            <h1>Page</h1>
+            <Contact />
         </div>
     );
 }
