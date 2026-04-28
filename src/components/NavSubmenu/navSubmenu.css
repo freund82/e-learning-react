@@ -1,0 +1,11 @@
+.nav-submenu{
+    position:absolute;
+    top:80%;
+    left:44%;
+    background-color: var(--light-gray);
+    padding: 1.6rem 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}

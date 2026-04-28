@@ -1,9 +1,19 @@
 import "./header.css";
 import {NavLink, Link} from "react-router-dom";
+import { useState } from "react";
 import Logo from "../../../assets/images/logo.svg";
 import Search from "../../../assets/images/search.svg";
+import NavSubmenu from "../../NavSubmenu/NavSubmenu";
 
 function Header() {
+
+    const [showNavSubMenu, setShowNavSubMenu] = useState(false);
+     
+
+const handleMouseEnter = () => {
+        setShowNavSubMenu(showNavSubMenu => !showNavSubMenu);
+    }
+
   
     return (
         <div className="header">
@@ -23,8 +33,10 @@ function Header() {
                             <NavLink to="/blog" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Blog</NavLink>
                         </li>
                         <li className="header__item">
-                            <NavLink to="/page/contact" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Page</NavLink>
+                            <span className="header__link" onMouseEnter={handleMouseEnter}>Page</span>
+                           
                         </li>
+                         {showNavSubMenu && <NavSubmenu />}
                     </ul>
                     <div className="nav__burger--menu">
                        
