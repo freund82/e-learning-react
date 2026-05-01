@@ -9,6 +9,7 @@ import CoursesDetail from './components/CoursesDetail/CoursesDetail'
 import Blog from './pages/Blog/Blog'
 import BlogDetail from './components/BlogDetail/BlogDetail'
 import Contact from './components/Contact/Contact'
+import FAQs from './components/FAQs/FAQs'
 
 
 
@@ -49,6 +50,7 @@ function App() {
         {path: "courses/:id", element: <CoursesDetail courses={courses} />},
         {path: "blog/:id", element: <BlogDetail courses={articles} />},
         {path: "page/contact", element: <Contact/>},
+        {path: "page/faqs", element: <FAQs/>},
       ]
     }
   ])
