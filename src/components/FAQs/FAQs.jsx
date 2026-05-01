@@ -1,6 +1,7 @@
 import "./faqs.css";
 import faqs from "../../data/faqs";
 import { useState } from "react";
+import FAQsImg from "../../assets/images/faqs_img.png"
 
 function FAQs() {
 
@@ -30,6 +31,7 @@ function FAQs() {
                         ))}
                     </ul>
             </div>
+            <img className="faqs__img" src={FAQsImg} alt="FAQs" />
         </div>
     );
 }

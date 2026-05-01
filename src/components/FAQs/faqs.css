@@ -24,7 +24,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     align-self: start;  /* добавляем — блоки не будут растягиваться */
-    break-inside: avoid;  /* не разрывать вопрос-ответ. Обычно используется при печати страницы */
+    break-inside: avoid;  /* не разрывать вопрос-ответ. Обычно используется при печати страницы и помогло не меньшать первый впорос во второй колонке */
     margin-bottom:3rem;
 }
 
@@ -54,4 +54,9 @@
 
 .faqs__list > li.active>span{
   color:var(--orange);
+}
+
+.faqs__img{
+    display:block;
+    margin-top:3rem;
 }
