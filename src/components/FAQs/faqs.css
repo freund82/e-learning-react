@@ -7,9 +7,8 @@
 }
 
 .faqs__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  columns:2;
+  column-gap: 3rem;
   margin:0;
   padding:0;
 }
@@ -25,6 +24,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     align-self: start;  /* добавляем — блоки не будут растягиваться */
+    break-inside: avoid;  /* не разрывать вопрос-ответ. Обычно используется при печати страницы */
+    margin-bottom:3rem;
 }
 
 .faqsArrowIcon{
