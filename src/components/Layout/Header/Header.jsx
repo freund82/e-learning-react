@@ -33,7 +33,7 @@ const handleMouseEnter = () => {
                             <NavLink to="/blog" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Blog</NavLink>
                         </li>
                         <li className="header__item">
-                            <span className="header__link" onMouseEnter={handleMouseEnter}>Page</span>
+                            <NavLink to="/page/contact" className="header__link submenu__link" onMouseEnter={handleMouseEnter}>Page</NavLink>
                            
                         </li>
                          {showNavSubMenu && <NavSubmenu />}

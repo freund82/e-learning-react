@@ -11,6 +11,9 @@
     margin-top:6rem;
     max-width:99rem;
 }
+.contactLeaveAComment{
+    max-width:100%;
+}
 
 .commentsForm__title{
     font-size:var(--font-size20);
@@ -46,6 +49,10 @@
 
 .inputWidth{
     max-width:48.5rem;
+}
+
+.inputContactWidth{
+    max-width:63.5rem;
 }
 
 .commentsForm__textarea{

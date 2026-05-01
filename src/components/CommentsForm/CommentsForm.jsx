@@ -1,16 +1,16 @@
 import "./commentsForm.css";
 import ButtonPrimary from "../shared/ButtonPrimary/ButtonPrimary";
 
-function CommentsForm({blogDetailLeaveAComment, inputWidth}) {
+function CommentsForm({blogDetailLeaveAComment, inputWidth, inputContactWidth, contactLeaveAComment, title}) {
     return (
         <div className="container">
-            <form className={`commentsForm ${blogDetailLeaveAComment}`} action="" method="post">
-                <h2 className="commentsForm__title">Leave A Comment</h2>
+            <form className={`commentsForm ${blogDetailLeaveAComment || contactLeaveAComment}`} action="" method="post">
+                <h2 className="commentsForm__title">{title && title || "Leave A Comment"}</h2>
                 <p className="commentsForm__text">Your email address will not be published. Required fields are marked *</p>
                 <div>
                     <div>
-                        <input className={`commentsForm__input ${inputWidth}`} type="text" placeholder="Name *" />
-                        <input className={`commentsForm__input ${inputWidth}`} type="email" placeholder="Email *" />
+                        <input className={`commentsForm__input ${inputWidth || inputContactWidth}`} type="text" placeholder="Name *" />
+                        <input className={`commentsForm__input ${inputWidth || inputContactWidth}`} type="email" placeholder="Email *" />
                     </div>
                      <textarea className="commentsForm__textarea" type="text" placeholder="Comment" />
                 </div>

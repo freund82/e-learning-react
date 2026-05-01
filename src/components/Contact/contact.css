@@ -1,0 +1,60 @@
+.contact{
+    display:flex;
+    gap:3rem;
+    margin-top:6rem;
+    margin-bottom:6rem;
+}
+
+.contact__title{
+    font-size:var(--font-size32);
+    line-height:var(--line-height120);
+    margin-bottom:2.4rem;
+    color:var(--color-black);
+    font-family: var(--font-family-Exo);
+}
+
+.contact__text{
+    font-size:var(--font-size16);
+    line-height:var(--line-height150);
+    color:var(--dark-gray);
+    font-family: var(--font-family--Jost);
+    margin-bottom:2.4rem;
+}
+
+.contact__inner{
+    display:flex;
+    gap:2.4rem;
+    margin-bottom:2.4rem;
+}
+
+.contact__icon{
+    width:5.6rem;
+    height:5.6rem;
+    background-color:var(--white-gray);
+    border-radius:0.8rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__info{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact__info--title{
+    font-size:var(--font-size18);
+    line-height:var(--line-height150);
+    color:var(--dark-gray);
+    font-family: var(--font-family--Jost);
+}
+
+.contact__info--link{
+    color:var(--color-black);
+    font-family: var(--font-family-Exo);
+    font-size:var(--font-size16);
+    line-height:var(--line-height120);
+    font-weight:600;
+    text-decoration: none;
+}

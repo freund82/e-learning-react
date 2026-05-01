@@ -2,6 +2,12 @@
     position:absolute;
     top:80%;
     left:44%;
+    width:9rem;
+    height:10rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1rem var(--orange);
+    outline: 0.1rem solid var(--orange);
+    outline-offset: -0.5em;
     background-color: var(--light-gray);
     padding: 1.6rem 1rem;
     list-style: none;
