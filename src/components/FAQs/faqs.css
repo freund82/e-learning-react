@@ -24,6 +24,7 @@
     border-radius: 0.8rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    align-self: start;  /* добавляем — блоки не будут растягиваться */
 }
 
 .faqsArrowIcon{
@@ -35,13 +36,21 @@
 }
 
 .faqs__answer{
+    display:none;
     width:100%;
     max-width:52rem;
     font-size:var(--font-size16);
     line-height:var(--line-height150);
     color:var(--dark-gray);
     font-style:var(--font-family--Jost);
-    margin-top:1.2rem;
     margin-bottom:1.2rem;
     font-weight:400;
+}
+
+.faqs__list > li.active .faqs__answer{
+    display:block;
+}
+
+.faqs__list > li.active>span{
+  color:var(--orange);
 }
