@@ -10,6 +10,7 @@ import Blog from './pages/Blog/Blog'
 import BlogDetail from './components/BlogDetail/BlogDetail'
 import Contact from './components/Contact/Contact'
 import FAQs from './components/FAQs/FAQs'
+import LoginRegister from './pages/LoginRegister/LoginRegister'
 import Error from './components/Error/Error'
 
 
@@ -52,6 +53,7 @@ function App() {
         {path: "blog/:id", element: <BlogDetail courses={articles} />},
         {path: "page/contact", element: <Contact/>},
         {path: "page/faqs", element: <FAQs/>},
+        {path: "loginregister", element: <LoginRegister/>},
         {path: "*", element: <Error/>},
       ]
     }

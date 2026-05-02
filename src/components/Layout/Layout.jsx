@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
     '/blog',
     '/page/contact',
     '/page/faqs',
+    '/loginregister',
     // можно добавить другие пути
   ];
 

@@ -42,9 +42,9 @@ const handleMouseEnter = () => {
                        
                     </div>
                     <div className="header__auth">
-                        <Link to="/login" className="header__link" href="#">Login</Link>
-                        <span>/</span>
-                        <Link to="/register" className="header__link" href="#">Register</Link>
+                         <li className="header__item">
+                            <NavLink to="/loginregister" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Login / Register</NavLink>
+                        </li>
                         <div className="header__search">
                             <img src={Search} alt="search" />
                         </div>

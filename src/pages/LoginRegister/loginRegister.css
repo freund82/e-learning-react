@@ -1,0 +1,7 @@
+.loginRegister{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:6rem;
+    gap:3rem;
+    justify-content: center;
+}

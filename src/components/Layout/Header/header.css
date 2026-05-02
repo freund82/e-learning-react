@@ -92,6 +92,10 @@
     font-size: var(--font-size16);
 }
 
+.header__item{
+    list-style: none;
+}
+
 .header__search{
     cursor: pointer;
 }
