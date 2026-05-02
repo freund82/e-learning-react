@@ -60,6 +60,7 @@
 
 .cardCourses__item--author{
     color:var(--black);
+    font-size:var(--font-size14) !important;
 }
 
 .cardCourses__item--title{
@@ -67,6 +68,10 @@
     line-height: var(--line-height120);
     font-weight: 600;
     margin-top:1.2rem;
+}
+
+.cardCourses__item--block{
+    display:flex;
 }
 
 .cardCourses__item--featuredCoursesWidth{
@@ -103,7 +108,7 @@
 }
 
 .cardCourses__item--text{
-    font-size: var(--font-size16);
+    font-size: var(--font-size14);
     line-height: var(--line-height150);
     color:var(--dark-gray);
     font-style:var(--font-family--Jost);
@@ -117,7 +122,7 @@
 
 .cardCourses__item--price{
     position:absolute;
-    top:90%;
+    top:87.5%;
     left:50%;
     transform:translateX(-50%);
     bottom:2rem;
