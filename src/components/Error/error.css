@@ -1,0 +1,14 @@
+.error{
+    margin-top:6rem;
+    font-size:var(--font-size20);
+    line-height: var(--line-height120);
+    color:var(--color-black);
+    font-family: var(--font-family-Exo);
+    font-weight:400;
+}
+
+.error__img{
+    display:block;
+    margin-top:6rem;
+    margin-bottom:9rem;
+}
