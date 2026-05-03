@@ -189,6 +189,60 @@
     transition: border-bottom 0.2s ease-in-out;
 }
 
+/* Стили для мобильного подменю */
+.mobileMenu__item--with-submenu {
+    position: relative;
+}
+
+.mobileMenu__link--parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mobileMenu__link--parent.expanded {
+    color: var(--orange);
+    background-color: var(--white-gray);
+}
+
+.mobileMenu__arrow {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.mobileMenu__submenu {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Стили для подменю в мобильной версии */
+.mobile-nav-submenu {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: var(--white-gray) !important;
+    margin-top: 8px !important;
+    padding-left: 20px !important;
+    width: 100% !important;
+    display: none;
+}
+
+.mobile-nav-submenu.show {
+    display: block !important;
+}
+
+.mobile-nav-submenu::before {
+    display: none !important;
+}
+
+.mobile-nav-submenu .nav-submenu__link {
+    padding-left: 32px !important;
+}
+
 @media (max-width: 700px) {
     .nav__burger--menu {
         display: block;
