@@ -33,7 +33,7 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="contact__map">
                     <img src={Map} alt="Map" />
                 </div>
             </div>

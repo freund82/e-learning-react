@@ -58,3 +58,14 @@
     font-weight:600;
     text-decoration: none;
 }
+
+.contact__map>img{
+ width:100%;
+ min-width:20rem;
+}
+
+@media (max-width:768px){
+    .contact{
+        flex-direction: column;
+    }
+}
