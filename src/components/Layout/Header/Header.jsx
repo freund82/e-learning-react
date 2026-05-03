@@ -10,7 +10,7 @@ function Header() {
 
     const [showNavSubMenu, setShowNavSubMenu] = useState(false);
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-     
+      
 
 const handleMouseEnter = () => {
         setShowNavSubMenu(showNavSubMenu => !showNavSubMenu);
@@ -20,7 +20,11 @@ const handleBurgerMenuClick = () => {
         setShowMobileMenu(showMobileMenu => !showMobileMenu);
     }
 
-  
+    const handleCloseMobileMenu = () => {
+        setShowMobileMenu(false);
+    }
+
+   
     return (
         <div className="header">
                 <div className="header__inner">
@@ -47,7 +51,7 @@ const handleBurgerMenuClick = () => {
                     <div className="nav__burger--menu" onClick={handleBurgerMenuClick}>
                        
                     </div>
-                     
+                      
                     <div className="header__auth">
                          <li className="header__item">
                             <NavLink to="/loginregister" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Login / Register</NavLink>
@@ -56,9 +60,9 @@ const handleBurgerMenuClick = () => {
                             <img src={Search} alt="search" />
                         </div>
                     </div>
-                </nav>      
+                </nav>
             </div>
-            {showMobileMenu && <MobileMenu />}
+            {showMobileMenu && <MobileMenu onClose={handleCloseMobileMenu} />}
         </div>
     );
 }
