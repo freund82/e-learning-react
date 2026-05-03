@@ -231,4 +231,8 @@ Blog Page Card Styles
         padding-left:2rem;
         padding-right:2rem;
     }
+
+    .cardCourses__item--blogArticleText{
+        max-width:32rem;
+    }
 }
