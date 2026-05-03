@@ -12,6 +12,8 @@ function NavSubmenu({ show, onLinkClick }) {
                 >
                     Contact
                 </NavLink>
+            </li>
+            <li className="nav-submenu__item">
                 <NavLink
                     to="/page/faqs"
                     className={({ isActive }) => `nav-submenu__link ${isActive ? "active" : ""}`}
