@@ -3,15 +3,21 @@ import {NavLink, Link} from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../../assets/images/logo.svg";
 import Search from "../../../assets/images/search.svg";
+import MobileMenu from "../../MobileMenu/MobileMenu";
 import NavSubmenu from "../../NavSubmenu/NavSubmenu";
 
 function Header() {
 
     const [showNavSubMenu, setShowNavSubMenu] = useState(false);
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
      
 
 const handleMouseEnter = () => {
         setShowNavSubMenu(showNavSubMenu => !showNavSubMenu);
+    }
+
+const handleBurgerMenuClick = () => {
+        setShowMobileMenu(showMobileMenu => !showMobileMenu);
     }
 
   
@@ -38,9 +44,10 @@ const handleMouseEnter = () => {
                         </li>
                          {showNavSubMenu && <NavSubmenu />}
                     </ul>
-                    <div className="nav__burger--menu">
+                    <div className="nav__burger--menu" onClick={handleBurgerMenuClick}>
                        
                     </div>
+                     
                     <div className="header__auth">
                          <li className="header__item">
                             <NavLink to="/loginregister" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Login / Register</NavLink>
@@ -49,8 +56,9 @@ const handleMouseEnter = () => {
                             <img src={Search} alt="search" />
                         </div>
                     </div>
-                </nav>
+                </nav>      
             </div>
+            {showMobileMenu && <MobileMenu />}
         </div>
     );
 }

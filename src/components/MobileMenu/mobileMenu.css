@@ -1,0 +1,132 @@
+.mobileMenu{
+    position:absolute;
+    top:10%;
+    right:10%;
+    width:10rem;
+    height:30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:1000;
+}
+
+.mobileMenu__inner{
+    width:100%;
+    height:100%;
+    max-width:129rem;
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileMenu__nav{
+    position: relative;
+    width:100%;
+    height:100%;
+    max-width:70.2rem;
+    align-items: center;
+    background-color:var(--gray);
+    z-index:1000;
+}
+
+.mobileMenu__list{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap:3.2rem;
+    font-size: var(--font-size16);
+}
+
+.mobileMenu__link{
+    color:var(--black);
+    font-size: var(--font-size16);
+    font-weight:500;
+    transition: color 0.2s ease-in-out;
+    cursor:pointer;
+}
+
+.mobileMenu__link:hover{
+    color:var(--orange);
+    transition: color 0.2s ease-in-out;
+}
+
+.nav__burger--menu{
+    display:none;
+    width:3rem;
+    cursor: pointer;
+    border-bottom:solid 0.2rem var(--black);
+}
+
+.nav__burger--menu::after{
+    content:"";
+    display:block;
+    width:3rem;
+    height:0.2rem;
+    background-color:var(--black);
+    margin-bottom:0.6rem;
+}
+
+.nav__burger--menu::before{
+    content:"";
+    display:block;
+    width:3rem;
+    height:0.2rem;
+    background-color:var(--black);
+    margin-bottom:0.6rem;
+}
+
+.nav__burger--menu:hover::after{
+    background-color:var(--orange);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav__burger--menu:hover::before{
+    background-color:var(--orange);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav__burger--menu:hover{
+    border-bottom:solid 0.2rem var(--orange);
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+.mobileMenu__auth{
+    display:flex;
+    align-items: center;
+    gap:1.6rem;
+    font-size: var(--font-size16);
+}
+
+.mobileMenu__item{
+    list-style: none;
+}
+
+.mobileMenu__search{
+    cursor: pointer;
+}
+
+.mobileMenu__nav >ul li a.active{
+    background-color:var(--white-gray);
+    padding-top:2.7rem;
+    padding-bottom:2.7rem;
+    padding-left:2rem;
+    padding-right:2rem;
+    margin:0;
+}
+
+li a.active{
+    color:var(--orange);
+}
+
+
+
+@media(max-width: 700px) {
+ 
+    .nav__burger--menu{
+        display:block;
+        align-items: flex-end;
+    }
+
+}
