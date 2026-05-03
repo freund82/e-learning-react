@@ -215,7 +215,20 @@ Blog Page Card Styles
 }
 
 @media(max-width:700px){
+    .cardCourses__inner{
+        max-width:35rem;
+    }
     .cardCourses__list{
     justify-content: space-around;
+    }
+
+    .cardCourses__item--title{
+        max-width:32rem;
+    }
+
+    .cardCourses__item--price{
+        top:80.5%;
+        padding-left:2rem;
+        padding-right:2rem;
     }
 }
