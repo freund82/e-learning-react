@@ -12,15 +12,9 @@ function MobileMenu({ onClose }) {
         setShowNavSubMenu(showNavSubMenu => !showNavSubMenu);
     }
 
-    const handleOverlayClick = (e) => {
-        if (e.target.classList.contains('mobileMenu')) {
-            onClose?.();
-        }
-    }
-
 
     return (
-        <div className="mobileMenu" onClick={handleOverlayClick}>
+        <div className="mobileMenu">
                 <div className="mobileMenu__inner">
                 <div className="mobileMenu__header">
                     <h2 className="mobileMenu__title">Menu</h2>
