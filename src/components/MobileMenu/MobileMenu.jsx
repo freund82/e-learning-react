@@ -8,13 +8,13 @@ function MobileMenu({ onClose }) {
     const [showNavSubMenu, setShowNavSubMenu] = useState(false);
 
     const handlePageClick = (e) => {
-        e.preventDefault(); // Предотвращаем переход по ссылке
+        e.preventDefault();
         setShowNavSubMenu(prev => !prev);
     }
 
     const handleSubmenuLinkClick = () => {
-        setShowNavSubMenu(false); // Закрываем подменю
-        onClose(); // Закрываем мобильное меню
+        setShowNavSubMenu(false);
+        onClose();
     }
 
     return (
@@ -44,7 +44,7 @@ function MobileMenu({ onClose }) {
                                 <span className="mobileMenu__arrow">{showNavSubMenu ? "▲" : "▼"}</span>
                             </div>
                             <div className="mobileMenu__submenu">
-                                <NavSubmenu show={showNavSubMenu} onLinkClick={handleSubmenuLinkClick} />
+                                <NavSubmenu show={showNavSubMenu} onLinkClick={handleSubmenuLinkClick} isMobile={true} />
                             </div>
                         </li>
                     </ul>

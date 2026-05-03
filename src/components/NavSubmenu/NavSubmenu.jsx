@@ -1,9 +1,9 @@
 import "./navSubmenu.css";
 import { NavLink } from "react-router-dom";
 
-function NavSubmenu({ show, onLinkClick }) {
+function NavSubmenu({ show, onLinkClick, isMobile = false }) {
     return (
-        <ul className={`nav-submenu mobile-nav-submenu ${show ? "show" : ""}`}>
+        <ul className={`nav-submenu ${isMobile ? "mobile-nav-submenu" : "desktop-nav-submenu"} ${show ? "show" : ""}`}>
             <li className="nav-submenu__item">
                 <NavLink
                     to="/page/contact"
@@ -12,8 +12,6 @@ function NavSubmenu({ show, onLinkClick }) {
                 >
                     Contact
                 </NavLink>
-            </li>
-            <li className="nav-submenu__item">
                 <NavLink
                     to="/page/faqs"
                     className={({ isActive }) => `nav-submenu__link ${isActive ? "active" : ""}`}

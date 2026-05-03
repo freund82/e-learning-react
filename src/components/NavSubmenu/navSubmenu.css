@@ -1,3 +1,4 @@
+/* Основные стили для десктопного подменю */
 .nav-submenu {
     position: absolute;
     top: 100%;
@@ -25,6 +26,7 @@
     transform: translateX(-50%) translateY(0);
 }
 
+/* Треугольник (клюв) */
 .nav-submenu::before {
     content: '';
     position: absolute;
@@ -40,6 +42,7 @@
     z-index: -1;
 }
 
+/* Стили для элементов подменю */
 .nav-submenu__item {
     display: flex;
     flex-direction: column;
@@ -72,6 +75,7 @@
     font-weight: 600;
 }
 
+/* Стрелка справа */
 .nav-submenu__link::after {
     content: '';
     position: absolute;
