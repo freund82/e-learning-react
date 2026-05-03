@@ -92,6 +92,11 @@
 
 .header__item{
     list-style: none;
+    position: relative;
+}
+
+.header__item--with-submenu {
+    position: relative;
 }
 
 .header__search{

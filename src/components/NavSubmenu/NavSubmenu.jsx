@@ -1,14 +1,22 @@
-import "./navSubmenu.css"
-import {NavLink} from "react-router-dom";
-import Contact from "../Contact/Contact";
-import FAQs from "../FAQs/FAQs";
+import "./navSubmenu.css";
+import { NavLink } from "react-router-dom";
 
-function NavSubmenu() {
+function NavSubmenu({ show }) {
     return (
-        <ul className="nav-submenu">
+        <ul className={`nav-submenu ${show ? "show" : ""}`}>
             <li className="nav-submenu__item">
-                <NavLink to="/page/contact" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">Contact</NavLink>
-                <NavLink to="/page/faqs" className={({ isActive }) =>`header__link ${isActive ? "active" : ""}`}  href="#">FAQs</NavLink>
+                <NavLink
+                    to="/page/contact"
+                    className={({ isActive }) => `nav-submenu__link ${isActive ? "active" : ""}`}
+                >
+                    Contact
+                </NavLink>
+                <NavLink
+                    to="/page/faqs"
+                    className={({ isActive }) => `nav-submenu__link ${isActive ? "active" : ""}`}
+                >
+                    FAQs
+                </NavLink>
             </li>
         </ul>
     );
