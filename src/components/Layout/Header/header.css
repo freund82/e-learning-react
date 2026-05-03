@@ -48,41 +48,39 @@
 .nav__burger--menu{
     display:none;
     width:3rem;
+    height: 1.8rem;
     cursor: pointer;
-    border-bottom:solid 0.2rem var(--black);
+    position: relative;
+    border-bottom: solid 0.2rem var(--black)!important;
+    transition: border-bottom-color 0.2s ease-in-out;
 }
 
+.nav__burger--menu::before,
 .nav__burger--menu::after{
     content:"";
-    display:block;
-    width:3rem;
+    position: absolute;
+    left:0;
+    width:100%;
     height:0.2rem;
     background-color:var(--black);
-    margin-bottom:0.6rem;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .nav__burger--menu::before{
-    content:"";
-    display:block;
-    width:3rem;
-    height:0.2rem;
-    background-color:var(--black);
-    margin-bottom:0.6rem;
+    top:0;
 }
 
+.nav__burger--menu::after{
+    top:0.8rem;
+}
+
+.nav__burger--menu:hover::before,
 .nav__burger--menu:hover::after{
     background-color:var(--orange);
-    transition: background-color 0.2s ease-in-out;
-}
-
-.nav__burger--menu:hover::before{
-    background-color:var(--orange);
-    transition: background-color 0.2s ease-in-out;
 }
 
 .nav__burger--menu:hover{
-    border-bottom:solid 0.2rem var(--orange);
-    transition: border-bottom 0.2s ease-in-out;
+    border-bottom-color:var(--orange);
 }
 
 .header__auth{
