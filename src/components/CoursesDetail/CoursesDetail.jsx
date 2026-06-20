@@ -10,11 +10,17 @@ import Quizzes from "../../assets/icons/quizzes.svg"
 import ButtonPrimary from "../shared/ButtonPrimary/ButtonPrimary";
 import TabPanel from "../TabPanel/TabPanel";
 import CommentsForm from "../CommentsForm/CommentsForm";
+import useMediaQuery from "../../utils/useMediaQuery";
+import Accordion from "../Accordion/Accordion";
 
 function CoursesDetail({ courses }) {
   const { id } = useParams();
   const [setCourseTitle] = useOutletContext();
   console.log("ID из URL:", id);
+
+  //Media запрос на экран меньшего размера
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  console.log("isMobile:", isMobile);
   
   // Найдем курс по id
   const courseId = parseInt(id);
@@ -76,7 +82,7 @@ function CoursesDetail({ courses }) {
           </div>
     </div>
     <div>
-        <TabPanel course={course} />
+        {isMobile ? <Accordion course={course} /> : <TabPanel course={course} />}
     </div>
     <div>
         <CommentsForm />
