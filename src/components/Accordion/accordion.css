@@ -1,0 +1,37 @@
+.accordion{
+    margin-top:5rem;
+}
+
+.accordion-item{
+    margin-bottom:2rem;
+}
+.accordion-header{
+    font-family:var(--font-family-Exo);
+    font-weight:600;
+    font-size:var(--font-size20);
+    line-height: var(--line-height120);
+    color:var(--black);
+    margin-bottom:1rem;
+    cursor:pointer;
+    padding: 2% 0% 0.5rem 2%;
+    border-bottom:solid 0.1rem var(--light-gray);
+    transition:border-bottom 0.3s ease-in-out;
+    transition-delay:0.1s;
+    border-radius:0.5rem;
+}
+
+.open{
+    color:var(--orange);
+    transition:color 0.3s ease-in-out;
+    transition-delay:0.1s;
+    background-color:var(--light-gray);
+}
+
+.accordion-content{
+    padding:1rem 2%;
+    font-family:var(--font-family--Jost);
+    font-weight:400;
+    font-size:var(--font-size16);
+    line-height: var(--line-height150);
+    color:var(--dark-gray);
+}
