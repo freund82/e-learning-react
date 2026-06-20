@@ -98,3 +98,9 @@ MEDIA QUERIES
         font-size:var(--font-size32);
     }
 }
+
+@media(max-width:726px){
+    .courses-detail--card{
+        display:none;
+    }
+}
