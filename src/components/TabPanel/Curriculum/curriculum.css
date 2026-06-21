@@ -139,3 +139,56 @@
   color: var(--dark-gray);
   margin-right:2rem;
 }
+
+
+/**********
+* MEDIA QUERIES
+***********/
+
+@media (max-width: 768px) {
+  .module-container{
+    padding:1.6rem 0.5rem;
+    margin-bottom:0;
+  }
+
+  .module-title{
+    font-size:var(--font-size14);
+    text-align: left;
+  }
+  .lessons-container{
+   padding-left:0;
+  }
+
+  .lesson-item{
+    padding:1.2rem 0.5rem;
+  }
+
+  .lesson-icon{
+    width:1.6rem;
+    height:1.6rem;
+  }
+
+  .lesson-title{
+    font-size:var(--font-size14);
+    text-align: left;
+  }
+
+  .lesson-preview{
+    font-size:var(--font-size12);
+    padding:0.4rem 0.8rem;
+    margin-right:1.6rem;
+  }
+
+  .lessons-count{
+    font-size:var(--font-size12);
+  }
+
+  .lessons-time{
+    font-size:var(--font-size12);
+  }
+
+  .lesson-info{
+    display:flex;
+    align-items: center;
+  }
+}

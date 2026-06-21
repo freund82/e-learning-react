@@ -35,3 +35,13 @@
     line-height: var(--line-height150);
     color:var(--dark-gray);
 }
+
+/*************
+* MEDIA QUERIES
+**************/
+
+@media (max-width:768px){
+    .accordion-content:nth-child(2){
+        text-align:justify;
+    }
+}
